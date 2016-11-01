@@ -1,0 +1,72 @@
+--------------------
+Testing Sorter: Bubble Sorter
+Testing set with n=1000...
+	Average Time Used: 9.3 ms
+	Average Number of Comparisons: 961238
+	Average Number of Swaps: 248417
+
+Testing set with n=10000...
+	Average Time Used: 610.1 ms
+	Average Number of Comparisons: 9.87121e+07
+	Average Number of Swaps: 2.49661e+07
+
+Testing set with n=100000...
+	Average Time Used: 61274.9 ms
+	Average Number of Comparisons: 9.9656e+09
+	Average Number of Swaps: 2.50044e+09
+
+Testing set with n=1000000...
+	Average Time Used: 6.12874e+06 ms
+	Average Number of Comparisons: 9.98494e+11
+	Average Number of Swaps: 2.50121e+11
+
+--------------------
+
+--------------------
+Testing Sorter: Merge Sorter
+Testing set with n=1000...
+	Average Time Used: 0 ms
+	Average Number of Comparisons: 8701.8
+	Average Number of Swaps: 9976
+
+Testing set with n=10000...
+	Average Time Used: 1 ms
+	Average Number of Comparisons: 120452
+	Average Number of Swaps: 133616
+
+Testing set with n=100000...
+	Average Time Used: 19.6 ms
+	Average Number of Comparisons: 1.53653e+06
+	Average Number of Swaps: 1.66893e+06
+
+Testing set with n=1000000...
+	Average Time Used: 230 ms
+	Average Number of Comparisons: 1.86747e+07
+	Average Number of Swaps: 1.99514e+07
+
+--------------------
+
+--------------------
+Testing Sorter: Counting Sorter
+Testing set with n=1000...
+	Average Time Used: 2 ms
+	Average Number of Comparisons: 0
+	Average Number of Swaps: 1000
+
+Testing set with n=10000...
+	Average Time Used: 2 ms
+	Average Number of Comparisons: 0
+	Average Number of Swaps: 10000
+
+Testing set with n=100000...
+	Average Time Used: 4 ms
+	Average Number of Comparisons: 0
+	Average Number of Swaps: 100000
+
+Testing set with n=1000000...
+	Average Time Used: 15 ms
+	Average Number of Comparisons: 0
+	Average Number of Swaps: 1000000
+
+--------------------
+

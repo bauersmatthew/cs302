@@ -32,7 +32,7 @@ void \hyperlink{_p_a04_8cpp_a733045b67e1b8242db2b77c270025ff6}{fill\+Randset} (i
 \begin{DoxyCompactList}\small\item\em Fill one randset. \end{DoxyCompactList}\item 
 void \hyperlink{_p_a04_8cpp_a00f93c6504af37640753e6e7153a20ee}{generate\+Randsets} ()
 \begin{DoxyCompactList}\small\item\em Fill all randsets appropriately. \end{DoxyCompactList}\item 
-void \hyperlink{_p_a04_8cpp_a88fe60bfd6f33c3bd41d57c8da43a80f}{free\+One\+Randset} (int $\ast$$\ast$\&set)
+void \hyperlink{_p_a04_8cpp_a03f7d9bf461474b6d2688afd52d586de}{free\+One\+Randset} (int $\ast$$\ast$\&set, bool is1m=false)
 \begin{DoxyCompactList}\small\item\em Free one randset. \end{DoxyCompactList}\item 
 void \hyperlink{_p_a04_8cpp_a05e464736d72893d788140acf09b2d24}{free\+Randsets} ()
 \begin{DoxyCompactList}\small\item\em Free the memory of all randsets. \end{DoxyCompactList}\item 
@@ -54,6 +54,8 @@ int $\ast$$\ast$ \hyperlink{_p_a04_8cpp_aed17f6d6f6eac3b72ab37430e2c0e03b}{rands
 int $\ast$$\ast$ \hyperlink{_p_a04_8cpp_aaa405254ce6444ad19c4ff8303c53c15}{randset\+\_\+10k}
 \item 
 int $\ast$$\ast$ \hyperlink{_p_a04_8cpp_a5363a4ad01ac43689e6b1392d80b97fb}{randset\+\_\+100k}
+\item 
+int $\ast$$\ast$ \hyperlink{_p_a04_8cpp_afc7baa9b232aa429be75036f602e1a60}{randset\+\_\+1m}
 \end{DoxyCompactItemize}
 
 
@@ -115,11 +117,12 @@ The given randset has not been allocated.
 \end{DoxyPrecond}
 \index{P\+A04.\+cpp@{P\+A04.\+cpp}!free\+One\+Randset@{free\+One\+Randset}}
 \index{free\+One\+Randset@{free\+One\+Randset}!P\+A04.\+cpp@{P\+A04.\+cpp}}
-\subsubsection[{\texorpdfstring{free\+One\+Randset(int $\ast$$\ast$\&set)}{freeOneRandset(int **&set)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+One\+Randset (
+\subsubsection[{\texorpdfstring{free\+One\+Randset(int $\ast$$\ast$\&set, bool is1m=false)}{freeOneRandset(int **&set, bool is1m=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+One\+Randset (
 \begin{DoxyParamCaption}
-\item[{int $\ast$$\ast$\&}]{set}
+\item[{int $\ast$$\ast$\&}]{set, }
+\item[{bool}]{is1m = {\ttfamily false}}
 \end{DoxyParamCaption}
-)}\hypertarget{_p_a04_8cpp_a88fe60bfd6f33c3bd41d57c8da43a80f}{}\label{_p_a04_8cpp_a88fe60bfd6f33c3bd41d57c8da43a80f}
+)}\hypertarget{_p_a04_8cpp_a03f7d9bf461474b6d2688afd52d586de}{}\label{_p_a04_8cpp_a03f7d9bf461474b6d2688afd52d586de}
 
 
 Free one randset. 
@@ -127,6 +130,8 @@ Free one randset.
 
 \begin{DoxyParams}{Parameters}
 {\em set} & The randset to free. \\
+\hline
+{\em is1m} & If the randset is the randset with n=1 million \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
@@ -279,3 +284,6 @@ Prints output to files\+: sorts.\+txt, stats.\+txt
 \index{P\+A04.\+cpp@{P\+A04.\+cpp}!randset\+\_\+1k@{randset\+\_\+1k}}
 \index{randset\+\_\+1k@{randset\+\_\+1k}!P\+A04.\+cpp@{P\+A04.\+cpp}}
 \subsubsection[{\texorpdfstring{randset\+\_\+1k}{randset_1k}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ randset\+\_\+1k}\hypertarget{_p_a04_8cpp_aed17f6d6f6eac3b72ab37430e2c0e03b}{}\label{_p_a04_8cpp_aed17f6d6f6eac3b72ab37430e2c0e03b}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!randset\+\_\+1m@{randset\+\_\+1m}}
+\index{randset\+\_\+1m@{randset\+\_\+1m}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{randset\+\_\+1m}{randset_1m}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$$\ast$ randset\+\_\+1m}\hypertarget{_p_a04_8cpp_afc7baa9b232aa429be75036f602e1a60}{}\label{_p_a04_8cpp_afc7baa9b232aa429be75036f602e1a60}

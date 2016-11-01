@@ -11,8 +11,7 @@ Base class for \hyperlink{class_sorter}{Sorter} classes, which sort int data.
 
 
 
-Inheritance diagram for Sorter\+:
-\nopagebreak
+Inheritance diagram for Sorter\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,18 +31,27 @@ void \hyperlink{class_sorter_a085f06b5b3200a426c05fab3eca30dfe}{reset\+Stats} ()
 \begin{DoxyCompactList}\small\item\em Resets the stats. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{class_sorter_aa7596dcc44254c88e2544708adff0de0}{get\+Name} ()
 \begin{DoxyCompactList}\small\item\em Gets the name of this sorter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_sorter_a706bb59cd4957fe8e7b2eb46f1a09092}{start\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Starts timing the algorithm. \end{DoxyCompactList}\item 
+void \hyperlink{class_sorter_a2aff740358afb37276666168cf059f62}{stop\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Stops timing the algorithm and adds the elapsed time to tot\+Time. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{class_sorter_a582afc82309a3bf0e5567814b6d61079}{sorts\+Run}
 \item 
-long \hyperlink{class_sorter_a695f5c4f7455145e9e8574fa5ee39fc4}{tot\+C\+P\+U\+Time}
+long \hyperlink{class_sorter_afd76a62edf3a0f6ed7a2eee28335e42f}{tot\+Time}
 \item 
 long \hyperlink{class_sorter_a28ba087dad25b8c837c1211d8d2cb8f4}{tot\+Num\+Comparisons}
 \item 
 long \hyperlink{class_sorter_a2fcaa452c03ec3429bedd8de1421e678}{tot\+Num\+Swaps}
 \item 
 std\+::string \hyperlink{class_sorter_ae86338aba4991d9a1376400733579f4f}{name}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::high\+\_\+resolution\+\_\+clock $>$ \hyperlink{class_sorter_a022bf8dfe39ec74d4761fe9c9b0f5915}{tmr\+Start}
 \end{DoxyCompactItemize}
 
 
@@ -132,6 +140,34 @@ Algorithm is abstracted.
 
 Implemented in \hyperlink{class_merge_sorter_a1137eeb25786449a1363bac71f81014d}{Merge\+Sorter}, \hyperlink{class_bubble_sorter_ab430d94d65daffbe7ccc9e747e05b653}{Bubble\+Sorter}, and \hyperlink{class_counting_sorter_adcfc7504df3cd6e0f398a3f064bc01bc}{Counting\+Sorter}.
 
+\index{Sorter@{Sorter}!start\+Timer@{start\+Timer}}
+\index{start\+Timer@{start\+Timer}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{start\+Timer()}{startTimer()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sorter\+::start\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a706bb59cd4957fe8e7b2eb46f1a09092}{}\label{class_sorter_a706bb59cd4957fe8e7b2eb46f1a09092}
+
+
+Starts timing the algorithm. 
+
+\begin{DoxyPrecond}{Precondition}
+The timer is stopped. 
+\end{DoxyPrecond}
+\index{Sorter@{Sorter}!stop\+Timer@{stop\+Timer}}
+\index{stop\+Timer@{stop\+Timer}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{stop\+Timer()}{stopTimer()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sorter\+::stop\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a2aff740358afb37276666168cf059f62}{}\label{class_sorter_a2aff740358afb37276666168cf059f62}
+
+
+Stops timing the algorithm and adds the elapsed time to tot\+Time. 
+
+\begin{DoxyPrecond}{Precondition}
+The timer has been started. 
+\end{DoxyPrecond}
 
 
 \subsection{Member Data Documentation}
@@ -141,15 +177,18 @@ Implemented in \hyperlink{class_merge_sorter_a1137eeb25786449a1363bac71f81014d}{
 \index{Sorter@{Sorter}!sorts\+Run@{sorts\+Run}}
 \index{sorts\+Run@{sorts\+Run}!Sorter@{Sorter}}
 \subsubsection[{\texorpdfstring{sorts\+Run}{sortsRun}}]{\setlength{\rightskip}{0pt plus 5cm}int Sorter\+::sorts\+Run\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a582afc82309a3bf0e5567814b6d61079}{}\label{class_sorter_a582afc82309a3bf0e5567814b6d61079}
-\index{Sorter@{Sorter}!tot\+C\+P\+U\+Time@{tot\+C\+P\+U\+Time}}
-\index{tot\+C\+P\+U\+Time@{tot\+C\+P\+U\+Time}!Sorter@{Sorter}}
-\subsubsection[{\texorpdfstring{tot\+C\+P\+U\+Time}{totCPUTime}}]{\setlength{\rightskip}{0pt plus 5cm}long Sorter\+::tot\+C\+P\+U\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a695f5c4f7455145e9e8574fa5ee39fc4}{}\label{class_sorter_a695f5c4f7455145e9e8574fa5ee39fc4}
+\index{Sorter@{Sorter}!tmr\+Start@{tmr\+Start}}
+\index{tmr\+Start@{tmr\+Start}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{tmr\+Start}{tmrStart}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::high\+\_\+resolution\+\_\+clock$>$ Sorter\+::tmr\+Start\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a022bf8dfe39ec74d4761fe9c9b0f5915}{}\label{class_sorter_a022bf8dfe39ec74d4761fe9c9b0f5915}
 \index{Sorter@{Sorter}!tot\+Num\+Comparisons@{tot\+Num\+Comparisons}}
 \index{tot\+Num\+Comparisons@{tot\+Num\+Comparisons}!Sorter@{Sorter}}
 \subsubsection[{\texorpdfstring{tot\+Num\+Comparisons}{totNumComparisons}}]{\setlength{\rightskip}{0pt plus 5cm}long Sorter\+::tot\+Num\+Comparisons\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a28ba087dad25b8c837c1211d8d2cb8f4}{}\label{class_sorter_a28ba087dad25b8c837c1211d8d2cb8f4}
 \index{Sorter@{Sorter}!tot\+Num\+Swaps@{tot\+Num\+Swaps}}
 \index{tot\+Num\+Swaps@{tot\+Num\+Swaps}!Sorter@{Sorter}}
 \subsubsection[{\texorpdfstring{tot\+Num\+Swaps}{totNumSwaps}}]{\setlength{\rightskip}{0pt plus 5cm}long Sorter\+::tot\+Num\+Swaps\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a2fcaa452c03ec3429bedd8de1421e678}{}\label{class_sorter_a2fcaa452c03ec3429bedd8de1421e678}
+\index{Sorter@{Sorter}!tot\+Time@{tot\+Time}}
+\index{tot\+Time@{tot\+Time}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{tot\+Time}{totTime}}]{\setlength{\rightskip}{0pt plus 5cm}long Sorter\+::tot\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_afd76a62edf3a0f6ed7a2eee28335e42f}{}\label{class_sorter_afd76a62edf3a0f6ed7a2eee28335e42f}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

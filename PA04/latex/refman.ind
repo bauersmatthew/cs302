@@ -1,10 +1,10 @@
 \begin{theindex}
 
-  \item {avg\+C\+P\+U\+Time}
-    \subitem {Sort\+Stats}, \hyperpage{15}
   \item {avg\+Num\+Comparisons}
     \subitem {Sort\+Stats}, \hyperpage{15}
   \item {avg\+Num\+Swaps}
+    \subitem {Sort\+Stats}, \hyperpage{15}
+  \item {avg\+Time}
     \subitem {Sort\+Stats}, \hyperpage{15}
 
   \indexspace
@@ -39,9 +39,9 @@
   \item {generate\+Randsets}
     \subitem {P\+A04.\+cpp}, \hyperpage{25}
   \item {get\+Name}
-    \subitem {Sorter}, \hyperpage{13}
+    \subitem {Sorter}, \hyperpage{14}
   \item {get\+Stats}
-    \subitem {Sorter}, \hyperpage{13}
+    \subitem {Sorter}, \hyperpage{14}
 
   \indexspace
 
@@ -60,7 +60,7 @@
   \indexspace
 
   \item {name}
-    \subitem {Sorter}, \hyperpage{14}
+    \subitem {Sorter}, \hyperpage{15}
 
   \indexspace
 
@@ -74,6 +74,7 @@
     \subitem {randset\+\_\+100k}, \hyperpage{26}
     \subitem {randset\+\_\+10k}, \hyperpage{26}
     \subitem {randset\+\_\+1k}, \hyperpage{26}
+    \subitem {randset\+\_\+1m}, \hyperpage{26}
     \subitem {test\+Array}, \hyperpage{25}
     \subitem {test\+One\+Sorter}, \hyperpage{26}
     \subitem {test\+Randset}, \hyperpage{26}
@@ -86,6 +87,8 @@
   \item {randset\+\_\+10k}
     \subitem {P\+A04.\+cpp}, \hyperpage{26}
   \item {randset\+\_\+1k}
+    \subitem {P\+A04.\+cpp}, \hyperpage{26}
+  \item {randset\+\_\+1m}
     \subitem {P\+A04.\+cpp}, \hyperpage{26}
   \item {reset\+Stats}
     \subitem {Sorter}, \hyperpage{14}
@@ -100,23 +103,30 @@
   \item {sort\+Recursive}
     \subitem {Merge\+Sorter}, \hyperpage{12}
   \item {Sort\+Stats}, \hyperpage{15}
-    \subitem {avg\+C\+P\+U\+Time}, \hyperpage{15}
     \subitem {avg\+Num\+Comparisons}, \hyperpage{15}
     \subitem {avg\+Num\+Swaps}, \hyperpage{15}
+    \subitem {avg\+Time}, \hyperpage{15}
   \item {Sorter}, \hyperpage{12}
-    \subitem {get\+Name}, \hyperpage{13}
-    \subitem {get\+Stats}, \hyperpage{13}
-    \subitem {name}, \hyperpage{14}
+    \subitem {get\+Name}, \hyperpage{14}
+    \subitem {get\+Stats}, \hyperpage{14}
+    \subitem {name}, \hyperpage{15}
     \subitem {reset\+Stats}, \hyperpage{14}
     \subitem {sort\+In\+Place}, \hyperpage{14}
     \subitem {Sorter}, \hyperpage{13}
-    \subitem {sorts\+Run}, \hyperpage{14}
-    \subitem {tot\+C\+P\+U\+Time}, \hyperpage{14}
-    \subitem {tot\+Num\+Comparisons}, \hyperpage{14}
-    \subitem {tot\+Num\+Swaps}, \hyperpage{14}
+    \subitem {sorts\+Run}, \hyperpage{15}
+    \subitem {start\+Timer}, \hyperpage{14}
+    \subitem {stop\+Timer}, \hyperpage{14}
+    \subitem {tmr\+Start}, \hyperpage{15}
+    \subitem {tot\+Num\+Comparisons}, \hyperpage{15}
+    \subitem {tot\+Num\+Swaps}, \hyperpage{15}
+    \subitem {tot\+Time}, \hyperpage{15}
   \item {Sorter.\+cpp}, \hyperpage{26}
   \item {Sorter.\+h}, \hyperpage{27}
   \item {sorts\+Run}
+    \subitem {Sorter}, \hyperpage{15}
+  \item {start\+Timer}
+    \subitem {Sorter}, \hyperpage{14}
+  \item {stop\+Timer}
     \subitem {Sorter}, \hyperpage{14}
 
   \indexspace
@@ -129,11 +139,13 @@
     \subitem {P\+A04.\+cpp}, \hyperpage{26}
   \item {test\+Sorters}
     \subitem {P\+A04.\+cpp}, \hyperpage{26}
-  \item {tot\+C\+P\+U\+Time}
-    \subitem {Sorter}, \hyperpage{14}
+  \item {tmr\+Start}
+    \subitem {Sorter}, \hyperpage{15}
   \item {tot\+Num\+Comparisons}
-    \subitem {Sorter}, \hyperpage{14}
+    \subitem {Sorter}, \hyperpage{15}
   \item {tot\+Num\+Swaps}
-    \subitem {Sorter}, \hyperpage{14}
+    \subitem {Sorter}, \hyperpage{15}
+  \item {tot\+Time}
+    \subitem {Sorter}, \hyperpage{15}
 
 \end{theindex}
