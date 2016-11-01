@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -std=c++14
+CXXFLAGS = -Wall -std=c++11
 
 SRCS = PA04.cpp Sorter.cpp BubbleSorter.cpp CountingSorter.cpp MergeSorter.cpp
 OBJS = $(SRCS:.cpp=.o)
@@ -18,3 +18,4 @@ $(MAIN): $(OBJS)
 	
 clean:
 	rm *.o
+	rm PA04
