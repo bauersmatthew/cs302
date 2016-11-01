@@ -17,7 +17,7 @@
 #include "CountingSorter.h"
 
 // a randsetN is an array of ten pointers to arrays containing N numbers.
-int **randset_1k, **randset_10k, **randset_100k;
+int **randset_1k, **randset_10k, **randset_100k, **randset_1m;
 
 /**
  * @brief Fills an array with the given number of random integers with values
@@ -29,13 +29,13 @@ int **randset_1k, **randset_10k, **randset_100k;
  * @post The first numInts elements of the array will be filled with random
  *     integers.
  */
- void fillArrayRandomly(int *arr, int numInts)
- {
- 	while(numInts--)
- 	{
- 		*(arr++) = (rand()%1000001)+1;
- 	}
- }
+void fillArrayRandomly(int *arr, int numInts)
+{
+    while(numInts--)
+    {
+ 	    *(arr++) = (rand()%1000001)+1;
+    }
+}
 
 /**
  * @brief Fill one randset.
@@ -45,8 +45,15 @@ int **randset_1k, **randset_10k, **randset_100k;
  */
 void fillRandset(int**& set, int nval)
 {
-	set = new int*[10];
-	for(int arrIter = 0; arrIter < 10; arrIter++)
+	// only 2 arrays for 1m
+    int numArrs = 10;
+    if(nval == 1000000)
+    {
+        numArrs = 2;
+    }
+    
+    set = new int*[numArrs];
+	for(int arrIter = 0; arrIter < numArrs; arrIter++)
 	{
         set[arrIter] = new int[nval];
 		fillArrayRandomly(set[arrIter], nval);
@@ -62,17 +69,25 @@ void generateRandsets()
 	fillRandset(randset_1k, 1000);
 	fillRandset(randset_10k, 10000);
 	fillRandset(randset_100k, 100000);
+    fillRandset(randset_1m, 1000000);
 }
 
 /**
  * @brief Free one randset.
  * @param set The randset to free.
+ * @param is1m If the randset is the randset with n=1 million
  * @pre The randset is allocated and valid.
  * @post The randset pointer will be set to nullptr.
  */
-void freeOneRandset(int**& set)
+void freeOneRandset(int**& set, bool is1m=false)
 {
-	for(int arrIter = 0; arrIter < 10; arrIter++)
+	int numArrs = 10;
+    if(is1m)
+    {
+        numArrs = 2;
+    }
+    
+    for(int arrIter = 0; arrIter < numArrs; arrIter++)
 	{
 		delete set[arrIter];
 	}
@@ -89,6 +104,7 @@ void freeRandsets()
 	freeOneRandset(randset_1k);
 	freeOneRandset(randset_10k);
 	freeOneRandset(randset_100k);
+    freeOneRandset(randset_1m, true);
 }
 
 /**
@@ -140,7 +156,12 @@ void testRandset(
 
 	// only write to sortOut the first time!
 	bool writeOut = true;
-	for(int arrIter = 0; arrIter < 10; arrIter++)
+    int numArrs = 10;
+    if(len == 1000000)
+    {
+        numArrs = 2;
+    }
+	for(int arrIter = 0; arrIter < numArrs; arrIter++)
 	{
 		std::cerr << "\t\t(" << arrIter+1 << "/10)\n";
 
@@ -183,6 +204,7 @@ void testOneSorter(
 	testRandset(sorter, randset_1k, 1000, sortOut, statOut);
 	testRandset(sorter, randset_10k, 10000, sortOut, statOut);
 	testRandset(sorter, randset_100k, 100000, sortOut, statOut);
+    testRandset(sorter, randset_1m, 1000000, sortOut, statOut);
 
 	// more niceties
 	sortOut << "--------------------\n\n";
