@@ -17,7 +17,7 @@ SortStats Sorter::getStats()
 	SortStats stats;
 	float fltSortsRun = (float)sortsRun; // for convenience
 
-	stats.avgCPUTime = float(totCPUTime)/fltSortsRun;
+	stats.avgTime = float(totTime)/fltSortsRun;
 	stats.avgNumComparisons = float(totNumComparisons)/fltSortsRun;
 	stats.avgNumSwaps = float(totNumSwaps)/fltSortsRun;
 
@@ -27,7 +27,7 @@ SortStats Sorter::getStats()
 void Sorter::resetStats()
 {
 	sortsRun = 0;
-	totCPUTime = 0;
+	totTime = 0;
 	totNumComparisons = 0;
 	totNumSwaps = 0;
 }
@@ -35,4 +35,14 @@ void Sorter::resetStats()
 std::string Sorter::getName()
 {
 	return name;
+}
+
+void Sorter::startTimer()
+{
+	tmrStart = std::chrono::high_resolution_clock::now();
+}
+void Sorter::stopTimer()
+{
+	totTime += std::chrono::duration_cast<std::chrono::milliseconds>(
+		std::chrono::high_resolution_clock::now()-tmrStart).count();
 }

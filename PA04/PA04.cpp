@@ -151,7 +151,7 @@ void testRandset(
 	// write stats
 	SortStats stats = sorter->getStats();
 	statOut
-		<< "\tAverage CPU Time Used: " << stats.avgCPUTime << "\n"
+		<< "\tAverage Time Used: " << stats.avgTime << " ms\n"
 		<< "\tAverage Number of Comparisons: " << stats.avgNumComparisons << "\n"
 		<< "\tAverage Number of Swaps: " << stats.avgNumSwaps << "\n\n";
         

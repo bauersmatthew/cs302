@@ -1,0 +1,134 @@
+\hypertarget{class_merge_sorter}{}\section{Merge\+Sorter Class Reference}
+\label{class_merge_sorter}\index{Merge\+Sorter@{Merge\+Sorter}}
+
+
+\hyperlink{class_merge_sorter}{Merge\+Sorter} class.  
+
+
+
+
+{\ttfamily \#include $<$Merge\+Sorter.\+h$>$}
+
+
+
+Inheritance diagram for Merge\+Sorter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_merge_sorter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Merge\+Sorter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_merge_sorter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_merge_sorter_a6a1d4829efdea1e94f9ed2f61d32022c}{Merge\+Sorter} ()
+\item 
+void \hyperlink{class_merge_sorter_a1137eeb25786449a1363bac71f81014d}{sort\+In\+Place} (int $\ast$arr, int len)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_merge_sorter_aeb7003d6bbbe8963f65df7d6e5b11d15}{merge\+Parts} (int $\ast$part1, int len1, int $\ast$part2, int len2, int $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Merge two arrays in the right way. \end{DoxyCompactList}\item 
+void \hyperlink{class_merge_sorter_a13bb5ca817e9159b33324d2db33d7d61}{sort\+Recursive} (int $\ast$arr, int len)
+\begin{DoxyCompactList}\small\item\em The recursive layer for merge sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_merge_sorter}{Merge\+Sorter} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Merge\+Sorter@{Merge\+Sorter}!Merge\+Sorter@{Merge\+Sorter}}
+\index{Merge\+Sorter@{Merge\+Sorter}!Merge\+Sorter@{Merge\+Sorter}}
+\subsubsection[{\texorpdfstring{Merge\+Sorter()}{MergeSorter()}}]{\setlength{\rightskip}{0pt plus 5cm}Merge\+Sorter\+::\+Merge\+Sorter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_merge_sorter_a6a1d4829efdea1e94f9ed2f61d32022c}{}\label{class_merge_sorter_a6a1d4829efdea1e94f9ed2f61d32022c}
+Default constructor for Sorters.
+
+Constructs with name\+: \char`\"{}\+Merge Sorter\char`\"{} 
+
+\subsection{Member Function Documentation}
+\index{Merge\+Sorter@{Merge\+Sorter}!merge\+Parts@{merge\+Parts}}
+\index{merge\+Parts@{merge\+Parts}!Merge\+Sorter@{Merge\+Sorter}}
+\subsubsection[{\texorpdfstring{merge\+Parts(int $\ast$part1, int len1, int $\ast$part2, int len2, int $\ast$dest)}{mergeParts(int *part1, int len1, int *part2, int len2, int *dest)}}]{\setlength{\rightskip}{0pt plus 5cm}void Merge\+Sorter\+::merge\+Parts (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{part1, }
+\item[{int}]{len1, }
+\item[{int $\ast$}]{part2, }
+\item[{int}]{len2, }
+\item[{int $\ast$}]{dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_merge_sorter_aeb7003d6bbbe8963f65df7d6e5b11d15}{}\label{class_merge_sorter_aeb7003d6bbbe8963f65df7d6e5b11d15}
+
+
+Merge two arrays in the right way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part1} & The first part to merge. \\
+\hline
+{\em len1} & The length of the first part. \\
+\hline
+{\em part2} & The second part to merge. \\
+\hline
+{\em len2} & The length of the second part. \\
+\hline
+{\em dest} & The merge destination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The length of dest $>$= len1+len2 
+\end{DoxyPrecond}
+\index{Merge\+Sorter@{Merge\+Sorter}!sort\+In\+Place@{sort\+In\+Place}}
+\index{sort\+In\+Place@{sort\+In\+Place}!Merge\+Sorter@{Merge\+Sorter}}
+\subsubsection[{\texorpdfstring{sort\+In\+Place(int $\ast$arr, int len)}{sortInPlace(int *arr, int len)}}]{\setlength{\rightskip}{0pt plus 5cm}void Merge\+Sorter\+::sort\+In\+Place (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_merge_sorter_a1137eeb25786449a1363bac71f81014d}{}\label{class_merge_sorter_a1137eeb25786449a1363bac71f81014d}
+Sorts an array in place.
+
+Uses the merge sort algorithm. 
+
+Implements \hyperlink{class_sorter_a946276dc986c9f017e84986c74e7cf18}{Sorter}.
+
+\index{Merge\+Sorter@{Merge\+Sorter}!sort\+Recursive@{sort\+Recursive}}
+\index{sort\+Recursive@{sort\+Recursive}!Merge\+Sorter@{Merge\+Sorter}}
+\subsubsection[{\texorpdfstring{sort\+Recursive(int $\ast$arr, int len)}{sortRecursive(int *arr, int len)}}]{\setlength{\rightskip}{0pt plus 5cm}void Merge\+Sorter\+::sort\+Recursive (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_merge_sorter_a13bb5ca817e9159b33324d2db33d7d61}{}\label{class_merge_sorter_a13bb5ca817e9159b33324d2db33d7d61}
+
+
+The recursive layer for merge sort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & The array to sort. \\
+\hline
+{\em len} & The length of the array to sort \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_merge_sorter_8h}{Merge\+Sorter.\+h}\item 
+\hyperlink{_merge_sorter_8cpp}{Merge\+Sorter.\+cpp}\end{DoxyCompactItemize}

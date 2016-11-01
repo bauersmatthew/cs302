@@ -16,12 +16,11 @@ CountingSorter::CountingSorter()
 
 void CountingSorter::sortInPlace(int *arr, int len)
 {
-	long startCPU = (long)clock();
-
     int *counts = new int[1000001]; // for counting occurances
 	memset((int*)counts, 0, 1000001*sizeof(int)); // zeroe array
 
 	// do counting
+	startTimer();
 	for(int iter = 0; iter < len; iter++)
 	{
 		counts[arr[iter]]++;
@@ -37,9 +36,9 @@ void CountingSorter::sortInPlace(int *arr, int len)
             totNumSwaps++;
         }
 	}
+	stopTimer();
     
     delete counts;
     
-	totCPUTime += clock() - startCPU;
     sortsRun++;
 }

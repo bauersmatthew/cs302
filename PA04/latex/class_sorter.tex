@@ -1,0 +1,158 @@
+\hypertarget{class_sorter}{}\section{Sorter Class Reference}
+\label{class_sorter}\index{Sorter@{Sorter}}
+
+
+Base class for \hyperlink{class_sorter}{Sorter} classes, which sort int data.  
+
+
+
+
+{\ttfamily \#include $<$Sorter.\+h$>$}
+
+
+
+Inheritance diagram for Sorter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_sorter__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sorter_a0b2a0bc2bae60db1115788f49f988859}{Sorter} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for Sorters. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_sorter_a946276dc986c9f017e84986c74e7cf18}{sort\+In\+Place} (int $\ast$arr, int len)=0
+\begin{DoxyCompactList}\small\item\em Sorts an array in place. \end{DoxyCompactList}\item 
+\hyperlink{struct_sort_stats}{Sort\+Stats} \hyperlink{class_sorter_af864ce19b5f14a410ab55c1af6b4e3a5}{get\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Returns statistics on all sorts performed. \end{DoxyCompactList}\item 
+void \hyperlink{class_sorter_a085f06b5b3200a426c05fab3eca30dfe}{reset\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Resets the stats. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_sorter_aa7596dcc44254c88e2544708adff0de0}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of this sorter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_sorter_a582afc82309a3bf0e5567814b6d61079}{sorts\+Run}
+\item 
+long \hyperlink{class_sorter_a695f5c4f7455145e9e8574fa5ee39fc4}{tot\+C\+P\+U\+Time}
+\item 
+long \hyperlink{class_sorter_a28ba087dad25b8c837c1211d8d2cb8f4}{tot\+Num\+Comparisons}
+\item 
+long \hyperlink{class_sorter_a2fcaa452c03ec3429bedd8de1421e678}{tot\+Num\+Swaps}
+\item 
+std\+::string \hyperlink{class_sorter_ae86338aba4991d9a1376400733579f4f}{name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for \hyperlink{class_sorter}{Sorter} classes, which sort int data. 
+
+\hyperlink{class_sorter}{Sorter} classes record various statistics on the sort. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sorter@{Sorter}!Sorter@{Sorter}}
+\index{Sorter@{Sorter}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{Sorter()}{Sorter()}}]{\setlength{\rightskip}{0pt plus 5cm}Sorter\+::\+Sorter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sorter_a0b2a0bc2bae60db1115788f49f988859}{}\label{class_sorter_a0b2a0bc2bae60db1115788f49f988859}
+
+
+Default constructor for Sorters. 
+
+Constructs with name\+: \char`\"{}\+Base Sorter\char`\"{} 
+
+\subsection{Member Function Documentation}
+\index{Sorter@{Sorter}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{get\+Name()}{getName()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Sorter\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sorter_aa7596dcc44254c88e2544708adff0de0}{}\label{class_sorter_aa7596dcc44254c88e2544708adff0de0}
+
+
+Gets the name of this sorter. 
+
+\begin{DoxyReturn}{Returns}
+The name of this sorter. 
+\end{DoxyReturn}
+\index{Sorter@{Sorter}!get\+Stats@{get\+Stats}}
+\index{get\+Stats@{get\+Stats}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{get\+Stats()}{getStats()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sort\+Stats} Sorter\+::get\+Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sorter_af864ce19b5f14a410ab55c1af6b4e3a5}{}\label{class_sorter_af864ce19b5f14a410ab55c1af6b4e3a5}
+
+
+Returns statistics on all sorts performed. 
+
+\begin{DoxyReturn}{Returns}
+A filled \hyperlink{struct_sort_stats}{Sort\+Stats} instance. 
+\end{DoxyReturn}
+\index{Sorter@{Sorter}!reset\+Stats@{reset\+Stats}}
+\index{reset\+Stats@{reset\+Stats}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{reset\+Stats()}{resetStats()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sorter\+::reset\+Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sorter_a085f06b5b3200a426c05fab3eca30dfe}{}\label{class_sorter_a085f06b5b3200a426c05fab3eca30dfe}
+
+
+Resets the stats. 
+
+\index{Sorter@{Sorter}!sort\+In\+Place@{sort\+In\+Place}}
+\index{sort\+In\+Place@{sort\+In\+Place}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{sort\+In\+Place(int $\ast$arr, int len)=0}{sortInPlace(int *arr, int len)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sorter\+::sort\+In\+Place (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_sorter_a946276dc986c9f017e84986c74e7cf18}{}\label{class_sorter_a946276dc986c9f017e84986c74e7cf18}
+
+
+Sorts an array in place. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & The array to sort. \\
+\hline
+{\em len} & The length of the array to sort. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The given array is at least len long.
+\end{DoxyPrecond}
+Algorithm is abstracted. 
+
+Implemented in \hyperlink{class_merge_sorter_a1137eeb25786449a1363bac71f81014d}{Merge\+Sorter}, \hyperlink{class_bubble_sorter_ab430d94d65daffbe7ccc9e747e05b653}{Bubble\+Sorter}, and \hyperlink{class_counting_sorter_adcfc7504df3cd6e0f398a3f064bc01bc}{Counting\+Sorter}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Sorter@{Sorter}!name@{name}}
+\index{name@{name}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Sorter\+::name\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_ae86338aba4991d9a1376400733579f4f}{}\label{class_sorter_ae86338aba4991d9a1376400733579f4f}
+\index{Sorter@{Sorter}!sorts\+Run@{sorts\+Run}}
+\index{sorts\+Run@{sorts\+Run}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{sorts\+Run}{sortsRun}}]{\setlength{\rightskip}{0pt plus 5cm}int Sorter\+::sorts\+Run\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a582afc82309a3bf0e5567814b6d61079}{}\label{class_sorter_a582afc82309a3bf0e5567814b6d61079}
+\index{Sorter@{Sorter}!tot\+C\+P\+U\+Time@{tot\+C\+P\+U\+Time}}
+\index{tot\+C\+P\+U\+Time@{tot\+C\+P\+U\+Time}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{tot\+C\+P\+U\+Time}{totCPUTime}}]{\setlength{\rightskip}{0pt plus 5cm}long Sorter\+::tot\+C\+P\+U\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a695f5c4f7455145e9e8574fa5ee39fc4}{}\label{class_sorter_a695f5c4f7455145e9e8574fa5ee39fc4}
+\index{Sorter@{Sorter}!tot\+Num\+Comparisons@{tot\+Num\+Comparisons}}
+\index{tot\+Num\+Comparisons@{tot\+Num\+Comparisons}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{tot\+Num\+Comparisons}{totNumComparisons}}]{\setlength{\rightskip}{0pt plus 5cm}long Sorter\+::tot\+Num\+Comparisons\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a28ba087dad25b8c837c1211d8d2cb8f4}{}\label{class_sorter_a28ba087dad25b8c837c1211d8d2cb8f4}
+\index{Sorter@{Sorter}!tot\+Num\+Swaps@{tot\+Num\+Swaps}}
+\index{tot\+Num\+Swaps@{tot\+Num\+Swaps}!Sorter@{Sorter}}
+\subsubsection[{\texorpdfstring{tot\+Num\+Swaps}{totNumSwaps}}]{\setlength{\rightskip}{0pt plus 5cm}long Sorter\+::tot\+Num\+Swaps\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sorter_a2fcaa452c03ec3429bedd8de1421e678}{}\label{class_sorter_a2fcaa452c03ec3429bedd8de1421e678}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_sorter_8h}{Sorter.\+h}\item 
+\hyperlink{_sorter_8cpp}{Sorter.\+cpp}\end{DoxyCompactItemize}

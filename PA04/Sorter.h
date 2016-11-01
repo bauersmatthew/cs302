@@ -7,13 +7,14 @@
 #define SORTER_H
 
 #include <string>
+#include <chrono>
 
 /**
  * @brief Contains sorting statistics.
  */
 struct SortStats
 {
-	float avgCPUTime;
+	float avgTime;
 	float avgNumComparisons;
 	float avgNumSwaps;
 };
@@ -26,10 +27,25 @@ class Sorter
 {
 protected:
 	int sortsRun; // the number of datasets sorted
-	long totCPUTime; // the total number of CPU time
+	long totTime; // the total number of CPU time
 	long totNumComparisons; // the total number of comparisons
 	long totNumSwaps; // the total number of swaps
 	std::string name; // the name of the sorter
+
+	// for use by startTimer and stopTimer
+	std::chrono::time_point<std::chrono::high_resolution_clock> tmrStart;
+	
+	/**
+	 * @brief Starts timing the algorithm.
+	 * @pre The timer is stopped.
+	 */
+	void startTimer();
+
+	/**
+	 * @brief Stops timing the algorithm and adds the elapsed time to totTime.
+	 * @pre The timer has been started.
+	 */
+	void stopTimer();
 
 public:
 

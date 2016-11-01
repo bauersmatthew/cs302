@@ -76,8 +76,8 @@ void MergeSorter::sortRecursive(int *arr, int len)
 
 void MergeSorter::sortInPlace(int *arr, int len)
 {
-	long startCPU = (long)clock();
+	startTimer();
 	sortRecursive(arr, len);
-	totCPUTime += clock() - startCPU;
+	stopTimer();
     sortsRun++;
 }

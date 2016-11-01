@@ -1,0 +1,281 @@
+\hypertarget{_p_a04_8cpp}{}\section{P\+A04.\+cpp File Reference}
+\label{_p_a04_8cpp}\index{P\+A04.\+cpp@{P\+A04.\+cpp}}
+
+
+Main file for C\+S302/\+P\+A04.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include \char`\"{}Bubble\+Sorter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Merge\+Sorter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Counting\+Sorter.\+h\char`\"{}}\\*
+Include dependency graph for P\+A04.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_a04_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_p_a04_8cpp_a4573cd9c09b30d379f0c47f2ec14e7b9}{fill\+Array\+Randomly} (int $\ast$arr, int num\+Ints)
+\begin{DoxyCompactList}\small\item\em Fills an array with the given number of random integers with values ranging from 0 to 1000000. \end{DoxyCompactList}\item 
+void \hyperlink{_p_a04_8cpp_a733045b67e1b8242db2b77c270025ff6}{fill\+Randset} (int $\ast$$\ast$\&set, int nval)
+\begin{DoxyCompactList}\small\item\em Fill one randset. \end{DoxyCompactList}\item 
+void \hyperlink{_p_a04_8cpp_a00f93c6504af37640753e6e7153a20ee}{generate\+Randsets} ()
+\begin{DoxyCompactList}\small\item\em Fill all randsets appropriately. \end{DoxyCompactList}\item 
+void \hyperlink{_p_a04_8cpp_a88fe60bfd6f33c3bd41d57c8da43a80f}{free\+One\+Randset} (int $\ast$$\ast$\&set)
+\begin{DoxyCompactList}\small\item\em Free one randset. \end{DoxyCompactList}\item 
+void \hyperlink{_p_a04_8cpp_a05e464736d72893d788140acf09b2d24}{free\+Randsets} ()
+\begin{DoxyCompactList}\small\item\em Free the memory of all randsets. \end{DoxyCompactList}\item 
+void \hyperlink{_p_a04_8cpp_a472101d67480be401c7070a1feda447e}{test\+Array} (\hyperlink{class_sorter}{Sorter} $\ast$sorter, int $\ast$arr, int len, std\+::stringstream \&sort\+Out, bool write\+Out=false)
+\begin{DoxyCompactList}\small\item\em Test an array on a \hyperlink{class_sorter}{Sorter}. \end{DoxyCompactList}\item 
+void \hyperlink{_p_a04_8cpp_aad638c13d38642ca2be432c4c542693a}{test\+Randset} (\hyperlink{class_sorter}{Sorter} $\ast$sorter, int $\ast$$\ast$set, int len, std\+::stringstream \&sort\+Out, std\+::stringstream \&stat\+Out)
+\begin{DoxyCompactList}\small\item\em Test a randset on a \hyperlink{class_sorter}{Sorter}. \end{DoxyCompactList}\item 
+void \hyperlink{_p_a04_8cpp_a54006df013b428e99d043289cfc7e292}{test\+One\+Sorter} (\hyperlink{class_sorter}{Sorter} $\ast$sorter, std\+::stringstream \&sort\+Out, std\+::stringstream \&stat\+Out)
+\begin{DoxyCompactList}\small\item\em Test a \hyperlink{class_sorter}{Sorter} on various data. \end{DoxyCompactList}\item 
+void \hyperlink{_p_a04_8cpp_addbc6930265a35072360c819a6e67a93}{test\+Sorters} (std\+::stringstream \&sort\+Out, std\+::stringstream \&stat\+Out)
+\begin{DoxyCompactList}\small\item\em Tests all Sorters fully. \end{DoxyCompactList}\item 
+int \hyperlink{_p_a04_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$$\ast$ \hyperlink{_p_a04_8cpp_aed17f6d6f6eac3b72ab37430e2c0e03b}{randset\+\_\+1k}
+\item 
+int $\ast$$\ast$ \hyperlink{_p_a04_8cpp_aaa405254ce6444ad19c4ff8303c53c15}{randset\+\_\+10k}
+\item 
+int $\ast$$\ast$ \hyperlink{_p_a04_8cpp_a5363a4ad01ac43689e6b1392d80b97fb}{randset\+\_\+100k}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main file for C\+S302/\+P\+A04. 
+
+\begin{DoxyAuthor}{Author}
+Matthew Bauer 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!fill\+Array\+Randomly@{fill\+Array\+Randomly}}
+\index{fill\+Array\+Randomly@{fill\+Array\+Randomly}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{fill\+Array\+Randomly(int $\ast$arr, int num\+Ints)}{fillArrayRandomly(int *arr, int numInts)}}]{\setlength{\rightskip}{0pt plus 5cm}void fill\+Array\+Randomly (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{num\+Ints}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_a4573cd9c09b30d379f0c47f2ec14e7b9}{}\label{_p_a04_8cpp_a4573cd9c09b30d379f0c47f2ec14e7b9}
+
+
+Fills an array with the given number of random integers with values ranging from 0 to 1000000. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & The array to fill. \\
+\hline
+{\em num\+Ints} & The number of ints to fill it with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The given array must be allocated with more than num\+Ints$\ast$4 bytes of space. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The first num\+Ints elements of the array will be filled with random integers. 
+\end{DoxyPostcond}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!fill\+Randset@{fill\+Randset}}
+\index{fill\+Randset@{fill\+Randset}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{fill\+Randset(int $\ast$$\ast$\&set, int nval)}{fillRandset(int **&set, int nval)}}]{\setlength{\rightskip}{0pt plus 5cm}void fill\+Randset (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$\&}]{set, }
+\item[{int}]{nval}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_a733045b67e1b8242db2b77c270025ff6}{}\label{_p_a04_8cpp_a733045b67e1b8242db2b77c270025ff6}
+
+
+Fill one randset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & The randset to fill. \\
+\hline
+{\em nval} & The N-\/value of the randset. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The given randset has not been allocated. 
+\end{DoxyPrecond}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!free\+One\+Randset@{free\+One\+Randset}}
+\index{free\+One\+Randset@{free\+One\+Randset}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{free\+One\+Randset(int $\ast$$\ast$\&set)}{freeOneRandset(int **&set)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+One\+Randset (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$\&}]{set}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_a88fe60bfd6f33c3bd41d57c8da43a80f}{}\label{_p_a04_8cpp_a88fe60bfd6f33c3bd41d57c8da43a80f}
+
+
+Free one randset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & The randset to free. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The randset is allocated and valid. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The randset pointer will be set to nullptr. 
+\end{DoxyPostcond}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!free\+Randsets@{free\+Randsets}}
+\index{free\+Randsets@{free\+Randsets}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{free\+Randsets()}{freeRandsets()}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Randsets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_a05e464736d72893d788140acf09b2d24}{}\label{_p_a04_8cpp_a05e464736d72893d788140acf09b2d24}
+
+
+Free the memory of all randsets. 
+
+\begin{DoxyPostcond}{Postcondition}
+All randset pointers will be set to nullptr. 
+\end{DoxyPostcond}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!generate\+Randsets@{generate\+Randsets}}
+\index{generate\+Randsets@{generate\+Randsets}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{generate\+Randsets()}{generateRandsets()}}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Randsets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_a00f93c6504af37640753e6e7153a20ee}{}\label{_p_a04_8cpp_a00f93c6504af37640753e6e7153a20ee}
+
+
+Fill all randsets appropriately. 
+
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!main@{main}}
+\index{main@{main}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{_p_a04_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Entry point. 
+
+\begin{DoxyReturn}{Returns}
+0 (assumes no failure) 
+\end{DoxyReturn}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!test\+Array@{test\+Array}}
+\index{test\+Array@{test\+Array}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{test\+Array(\+Sorter $\ast$sorter, int $\ast$arr, int len, std\+::stringstream \&sort\+Out, bool write\+Out=false)}{testArray(Sorter *sorter, int *arr, int len, std::stringstream &sortOut, bool writeOut=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void test\+Array (
+\begin{DoxyParamCaption}
+\item[{{\bf Sorter} $\ast$}]{sorter, }
+\item[{int $\ast$}]{arr, }
+\item[{int}]{len, }
+\item[{std\+::stringstream \&}]{sort\+Out, }
+\item[{bool}]{write\+Out = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_a472101d67480be401c7070a1feda447e}{}\label{_p_a04_8cpp_a472101d67480be401c7070a1feda447e}
+
+
+Test an array on a \hyperlink{class_sorter}{Sorter}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sorter} & The \hyperlink{class_sorter}{Sorter} to test the array on. \\
+\hline
+{\em arr} & The array to test. \\
+\hline
+{\em len} & The length of the array to test. \\
+\hline
+{\em sort\+Out} & The output stream to print sort results to. \\
+\hline
+{\em write\+Out} & Whether output should be added to the stream. \\
+\hline
+\end{DoxyParams}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!test\+One\+Sorter@{test\+One\+Sorter}}
+\index{test\+One\+Sorter@{test\+One\+Sorter}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{test\+One\+Sorter(\+Sorter $\ast$sorter, std\+::stringstream \&sort\+Out, std\+::stringstream \&stat\+Out)}{testOneSorter(Sorter *sorter, std::stringstream &sortOut, std::stringstream &statOut)}}]{\setlength{\rightskip}{0pt plus 5cm}void test\+One\+Sorter (
+\begin{DoxyParamCaption}
+\item[{{\bf Sorter} $\ast$}]{sorter, }
+\item[{std\+::stringstream \&}]{sort\+Out, }
+\item[{std\+::stringstream \&}]{stat\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_a54006df013b428e99d043289cfc7e292}{}\label{_p_a04_8cpp_a54006df013b428e99d043289cfc7e292}
+
+
+Test a \hyperlink{class_sorter}{Sorter} on various data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sorter} & The \hyperlink{class_sorter}{Sorter} to test. \\
+\hline
+{\em sort\+Out} & The output stream to print sort results to. \\
+\hline
+{\em stat\+Out} & The otuput stream to print stats to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Global randsets have been generated. 
+\end{DoxyPrecond}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!test\+Randset@{test\+Randset}}
+\index{test\+Randset@{test\+Randset}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{test\+Randset(\+Sorter $\ast$sorter, int $\ast$$\ast$set, int len, std\+::stringstream \&sort\+Out, std\+::stringstream \&stat\+Out)}{testRandset(Sorter *sorter, int **set, int len, std::stringstream &sortOut, std::stringstream &statOut)}}]{\setlength{\rightskip}{0pt plus 5cm}void test\+Randset (
+\begin{DoxyParamCaption}
+\item[{{\bf Sorter} $\ast$}]{sorter, }
+\item[{int $\ast$$\ast$}]{set, }
+\item[{int}]{len, }
+\item[{std\+::stringstream \&}]{sort\+Out, }
+\item[{std\+::stringstream \&}]{stat\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_aad638c13d38642ca2be432c4c542693a}{}\label{_p_a04_8cpp_aad638c13d38642ca2be432c4c542693a}
+
+
+Test a randset on a \hyperlink{class_sorter}{Sorter}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sorter} & The \hyperlink{class_sorter}{Sorter} to test the randset on. \\
+\hline
+{\em set} & The randset to test. \\
+\hline
+{\em len} & The length of the arrays in the randset to test. \\
+\hline
+{\em sort\+Out} & The output stream to print sort results to. \\
+\hline
+{\em stat\+Out} & The output stream to print stats to. \\
+\hline
+\end{DoxyParams}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!test\+Sorters@{test\+Sorters}}
+\index{test\+Sorters@{test\+Sorters}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{test\+Sorters(std\+::stringstream \&sort\+Out, std\+::stringstream \&stat\+Out)}{testSorters(std::stringstream &sortOut, std::stringstream &statOut)}}]{\setlength{\rightskip}{0pt plus 5cm}void test\+Sorters (
+\begin{DoxyParamCaption}
+\item[{std\+::stringstream \&}]{sort\+Out, }
+\item[{std\+::stringstream \&}]{stat\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a04_8cpp_addbc6930265a35072360c819a6e67a93}{}\label{_p_a04_8cpp_addbc6930265a35072360c819a6e67a93}
+
+
+Tests all Sorters fully. 
+
+Prints output to files\+: sorts.\+txt, stats.\+txt 
+
+\subsection{Variable Documentation}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!randset\+\_\+100k@{randset\+\_\+100k}}
+\index{randset\+\_\+100k@{randset\+\_\+100k}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{randset\+\_\+100k}{randset_100k}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$$\ast$ randset\+\_\+100k}\hypertarget{_p_a04_8cpp_a5363a4ad01ac43689e6b1392d80b97fb}{}\label{_p_a04_8cpp_a5363a4ad01ac43689e6b1392d80b97fb}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!randset\+\_\+10k@{randset\+\_\+10k}}
+\index{randset\+\_\+10k@{randset\+\_\+10k}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{randset\+\_\+10k}{randset_10k}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$$\ast$ randset\+\_\+10k}\hypertarget{_p_a04_8cpp_aaa405254ce6444ad19c4ff8303c53c15}{}\label{_p_a04_8cpp_aaa405254ce6444ad19c4ff8303c53c15}
+\index{P\+A04.\+cpp@{P\+A04.\+cpp}!randset\+\_\+1k@{randset\+\_\+1k}}
+\index{randset\+\_\+1k@{randset\+\_\+1k}!P\+A04.\+cpp@{P\+A04.\+cpp}}
+\subsubsection[{\texorpdfstring{randset\+\_\+1k}{randset_1k}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ randset\+\_\+1k}\hypertarget{_p_a04_8cpp_aed17f6d6f6eac3b72ab37430e2c0e03b}{}\label{_p_a04_8cpp_aed17f6d6f6eac3b72ab37430e2c0e03b}

@@ -6,6 +6,7 @@
 #include "BubbleSorter.h"
 #include <utility>
 #include <ctime>
+#include <chrono>
 
 // BubbleSorter defs
 BubbleSorter::BubbleSorter()
@@ -18,7 +19,7 @@ void BubbleSorter::sortInPlace(int *arr, int len)
 {
 	bool oneSwapped = false; // if a swap happened in this pass
 
-	long startCPU = (long)clock(); // starting cpu time
+	startTimer();
 	do
 	{
 		oneSwapped = false;
@@ -34,6 +35,7 @@ void BubbleSorter::sortInPlace(int *arr, int len)
 		}
 	}
 	while(oneSwapped);
-	totCPUTime += clock() - startCPU;
+	stopTimer();
+	
     sortsRun++;
 }
