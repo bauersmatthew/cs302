@@ -8,7 +8,7 @@
 #include <ctime>
 
 // BubbleSorter defs
-void BubbleSorter::BubbleSorter()
+BubbleSorter::BubbleSorter()
 {
 	name = "Bubble Sorter";
 	resetStats();

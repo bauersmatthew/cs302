@@ -31,3 +31,8 @@ void Sorter::resetStats()
 	totNumComparisons = 0;
 	totNumSwaps = 0;
 }
+
+std::string Sorter::getName()
+{
+	return name;
+}

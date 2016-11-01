@@ -5,6 +5,7 @@
  */
 #include "CountingSorter.h"
 #include <ctime>
+#include <string.h>
 
 // CountingSorter defs
 CountingSorter::CountingSorter()

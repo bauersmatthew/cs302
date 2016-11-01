@@ -6,6 +6,8 @@
 #ifndef SORTER_H
 #define SORTER_H
 
+#include <string>
+
 /**
  * @brief Contains sorting statistics.
  */

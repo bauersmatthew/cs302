@@ -59,7 +59,7 @@ void MergeSorter::sortRecursive(int *arr, int len)
 {
 	if(len == 1)
 	{ // base case
-		return arr;
+		return;
 	}
 	int *arrCpy = new int[len];
 	memcpy(arrCpy, arr, len);

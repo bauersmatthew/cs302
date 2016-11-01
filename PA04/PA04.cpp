@@ -10,12 +10,14 @@
 #include <vector>
 #include <sstream>
 #include <iostream>
+#include <string.h>
+#include <fstream>
 #include "BubbleSorter.h"
 #include "MergeSorter.h"
 #include "CountingSorter.h"
 
 // a randsetN is an array of ten pointers to arrays containing N numbers.
-int **randset_1k, randset_10k, randset_100k;
+int **randset_1k, **randset_10k, **randset_100k;
 
 /**
  * @brief Fills an array with the given number of random integers with values
@@ -43,7 +45,7 @@ int **randset_1k, randset_10k, randset_100k;
  */
 void fillRandset(int**& set, int nval)
 {
-	set = new (*int)[10];
+	set = new int*[10];
 	for(int arrIter = 0; arrIter < 10; arrIter++)
 	{
 		fillArrayRandomly(set[arrIter], nval);
@@ -128,7 +130,7 @@ void testArray(Sorter *sorter, int *arr, int len,
  * @param statOut The output stream to print stats to.
  */
 void testRandset(
-	Sorter *sorter, int **set, int len
+	Sorter *sorter, int **set, int len,
 	std::stringstream& sortOut, std::stringstream& statOut)
 {
 	statOut << "Testing set with n=" << len << "...\n";
@@ -166,10 +168,10 @@ void testOneSorter(
 {
 	// do output niceties
 	sortOut
-		<< "--------------------\n";
+		<< "--------------------\n"
 		<< "Testing Sorter: " << sorter->getName() << std::endl;
 	statOut
-		<< "--------------------\n";
+		<< "--------------------\n"
 		<< "Testing Sorter: " << sorter->getName() << std::endl;
 	std::cerr << "Sorter: " << sorter->getName() << std::endl;
 
@@ -192,14 +194,14 @@ void testSorters(std::stringstream& sortOut, std::stringstream& statOut)
 	std::cerr << "Testing sorters...\n";
 
 	// initialize sorters
-	bubbler = BubbleSorter();
-	merger = MergeSorter();
-	counter = CountingSorter();
+	BubbleSorter bubbler = BubbleSorter();
+	MergeSorter merger = MergeSorter();
+	CountingSorter counter = CountingSorter();
 
 	// test sorters
-	testOneSorter(bubbler, sortOut, statOut);
-	testOneSorter(merger, sortOut, statOut);
-	testOneSorter(counter, sortOut, statOut);
+	testOneSorter(&bubbler, sortOut, statOut);
+	testOneSorter(&merger, sortOut, statOut);
+	testOneSorter(&counter, sortOut, statOut);
 }
 
 /**
@@ -213,8 +215,8 @@ int main()
 	generateRandsets();
 
 	// test stuff
-	std::stringstream sortOut();
-	std::stringstream statOut();
+	std::stringstream sortOut;
+	std::stringstream statOut;
 	testSorters(sortOut, statOut);
 
 	// print output
