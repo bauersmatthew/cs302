@@ -1,0 +1,86 @@
+\hypertarget{class_city_node_v2}{}\section{City\+Node\+V2 Class Reference}
+\label{class_city_node_v2}\index{City\+Node\+V2@{City\+Node\+V2}}
+
+
+Represents a v2 node in the city adjacency map.  
+
+
+
+
+{\ttfamily \#include $<$Flight\+Map.\+v2.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_city_node_v2_ae1f0eb6340a8b885f89376339ec90314}{City\+Node\+V2} (const std\+::string \&\hyperlink{class_city_node_v2_a3cf01413b0ca939d0811ab649981d4a5}{name})
+\begin{DoxyCompactList}\small\item\em Initializes node with the given name. \end{DoxyCompactList}\item 
+\hyperlink{class_city_node_v2_a73000f4890545ab24a6ba02e609a79a3}{City\+Node\+V2} ()
+\begin{DoxyCompactList}\small\item\em Initializes node with empty name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_city_node_v2_a3cf01413b0ca939d0811ab649981d4a5}{name}
+\item 
+std\+::vector$<$ \hyperlink{struct_connection_v2}{Connection\+V2} $>$ \hyperlink{class_city_node_v2_a57050772b435bb5dc6570ded05ef2245}{connections}
+\item 
+bool \hyperlink{class_city_node_v2_a906dfb4dcfacbae15c57a316ab81036e}{visited}
+\item 
+int \hyperlink{class_city_node_v2_a1d674990d58d6a94c4fe4bc6211a8082}{try\+Next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a v2 node in the city adjacency map. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{City\+Node\+V2@{City\+Node\+V2}!City\+Node\+V2@{City\+Node\+V2}}
+\index{City\+Node\+V2@{City\+Node\+V2}!City\+Node\+V2@{City\+Node\+V2}}
+\subsubsection[{\texorpdfstring{City\+Node\+V2(const std\+::string \&name)}{CityNodeV2(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}City\+Node\+V2\+::\+City\+Node\+V2 (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_city_node_v2_ae1f0eb6340a8b885f89376339ec90314}{}\label{class_city_node_v2_ae1f0eb6340a8b885f89376339ec90314}
+
+
+Initializes node with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the city. \\
+\hline
+\end{DoxyParams}
+\index{City\+Node\+V2@{City\+Node\+V2}!City\+Node\+V2@{City\+Node\+V2}}
+\index{City\+Node\+V2@{City\+Node\+V2}!City\+Node\+V2@{City\+Node\+V2}}
+\subsubsection[{\texorpdfstring{City\+Node\+V2()}{CityNodeV2()}}]{\setlength{\rightskip}{0pt plus 5cm}City\+Node\+V2\+::\+City\+Node\+V2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_city_node_v2_a73000f4890545ab24a6ba02e609a79a3}{}\label{class_city_node_v2_a73000f4890545ab24a6ba02e609a79a3}
+
+
+Initializes node with empty name. 
+
+\begin{DoxyNote}{Note}
+Required for std\+::map compatibility. 
+\end{DoxyNote}
+
+
+\subsection{Member Data Documentation}
+\index{City\+Node\+V2@{City\+Node\+V2}!connections@{connections}}
+\index{connections@{connections}!City\+Node\+V2@{City\+Node\+V2}}
+\subsubsection[{\texorpdfstring{connections}{connections}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Connection\+V2}$>$ City\+Node\+V2\+::connections}\hypertarget{class_city_node_v2_a57050772b435bb5dc6570ded05ef2245}{}\label{class_city_node_v2_a57050772b435bb5dc6570ded05ef2245}
+\index{City\+Node\+V2@{City\+Node\+V2}!name@{name}}
+\index{name@{name}!City\+Node\+V2@{City\+Node\+V2}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string City\+Node\+V2\+::name}\hypertarget{class_city_node_v2_a3cf01413b0ca939d0811ab649981d4a5}{}\label{class_city_node_v2_a3cf01413b0ca939d0811ab649981d4a5}
+\index{City\+Node\+V2@{City\+Node\+V2}!try\+Next@{try\+Next}}
+\index{try\+Next@{try\+Next}!City\+Node\+V2@{City\+Node\+V2}}
+\subsubsection[{\texorpdfstring{try\+Next}{tryNext}}]{\setlength{\rightskip}{0pt plus 5cm}int City\+Node\+V2\+::try\+Next}\hypertarget{class_city_node_v2_a1d674990d58d6a94c4fe4bc6211a8082}{}\label{class_city_node_v2_a1d674990d58d6a94c4fe4bc6211a8082}
+\index{City\+Node\+V2@{City\+Node\+V2}!visited@{visited}}
+\index{visited@{visited}!City\+Node\+V2@{City\+Node\+V2}}
+\subsubsection[{\texorpdfstring{visited}{visited}}]{\setlength{\rightskip}{0pt plus 5cm}bool City\+Node\+V2\+::visited}\hypertarget{class_city_node_v2_a906dfb4dcfacbae15c57a316ab81036e}{}\label{class_city_node_v2_a906dfb4dcfacbae15c57a316ab81036e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_flight_map_8v2_8h}{Flight\+Map.\+v2.\+h}\item 
+\hyperlink{_flight_map_8v2_8cpp}{Flight\+Map.\+v2.\+cpp}\end{DoxyCompactItemize}

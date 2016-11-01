@@ -1,0 +1,76 @@
+\hypertarget{PA02_8cpp}{}\section{P\+A02.\+cpp File Reference}
+\label{PA02_8cpp}\index{P\+A02.\+cpp@{P\+A02.\+cpp}}
+
+
+Implements the program entry point.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for P\+A02.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{PA02_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PA02_8cpp_a38289856e74672ec95ce0fbb0ff279d5}{k\+Small} (int k\+Val, int $\ast$array, int first, int last, std\+::string \&log)
+\begin{DoxyCompactList}\small\item\em Returns the kth smallest value in an arrray. \end{DoxyCompactList}\item 
+int \hyperlink{PA02_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)\hypertarget{PA02_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{PA02_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCompactList}\small\item\em Entry point/main function of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the program entry point. 
+
+\begin{DoxyAuthor}{Author}
+Matthew Bauer  File skeleton created by Shehryar Khattak for C\+S302 Spring 2016. 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{P\+A02.\+cpp@{P\+A02.\+cpp}!k\+Small@{k\+Small}}
+\index{k\+Small@{k\+Small}!P\+A02.\+cpp@{P\+A02.\+cpp}}
+\subsubsection[{\texorpdfstring{k\+Small(int k\+Val, int $\ast$array, int first, int last, std\+::string \&log)}{kSmall(int kVal, int *array, int first, int last, std::string &log)}}]{\setlength{\rightskip}{0pt plus 5cm}int k\+Small (
+\begin{DoxyParamCaption}
+\item[{int}]{k\+Val, }
+\item[{int $\ast$}]{array, }
+\item[{int}]{first, }
+\item[{int}]{last, }
+\item[{std\+::string \&}]{log}
+\end{DoxyParamCaption}
+)}\hypertarget{PA02_8cpp_a38289856e74672ec95ce0fbb0ff279d5}{}\label{PA02_8cpp_a38289856e74672ec95ce0fbb0ff279d5}
+
+
+Returns the kth smallest value in an arrray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+Val} & The value of k. \\
+\hline
+{\em array} & The array to search. W\+A\+R\+N\+I\+NG\+: is edited by the function. \\
+\hline
+{\em first} & The first item in the section of the array to search. \\
+\hline
+{\em last} & The last item in the section of the array to search. \\
+\hline
+{\em log} & The string to write the algorithm log into. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+last-\/first+1 $>$= k\+\_\+val 
+
+log == \char`\"{}\char`\"{} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The log parameter will be filled with a log report. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+The kth smallest value in the given array. 
+\end{DoxyReturn}

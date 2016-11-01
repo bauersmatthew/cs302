@@ -1,0 +1,54 @@
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Linked\discretionary {-}{}{}List$<$ Item\discretionary {-}{}{}Type $>$ Class Template Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Constructor \& Destructor Documentation}{7}{subsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Linked\discretionary {-}{}{}List}{7}{subsubsection.4.1.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Member Function Documentation}{8}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}clear}{8}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}get\discretionary {-}{}{}Entry}{8}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.3}get\discretionary {-}{}{}Length}{8}{subsubsection.4.1.2.3}
+\contentsline {subsubsection}{\numberline {4.1.2.4}insert}{8}{subsubsection.4.1.2.4}
+\contentsline {subsubsection}{\numberline {4.1.2.5}is\discretionary {-}{}{}Empty}{9}{subsubsection.4.1.2.5}
+\contentsline {subsubsection}{\numberline {4.1.2.6}remove}{9}{subsubsection.4.1.2.6}
+\contentsline {subsubsection}{\numberline {4.1.2.7}replace}{9}{subsubsection.4.1.2.7}
+\contentsline {section}{\numberline {4.2}List\discretionary {-}{}{}Interface$<$ Item\discretionary {-}{}{}Type $>$ Class Template Reference}{10}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Member Function Documentation}{10}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}clear}{10}{subsubsection.4.2.1.1}
+\contentsline {subsubsection}{\numberline {4.2.1.2}get\discretionary {-}{}{}Entry}{10}{subsubsection.4.2.1.2}
+\contentsline {subsubsection}{\numberline {4.2.1.3}get\discretionary {-}{}{}Length}{11}{subsubsection.4.2.1.3}
+\contentsline {subsubsection}{\numberline {4.2.1.4}insert}{11}{subsubsection.4.2.1.4}
+\contentsline {subsubsection}{\numberline {4.2.1.5}is\discretionary {-}{}{}Empty}{11}{subsubsection.4.2.1.5}
+\contentsline {subsubsection}{\numberline {4.2.1.6}remove}{12}{subsubsection.4.2.1.6}
+\contentsline {subsubsection}{\numberline {4.2.1.7}replace}{12}{subsubsection.4.2.1.7}
+\contentsline {section}{\numberline {4.3}Node$<$ Item\discretionary {-}{}{}Type $>$ Class Template Reference}{12}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Constructor \& Destructor Documentation}{13}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.1}Node}{13}{subsubsection.4.3.1.1}
+\contentsline {subsubsection}{\numberline {4.3.1.2}Node}{13}{subsubsection.4.3.1.2}
+\contentsline {subsection}{\numberline {4.3.2}Member Function Documentation}{13}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}get\discretionary {-}{}{}Item}{13}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}set\discretionary {-}{}{}Item}{13}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}set\discretionary {-}{}{}Next}{14}{subsubsection.4.3.2.3}
+\contentsline {section}{\numberline {4.4}Precond\discretionary {-}{}{}Violated\discretionary {-}{}{}Except Class Reference}{14}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Constructor \& Destructor Documentation}{14}{subsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.1.1}Precond\discretionary {-}{}{}Violated\discretionary {-}{}{}Except}{14}{subsubsection.4.4.1.1}
+\contentsline {chapter}{\numberline {5}File Documentation}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Linked\discretionary {-}{}{}List.\discretionary {-}{}{}cpp File Reference}{15}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{15}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Linked\discretionary {-}{}{}List.\discretionary {-}{}{}h File Reference}{15}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{15}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}List\discretionary {-}{}{}Interface.\discretionary {-}{}{}h File Reference}{16}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{16}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Node.\discretionary {-}{}{}cpp File Reference}{16}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{16}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}Node.\discretionary {-}{}{}h File Reference}{16}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{17}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.6}Precond\discretionary {-}{}{}Violated\discretionary {-}{}{}Except.\discretionary {-}{}{}cpp File Reference}{17}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{17}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.7}Precond\discretionary {-}{}{}Violated\discretionary {-}{}{}Except.\discretionary {-}{}{}h File Reference}{17}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{17}{subsection.5.7.1}
+\contentsline {chapter}{Index}{19}{section*.10}

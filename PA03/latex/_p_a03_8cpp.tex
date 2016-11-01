@@ -1,0 +1,157 @@
+\hypertarget{_p_a03_8cpp}{}\section{P\+A03.\+cpp File Reference}
+\label{_p_a03_8cpp}\index{P\+A03.\+cpp@{P\+A03.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include \char`\"{}Flight\+Map.\+v2.\+h\char`\"{}}\\*
+Include dependency graph for P\+A03.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_a03_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{_p_a03_8cpp_aacadba7e0ed37dcc51034a6bd72153f8}{split\+String} (const std\+::string \&to\+Split, char delim)
+\begin{DoxyCompactList}\small\item\em Split the given string into parts by the given delimeter. \end{DoxyCompactList}\item 
+int \hyperlink{_p_a03_8cpp_ab506780224ebeac7fd6b0ea2157470d3}{string\+To\+Int} (const std\+::string \&to\+Convert)
+\begin{DoxyCompactList}\small\item\em Convert the given string into an int. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{_p_a03_8cpp_a3e4a5e7f9c031856621ab290e7fb20b4}{load\+Cities} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load the file containing the list of cities. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::pair$<$ std\+::string, std\+::string $>$, std\+::pair$<$ int, int $>$ $>$ \hyperlink{_p_a03_8cpp_a3c75582cd23f63e7c7a3743a0339ae0b}{load\+Flights} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load the file containing the flight paths. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \hyperlink{_p_a03_8cpp_af2044c9ab5635760d4a9cb3e643dccc8}{load\+Requests} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load the file containing the flight requests. \end{DoxyCompactList}\item 
+int \hyperlink{_p_a03_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+A03.\+cpp@{P\+A03.\+cpp}!load\+Cities@{load\+Cities}}
+\index{load\+Cities@{load\+Cities}!P\+A03.\+cpp@{P\+A03.\+cpp}}
+\subsubsection[{\texorpdfstring{load\+Cities(const std\+::string \&path)}{loadCities(const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ load\+Cities (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a03_8cpp_a3e4a5e7f9c031856621ab290e7fb20b4}{}\label{_p_a03_8cpp_a3e4a5e7f9c031856621ab290e7fb20b4}
+
+
+Load the file containing the list of cities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The given path points to a readable and correctly formatted file. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+A vector of all the city names read from the file. 
+\end{DoxyReturn}
+\index{P\+A03.\+cpp@{P\+A03.\+cpp}!load\+Flights@{load\+Flights}}
+\index{load\+Flights@{load\+Flights}!P\+A03.\+cpp@{P\+A03.\+cpp}}
+\subsubsection[{\texorpdfstring{load\+Flights(const std\+::string \&path)}{loadFlights(const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::pair$<$std\+::string, std\+::string$>$, std\+::pair$<$int, int$>$ $>$ load\+Flights (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a03_8cpp_a3c75582cd23f63e7c7a3743a0339ae0b}{}\label{_p_a03_8cpp_a3c75582cd23f63e7c7a3743a0339ae0b}
+
+
+Load the file containing the flight paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The given path points to a readable and correctly formatted file. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+A map linking string pairs (i.\+e. (\char`\"{}\+Origin\char`\"{}, \char`\"{}\+Destination\char`\"{})) to std\+::pairs of (flight number, flight cost). 
+\end{DoxyReturn}
+\index{P\+A03.\+cpp@{P\+A03.\+cpp}!load\+Requests@{load\+Requests}}
+\index{load\+Requests@{load\+Requests}!P\+A03.\+cpp@{P\+A03.\+cpp}}
+\subsubsection[{\texorpdfstring{load\+Requests(const std\+::string \&path)}{loadRequests(const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::pair$<$std\+::string, std\+::string$>$ $>$ load\+Requests (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a03_8cpp_af2044c9ab5635760d4a9cb3e643dccc8}{}\label{_p_a03_8cpp_af2044c9ab5635760d4a9cb3e643dccc8}
+
+
+Load the file containing the flight requests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The given path points to a readable and correctly formatted file. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+A vector containing (\char`\"{}\+Origin\char`\"{}, \char`\"{}\+Destination\char`\"{}) pairs. 
+\end{DoxyReturn}
+\index{P\+A03.\+cpp@{P\+A03.\+cpp}!main@{main}}
+\index{main@{main}!P\+A03.\+cpp@{P\+A03.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a03_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{_p_a03_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Entry point. 
+
+\index{P\+A03.\+cpp@{P\+A03.\+cpp}!split\+String@{split\+String}}
+\index{split\+String@{split\+String}!P\+A03.\+cpp@{P\+A03.\+cpp}}
+\subsubsection[{\texorpdfstring{split\+String(const std\+::string \&to\+Split, char delim)}{splitString(const std::string &toSplit, char delim)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ split\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{to\+Split, }
+\item[{char}]{delim}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a03_8cpp_aacadba7e0ed37dcc51034a6bd72153f8}{}\label{_p_a03_8cpp_aacadba7e0ed37dcc51034a6bd72153f8}
+
+
+Split the given string into parts by the given delimeter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Split} & The string to split. \\
+\hline
+{\em delim} & The delimeter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector containing the parts of the string. 
+\end{DoxyReturn}
+\index{P\+A03.\+cpp@{P\+A03.\+cpp}!string\+To\+Int@{string\+To\+Int}}
+\index{string\+To\+Int@{string\+To\+Int}!P\+A03.\+cpp@{P\+A03.\+cpp}}
+\subsubsection[{\texorpdfstring{string\+To\+Int(const std\+::string \&to\+Convert)}{stringToInt(const std::string &toConvert)}}]{\setlength{\rightskip}{0pt plus 5cm}int string\+To\+Int (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{to\+Convert}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a03_8cpp_ab506780224ebeac7fd6b0ea2157470d3}{}\label{_p_a03_8cpp_ab506780224ebeac7fd6b0ea2157470d3}
+
+
+Convert the given string into an int. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Convert} & The string to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The given string can be converted into an integer. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+The int value read fromt the given string. 
+\end{DoxyReturn}

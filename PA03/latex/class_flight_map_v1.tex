@@ -1,0 +1,115 @@
+\hypertarget{class_flight_map_v1}{}\section{Flight\+Map\+V1 Class Reference}
+\label{class_flight_map_v1}\index{Flight\+Map\+V1@{Flight\+Map\+V1}}
+
+
+Represents a v1 flight map.  
+
+
+
+
+{\ttfamily \#include $<$Flight\+Map.\+v1.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_flight_map_v1_a63b4aa091dc75bc5da768489b038d6ec}{Flight\+Map\+V1} (std\+::vector$<$ std\+::string $>$ cities, std\+::map$<$ std\+::pair$<$ std\+::string, std\+::string $>$, std\+::pair$<$ int, int $>$$>$ flights)
+\begin{DoxyCompactList}\small\item\em Initializes the flight map. \end{DoxyCompactList}\item 
+void \hyperlink{class_flight_map_v1_a35ceda0b390b37c1153356589f32ee88}{mark\+Visited} (const std\+::string \&city)
+\begin{DoxyCompactList}\small\item\em Mark a city as visited. \end{DoxyCompactList}\item 
+void \hyperlink{class_flight_map_v1_a8363dacd8d9afb8e1b7b27252e988004}{unvisit\+All} ()
+\begin{DoxyCompactList}\small\item\em Mark all cities as not visited. \end{DoxyCompactList}\item 
+bool \hyperlink{class_flight_map_v1_ad0e8cde28ec293191160c56b0ce38aef}{is\+Path} (const std\+::string \&origin, const std\+::string \&dest, std\+::string \&itinerary, std\+::ofstream \&log)
+\begin{DoxyCompactList}\small\item\em Test whether a sequence of flights exists between two cities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a v1 flight map. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flight\+Map\+V1@{Flight\+Map\+V1}!Flight\+Map\+V1@{Flight\+Map\+V1}}
+\index{Flight\+Map\+V1@{Flight\+Map\+V1}!Flight\+Map\+V1@{Flight\+Map\+V1}}
+\subsubsection[{\texorpdfstring{Flight\+Map\+V1(std\+::vector$<$ std\+::string $>$ cities, std\+::map$<$ std\+::pair$<$ std\+::string, std\+::string $>$, std\+::pair$<$ int, int $>$$>$ flights)}{FlightMapV1(std::vector< std::string > cities, std::map< std::pair< std::string, std::string >, std::pair< int, int >> flights)}}]{\setlength{\rightskip}{0pt plus 5cm}Flight\+Map\+V1\+::\+Flight\+Map\+V1 (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{cities, }
+\item[{std\+::map$<$ std\+::pair$<$ std\+::string, std\+::string $>$, std\+::pair$<$ int, int $>$$>$}]{flights}
+\end{DoxyParamCaption}
+)}\hypertarget{class_flight_map_v1_a63b4aa091dc75bc5da768489b038d6ec}{}\label{class_flight_map_v1_a63b4aa091dc75bc5da768489b038d6ec}
+
+
+Initializes the flight map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cities} & A list of all cities. \\
+\hline
+{\em flights} & A list of all flights. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Flight\+Map\+V1@{Flight\+Map\+V1}!is\+Path@{is\+Path}}
+\index{is\+Path@{is\+Path}!Flight\+Map\+V1@{Flight\+Map\+V1}}
+\subsubsection[{\texorpdfstring{is\+Path(const std\+::string \&origin, const std\+::string \&dest, std\+::string \&itinerary, std\+::ofstream \&log)}{isPath(const std::string &origin, const std::string &dest, std::string &itinerary, std::ofstream &log)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Flight\+Map\+V1\+::is\+Path (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{origin, }
+\item[{const std\+::string \&}]{dest, }
+\item[{std\+::string \&}]{itinerary, }
+\item[{std\+::ofstream \&}]{log}
+\end{DoxyParamCaption}
+)}\hypertarget{class_flight_map_v1_ad0e8cde28ec293191160c56b0ce38aef}{}\label{class_flight_map_v1_ad0e8cde28ec293191160c56b0ce38aef}
+
+
+Test whether a sequence of flights exists between two cities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The name of the origin city. \\
+\hline
+{\em dest} & The name of the destination city. \\
+\hline
+{\em itinerary} & The itenarary output of the path found. \\
+\hline
+{\em log} & The log to write log (debug) output to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a sequence exists; false otherwise. 
+\end{DoxyReturn}
+\index{Flight\+Map\+V1@{Flight\+Map\+V1}!mark\+Visited@{mark\+Visited}}
+\index{mark\+Visited@{mark\+Visited}!Flight\+Map\+V1@{Flight\+Map\+V1}}
+\subsubsection[{\texorpdfstring{mark\+Visited(const std\+::string \&city)}{markVisited(const std::string &city)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flight\+Map\+V1\+::mark\+Visited (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{city}
+\end{DoxyParamCaption}
+)}\hypertarget{class_flight_map_v1_a35ceda0b390b37c1153356589f32ee88}{}\label{class_flight_map_v1_a35ceda0b390b37c1153356589f32ee88}
+
+
+Mark a city as visited. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & The name of the city to mark as visited. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The given city is registered in the map. 
+\end{DoxyPrecond}
+\index{Flight\+Map\+V1@{Flight\+Map\+V1}!unvisit\+All@{unvisit\+All}}
+\index{unvisit\+All@{unvisit\+All}!Flight\+Map\+V1@{Flight\+Map\+V1}}
+\subsubsection[{\texorpdfstring{unvisit\+All()}{unvisitAll()}}]{\setlength{\rightskip}{0pt plus 5cm}void Flight\+Map\+V1\+::unvisit\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_flight_map_v1_a8363dacd8d9afb8e1b7b27252e988004}{}\label{class_flight_map_v1_a8363dacd8d9afb8e1b7b27252e988004}
+
+
+Mark all cities as not visited. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_flight_map_8v1_8h}{Flight\+Map.\+v1.\+h}\item 
+\hyperlink{_flight_map_8v1_8cpp}{Flight\+Map.\+v1.\+cpp}\item 
+\hyperlink{_flight_map_8v2_8cpp_8cpp}{Flight\+Map.\+v2.\+cpp.\+cpp}\end{DoxyCompactItemize}

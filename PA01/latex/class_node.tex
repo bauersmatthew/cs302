@@ -1,0 +1,127 @@
+\hypertarget{class_node}{\section{Node$<$ Item\-Type $>$ Class Template Reference}
+\label{class_node}\index{Node$<$ Item\-Type $>$@{Node$<$ Item\-Type $>$}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_node_a627e94f4fba0e73c546e0fb2a7266f36}{\hyperlink{class_node_a627e94f4fba0e73c546e0fb2a7266f36}{Node} ()}\label{class_node_a627e94f4fba0e73c546e0fb2a7266f36}
+
+\begin{DoxyCompactList}\small\item\em Construct an empty node. \end{DoxyCompactList}\item 
+\hyperlink{class_node_a0288598fcb0244739ce95099c26250ae}{Node} (const Item\-Type \&an\-Item)
+\begin{DoxyCompactList}\small\item\em Construct a node containing the given item. \end{DoxyCompactList}\item 
+\hyperlink{class_node_adf98d3f9b7227622cb5a0fdd7e8f0b18}{Node} (const Item\-Type \&an\-Item, \hyperlink{class_node}{Node}$<$ Item\-Type $>$ $\ast$next\-Node\-Ptr)
+\begin{DoxyCompactList}\small\item\em Construct a node containing the given item and pointing to the given next node. \end{DoxyCompactList}\item 
+void \hyperlink{class_node_ab4ceecdecc5df799011de486b9f54974}{set\-Item} (const Item\-Type \&an\-Item)
+\begin{DoxyCompactList}\small\item\em Set the contained item to the given item. \end{DoxyCompactList}\item 
+void \hyperlink{class_node_a01c1a66d4e39f5b149e090413deb4633}{set\-Next} (\hyperlink{class_node}{Node}$<$ Item\-Type $>$ $\ast$next\-Node\-Ptr)
+\begin{DoxyCompactList}\small\item\em Set the next node to the given node. \end{DoxyCompactList}\item 
+Item\-Type \hyperlink{class_node_a4e5519463291a0c1570014f4ee5ca130}{get\-Item} () const 
+\begin{DoxyCompactList}\small\item\em Get the item contained by this node. \end{DoxyCompactList}\item 
+\hypertarget{class_node_a44fbda8e8d17a37e8203434c2909ea07}{\hyperlink{class_node}{Node}$<$ Item\-Type $>$ $\ast$ {\bfseries get\-Next} () const }\label{class_node_a44fbda8e8d17a37e8203434c2909ea07}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_node_a0288598fcb0244739ce95099c26250ae}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Item\-Type $>$ {\bf Node}$<$ Item\-Type $>$\-::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{const Item\-Type \&}]{an\-Item}
+\end{DoxyParamCaption}
+)}}\label{class_node_a0288598fcb0244739ce95099c26250ae}
+
+
+Construct a node containing the given item. 
+
+\begin{DoxyPostcond}{Postcondition}
+The node will contain the given item. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em an\-Item} & The item to contain. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_node_adf98d3f9b7227622cb5a0fdd7e8f0b18}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Item\-Type $>$ {\bf Node}$<$ Item\-Type $>$\-::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{const Item\-Type \&}]{an\-Item, }
+\item[{{\bf Node}$<$ Item\-Type $>$ $\ast$}]{next\-Node\-Ptr}
+\end{DoxyParamCaption}
+)}}\label{class_node_adf98d3f9b7227622cb5a0fdd7e8f0b18}
+
+
+Construct a node containing the given item and pointing to the given next node. 
+
+\begin{DoxyPostcond}{Postcondition}
+The node will contain the given item and will point to the given next node. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em an\-Item} & The item to contain. \\
+\hline
+{\em next\-Node\-Ptr} & The pointer to the next node. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_node_a4e5519463291a0c1570014f4ee5ca130}{\index{Node@{Node}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!Node@{Node}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Item\-Type $>$ Item\-Type {\bf Node}$<$ Item\-Type $>$\-::get\-Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_node_a4e5519463291a0c1570014f4ee5ca130}
+
+
+Get the item contained by this node. 
+
+\begin{DoxyReturn}{Returns}
+The item contained by this node. 
+\end{DoxyReturn}
+\hypertarget{class_node_ab4ceecdecc5df799011de486b9f54974}{\index{Node@{Node}!set\-Item@{set\-Item}}
+\index{set\-Item@{set\-Item}!Node@{Node}}
+\subsubsection[{set\-Item}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Item\-Type $>$ void {\bf Node}$<$ Item\-Type $>$\-::set\-Item (
+\begin{DoxyParamCaption}
+\item[{const Item\-Type \&}]{an\-Item}
+\end{DoxyParamCaption}
+)}}\label{class_node_ab4ceecdecc5df799011de486b9f54974}
+
+
+Set the contained item to the given item. 
+
+\begin{DoxyPostcond}{Postcondition}
+The item will have been set to the given item. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em an\-Item} & The new item to be contained. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_node_a01c1a66d4e39f5b149e090413deb4633}{\index{Node@{Node}!set\-Next@{set\-Next}}
+\index{set\-Next@{set\-Next}!Node@{Node}}
+\subsubsection[{set\-Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Item\-Type $>$ void {\bf Node}$<$ Item\-Type $>$\-::set\-Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ Item\-Type $>$ $\ast$}]{next\-Node\-Ptr}
+\end{DoxyParamCaption}
+)}}\label{class_node_a01c1a66d4e39f5b149e090413deb4633}
+
+
+Set the next node to the given node. 
+
+\begin{DoxyPostcond}{Postcondition}
+This node will point to the given next node. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em next\-Node\-Ptr} & The pointer to the next node. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_node_8h}{Node.\-h}\item 
+\hyperlink{_node_8cpp}{Node.\-cpp}\end{DoxyCompactItemize}

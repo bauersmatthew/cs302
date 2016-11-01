@@ -1,0 +1,3 @@
+g++ -Wall -g -std=c++11 -c FlightMap.v1.cpp
+g++ -Wall -g -std=c++11 -c PA03.cpp
+g++ -Wall -g -std=c++11 PA03.o FlightMap.v1.o -o PA03

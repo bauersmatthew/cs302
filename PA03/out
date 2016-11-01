@@ -1,0 +1,41 @@
+Request is to fly from Los Angeles to Houston.
+Flight #823 from Los Angeles to Miami	Cost: $134
+Flight #774 from Miami to Atlanta	Cost: $246
+Flight #701 from Atlanta to Chicago	Cost: $200
+Flight #708 from Chicago to Houston	Cost: $140
+Total Cost ........ $720
+
+Request is to fly from Glendale to Houston.
+Sorry. HPAir does not fly from Glendale to Houston.
+
+Request is to fly from Dallas to Austin.
+Sorry. HPAir does not fly from Dallas to Austin.
+
+Request is to fly from Cleveland to Chicago.
+Flight #709 from Cleveland to Houston	Cost: $130
+Flight #808 from Houston to Chicago	Cost: $175
+Total Cost ........ $305
+
+Request is to fly from Indianapolis to San Francisco.
+Flight #809 from Indianapolis to Los Angeles	Cost: $160
+Flight #819 from Los Angeles to San Francisco	Cost: $108
+Total Cost ........ $268
+
+Request is to fly from San Francisco to Washington.
+Flight #824 from San Francisco to Los Angeles	Cost: $132
+Flight #541 from Los Angeles to Washington	Cost: $310
+Total Cost ........ $442
+
+Request is to fly from Boston to Columbia.
+Flight #504 from Boston to Chicago	Cost: $120
+Flight #708 from Chicago to Houston	Cost: $140
+Flight #802 from Houston to Columbia	Cost: $162
+Total Cost ........ $422
+
+Request is to fly from Miami to Denver.
+Flight #774 from Miami to Atlanta	Cost: $246
+Flight #701 from Atlanta to Chicago	Cost: $200
+Flight #708 from Chicago to Houston	Cost: $140
+Flight #807 from Houston to Denver	Cost: $190
+Total Cost ........ $776
+
