@@ -33,7 +33,7 @@ int **randset_1k, **randset_10k, **randset_100k;
  {
  	while(numInts--)
  	{
- 		*(arr++) = rand()%1000001;
+ 		*(arr++) = (rand()%1000001)+1;
  	}
  }
 
@@ -48,6 +48,7 @@ void fillRandset(int**& set, int nval)
 	set = new int*[10];
 	for(int arrIter = 0; arrIter < 10; arrIter++)
 	{
+        set[arrIter] = new int[nval];
 		fillArrayRandomly(set[arrIter], nval);
 	}
 }
@@ -103,7 +104,7 @@ void testArray(Sorter *sorter, int *arr, int len,
 {
 	// copy array
 	int *arrCpy = new int[len];
-	memcpy(arrCpy, arr, len);
+	memcpy(arrCpy, arr, len*sizeof(int));
 
 	// sort
 	sorter->sortInPlace(arrCpy, len);
@@ -153,6 +154,9 @@ void testRandset(
 		<< "\tAverage CPU Time Used: " << stats.avgCPUTime << "\n"
 		<< "\tAverage Number of Comparisons: " << stats.avgNumComparisons << "\n"
 		<< "\tAverage Number of Swaps: " << stats.avgNumSwaps << "\n\n";
+        
+    // reset sorter
+    sorter->resetStats();
 }
 
 /**

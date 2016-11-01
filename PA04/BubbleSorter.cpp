@@ -34,5 +34,6 @@ void BubbleSorter::sortInPlace(int *arr, int len)
 		}
 	}
 	while(oneSwapped);
-	totCPUTime += (int)(clock() - startCPU);
+	totCPUTime += clock() - startCPU;
+    sortsRun++;
 }

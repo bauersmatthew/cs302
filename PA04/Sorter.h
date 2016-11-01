@@ -26,9 +26,9 @@ class Sorter
 {
 protected:
 	int sortsRun; // the number of datasets sorted
-	int totCPUTime; // the total number of CPU time
-	int totNumComparisons; // the total number of comparisons
-	int totNumSwaps; // the total number of swaps
+	long totCPUTime; // the total number of CPU time
+	long totNumComparisons; // the total number of comparisons
+	long totNumSwaps; // the total number of swaps
 	std::string name; // the name of the sorter
 
 public:

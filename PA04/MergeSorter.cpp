@@ -45,12 +45,12 @@ void MergeSorter::mergeParts(
 	// place whatever's left over
 	if(len1)
 	{
-		memcpy(dest, part1, len1);
+		memcpy(dest, part1, len1*sizeof(int));
 		totNumSwaps += len1;
 	}
 	else
 	{
-		memcpy(dest, part2, len2);
+		memcpy(dest, part2, len2*sizeof(int));
 		totNumSwaps += len2;
 	}
 }
@@ -62,7 +62,7 @@ void MergeSorter::sortRecursive(int *arr, int len)
 		return;
 	}
 	int *arrCpy = new int[len];
-	memcpy(arrCpy, arr, len);
+	memcpy(arrCpy, arr, len*sizeof(int));
 
 	// len/2 --> floor(len/2) b/c int arithmetic
 	sortRecursive(arrCpy, len/2);
@@ -70,7 +70,7 @@ void MergeSorter::sortRecursive(int *arr, int len)
 
 	mergeParts(
 		arrCpy, len/2,
-		arrCpy+(len/2), (len/2)+1,
+		arrCpy+(len/2), len-(len/2),
 		arr);
 }
 
@@ -78,5 +78,6 @@ void MergeSorter::sortInPlace(int *arr, int len)
 {
 	long startCPU = (long)clock();
 	sortRecursive(arr, len);
-	totCPUTime += (int)(clock() - startCPU);
+	totCPUTime += clock() - startCPU;
+    sortsRun++;
 }

@@ -1,0 +1,57 @@
+--------------------
+Testing Sorter: Bubble Sorter
+Testing set with n=1000...
+	Average CPU Time Used: 10000
+	Average Number of Comparisons: 955943
+	Average Number of Swaps: 249127
+
+Testing set with n=10000...
+	Average CPU Time Used: 614000
+	Average Number of Comparisons: 9.87361e+07
+	Average Number of Swaps: 2.50025e+07
+
+Testing set with n=100000...
+	Average CPU Time Used: 6.1887e+07
+	Average Number of Comparisons: 9.95777e+09
+	Average Number of Swaps: 2.50123e+09
+
+--------------------
+
+--------------------
+Testing Sorter: Merge Sorter
+Testing set with n=1000...
+	Average CPU Time Used: 0
+	Average Number of Comparisons: 8716.1
+	Average Number of Swaps: 9976
+
+Testing set with n=10000...
+	Average CPU Time Used: 1000
+	Average Number of Comparisons: 120479
+	Average Number of Swaps: 133616
+
+Testing set with n=100000...
+	Average CPU Time Used: 20000
+	Average Number of Comparisons: 1.53639e+06
+	Average Number of Swaps: 1.66893e+06
+
+--------------------
+
+--------------------
+Testing Sorter: Counting Sorter
+Testing set with n=1000...
+	Average CPU Time Used: 2000
+	Average Number of Comparisons: 0
+	Average Number of Swaps: 1000
+
+Testing set with n=10000...
+	Average CPU Time Used: 3000
+	Average Number of Comparisons: 0
+	Average Number of Swaps: 10000
+
+Testing set with n=100000...
+	Average CPU Time Used: 6000
+	Average Number of Comparisons: 0
+	Average Number of Swaps: 99999.7
+
+--------------------
+
