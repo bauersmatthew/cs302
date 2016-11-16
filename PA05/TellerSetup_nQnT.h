@@ -20,7 +20,7 @@ public:
 	/**
 	 * @copybrief TellerSetup::simulate()
 	 */
-	void simualte(EventQueue *pEq);
-}
+	void simulate(EventQueue *pEq);
+};
 
 #endif

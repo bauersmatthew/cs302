@@ -7,7 +7,7 @@
 #define TELLER_SETUP_H
 
 #include <iostream>
-#include <deque>
+#include <vector>
 #include "EventQueue.h"
 
 class TellerSetup
@@ -118,7 +118,7 @@ public:
  * @brief An EventQueue wrapper that enables tick functionality.
  * @details An EventQueue wrapper that can be "ticked".
  */
-class TickableQueue
+class TickableQueue : public Tickable
 {
 private:
 	EventQueue *eq;
@@ -136,7 +136,7 @@ public:
 	 * @param tll Pointer to the total line length over time counter.
 	 * @param mll Pointer to the max line length counter.
 	 */
-	TickableQueue(EventQueue *evQ, long *tll, int *mll);
+	TickableQueue(EventQueue *evQ, long *tll, long *mll);
 
 	/**
 	 * @brief Register a destination queue for this queue to feed into.

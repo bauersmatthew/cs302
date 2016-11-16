@@ -1,6 +1,7 @@
 #include "TellerSetup_1QnT.h"
 #include "LLEventQueue.h"
 #include <chrono>
+#include <iostream>
 
 using namespace std::chrono;
 
@@ -28,15 +29,18 @@ void TellerSetup_1QnT::simulate(EventQueue *pEq)
 
 	std::vector<Tickable*> toTick;
 
+	std::cerr << "Setting up TickableQueue...\n";
 	// set up tickablequeue; put in first
 	long crTLL=0, crMLL=0;
 	toTick.push_back(new TickableQueue(pEq, &crTLL, &crMLL));
 
 	// set up 1 waitline
+	std::cerr << "Setting up 1 waitline...\n";
 	EventQueue *waitline = new LLEventQueue();
-	toTick[0]->regDestQueue(waitline);
+	((TickableQueue*)toTick[0])->regDestQueue(waitline);
 
 	// set up tellers
+	std::cerr << "Setting up tellers...\n";
 	int crNC=0, crTWT=0, crMWT=0;
 	for(int tlr = 0; tlr < numTellers; tlr++)
 	{
@@ -45,6 +49,7 @@ void TellerSetup_1QnT::simulate(EventQueue *pEq)
 	}
 
 	// run sim
+	std::cerr << "Running siulation loop...\n";
 	int oldNow=0, now=0;
 	while(true)
 	{
@@ -55,9 +60,9 @@ void TellerSetup_1QnT::simulate(EventQueue *pEq)
 			times.push_back(tckbl->whenNext());
 		}
 		now = getEarliestTime(times);
-
 		if(now == -1)
 		{
+			std::cerr << "Exiting simulation loop...\n";
 			// finish sim
 			for(int iter = 1; iter < toTick.size(); iter++)
 			{
@@ -76,6 +81,7 @@ void TellerSetup_1QnT::simulate(EventQueue *pEq)
 	}
 
 	// save stats
+	std::cerr << "Saving stats...\n";
 	totCPUTime +=
 		duration_cast<duration<double>>(
 		high_resolution_clock::now() - start).count();
@@ -86,13 +92,14 @@ void TellerSetup_1QnT::simulate(EventQueue *pEq)
 	totMaxLineLen += crMLL;
 
 	// clean up
+	std::cerr << "Cleaning up...\n";
 	delete waitline;
 	for(int iter = 0; iter < toTick.size(); iter++)
 	{
 		if(iter >= 1)
 		{
-			// tickers only: save idle time
-			totIdleTimePerTeller[iter-1] += ((Ticker*)toTick[iter])->idleTime;
+			// tellers only: save idle time
+			totIdleTimePerTeller[iter-1] += ((Teller*)toTick[iter])->idleTime;
 		}
 		delete toTick[iter];
 	}

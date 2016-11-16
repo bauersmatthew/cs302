@@ -14,7 +14,7 @@ LLEventQueue::LLEventQueue(
 {
 	head = tail = nullptr;
 	len = 0;
-	fillRandomly(num, lobArrival, hibArrival, lobDuration, hibDruation);
+	fillRandomly(num, lobArrival, hibArrival, lobDuration, hibDuration);
 }
 
 LLEventQueue::~LLEventQueue()
@@ -43,8 +43,9 @@ void LLEventQueue::addBack(Event newEv)
 	else
 	{
 		tail->next = new LLEQNode;
-		tail->next->ev = newEv;
-		tail->next->next = nullptr;
+		tail = tail->next;
+		tail->ev = newEv;
+		tail->next = nullptr;
 	}
 }
 

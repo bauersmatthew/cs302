@@ -14,7 +14,7 @@ public:
 	/**
 	 * @brief Cleans up the queue.
 	 */
-	virtual ~EventQueue() =0;
+	virtual ~EventQueue();
 
 	/**
 	 * @brief Get the length of the queue.

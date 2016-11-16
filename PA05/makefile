@@ -18,4 +18,3 @@ $(MAIN): $(OBJS)
 	
 clean:
 	rm *.o
-	rm $(MAIN)

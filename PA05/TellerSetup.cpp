@@ -1,5 +1,6 @@
 #include "TellerSetup.h"
 #include <stdarg.h>
+#include <iostream>
 
 // TELLERSETUP DEFS
 
@@ -11,8 +12,8 @@ void TellerSetup::printStats(std::ostream& out)
 		<< "\t\tCPU Time: " << totCPUTime/numTrials << " s\n"
 		<< "\t\tVirtual Time: " << totVirtTime/numTrials << " units\n"
 		<< "\tWait Times...\n"
-		<< "\t\tAverage per Customer: " << totAvgWaitTime/numTrials << " units\n";
-		<< "\t\tMaximum per Customer: " << totMaxWaitTime/numTrials << " units\n";
+		<< "\t\tAverage per Customer: " << totAvgWaitTime/numTrials << " units\n"
+		<< "\t\tMaximum per Customer: " << totMaxWaitTime/numTrials << " units\n"
 		<< "\tLine Lengths...\n"
 		<< "\t\tAverage: " << totAvgLineLen/numTrials << "\n"
 		<< "\t\tMaximum: " << totMaxLineLen/numTrials << "\n"
@@ -28,8 +29,9 @@ void TellerSetup::printStats(std::ostream& out)
 
 // TELLER DEFS
 
-Teller::Teller(int *nc, int *twt, int *mwt, int *tll, int *mll)
+Teller::Teller(EventQueue *ln, int *nc, int *twt, int *mwt)
 {
+	line = ln;
 	numCustomers = nc;
 	totWaitTime = twt;
 	maxWaitTime = mwt;
@@ -58,7 +60,7 @@ void Teller::tick(int now)
 			Event customer = line->peekFront();
 			line->popFront();
 
-			*totWaitTime += (now - customer.arrival)
+			*totWaitTime += (now - customer.arrival);
 			*maxWaitTime = (now - customer.arrival) > *maxWaitTime ?
 				(now - customer.arrival) : *maxWaitTime;
 
@@ -78,7 +80,7 @@ int Teller::whenNext()
 	{
 		if(!line->isEmpty())
 		{
-			arrvl = line->peekFront().arrival;
+			int arrvl = line->peekFront().arrival;
 			// return idle start time if arrived while busy else arrival time
 			if(arrvl < idleStart)
 			{
@@ -104,15 +106,15 @@ void Teller::finish(int now)
 
 
 // TICKABLEQUEUE DEFS
-TickableQueue::TickableQueue(EventQueue *evQ)
+TickableQueue::TickableQueue(EventQueue *evQ, long *tll, long *mll)
 {
 	eq = evQ;
 	totLineLen = tll;
-	maxLineLne = mll;
+	maxLineLen = mll;
 	lastTicked = 0;
 }
 
-void TickableQueue::regDestQueue(WaitLine *dest)
+void TickableQueue::regDestQueue(EventQueue *dest)
 {
 	destLines.push_back(dest);
 }
@@ -129,7 +131,7 @@ void TickableQueue::tick(int now)
 	{
 		if(destLines.empty())
 		{
-			return -1; // shouldn't happen
+			return; // shouldn't happen
 		}
 		// find the shortest dest queue
 		EventQueue *shortest = destLines[0];
@@ -152,7 +154,7 @@ void TickableQueue::tick(int now)
 	lastTicked = now;
 }
 
-int Tickable::whenNext()
+int TickableQueue::whenNext()
 {
 	if(eq->isEmpty())
 	{

@@ -26,18 +26,21 @@ void TellerSetup_nQnT::simulate(EventQueue *pEq)
 	std::vector<Tickable*> toTick;
 
 	// set up tickablequeue; put in first
+	std::cerr << "Setting up TickableQueue...\n";
 	long crTLL=0, crMLL=0;
 	toTick.push_back(new TickableQueue(pEq, &crTLL, &crMLL));
 
 	// set up n waitlines
+	std::cerr << "Setting up waitlines...\n";
 	std::vector<EventQueue*> waitlines;
-	for(int iter = 0; iter < numlines; iter++)
+	for(int iter = 0; iter < numLines; iter++)
 	{
 		waitlines.push_back(new LLEventQueue());
-		toTick[0]->regDestQueue(waitlines[iter]);
+		((TickableQueue*)toTick[0])->regDestQueue(waitlines[iter]);
 	}
 
 	// set up tellers
+	std::cerr << "Setting up tellers...\n";
 	int crNC=0, crTWT=0, crMWT=0;
 	for(int tlr = 0; tlr < numTellers; tlr++)
 	{
@@ -45,6 +48,7 @@ void TellerSetup_nQnT::simulate(EventQueue *pEq)
 	}
 
 	// run sim
+	std::cerr << "Running simulation loop...\n";
 	int oldNow = 0;
 	int now = 0;
 	while(true)
@@ -59,6 +63,7 @@ void TellerSetup_nQnT::simulate(EventQueue *pEq)
 
 		if(now == -1)
 		{
+			std::cerr << "Exiting simulation loop...\n";
 			// finish sim
 			for(int iter = 1; iter < toTick.size(); iter++)
 			{
@@ -77,8 +82,9 @@ void TellerSetup_nQnT::simulate(EventQueue *pEq)
 	}
 
 	// save stats
-	totCPTime +=
-		duration_cast<duration<<double>>(
+	std::cerr << "Saving stats...\n";
+	totCPUTime +=
+		duration_cast<duration<double>>(
 		high_resolution_clock::now() - start).count();
 	totVirtTime += oldNow;
 	totAvgWaitTime += float(crTWT)/float(crNC);
@@ -87,6 +93,7 @@ void TellerSetup_nQnT::simulate(EventQueue *pEq)
 	totMaxLineLen += crMLL;
 
 	// clean up
+	std::cerr << "Cleaning up...\n";
 	for(auto wl : waitlines)
 	{
 		delete wl;
@@ -95,8 +102,8 @@ void TellerSetup_nQnT::simulate(EventQueue *pEq)
 	{
 		if(iter >= 1)
 		{
-			// tickers only: save idle time
-			totIdleTimePerTeller[iter-1] += ((Ticker*)toTick[iter])->idleTime;
+			// tellers only: save idle time
+			totIdleTimePerTeller[iter-1] += ((Teller*)toTick[iter])->idleTime;
 		}
 		delete toTick[iter];
 	}
