@@ -1,0 +1,43 @@
+Teller Setup: 1 Lines, 1Tellers
+	Average Simulation Time...
+		CPU Time: inf s
+		Virtual Time: inf units
+	Wait Times...
+		Average per Customer: -inf units
+		Maximum per Customer: inf units
+	Line Lengths...
+		Average: inf
+		Maximum: inf
+	Total Idle Time per Teller:
+Teller 1: 6
+
+Teller Setup: 3 Lines, 3Tellers
+	Average Simulation Time...
+		CPU Time: 8.68824e-30 s
+		Virtual Time: 1.06939e-23 units
+	Wait Times...
+		Average per Customer: -2.83947e-26 units
+		Maximum per Customer: 1.04822e-23 units
+	Line Lengths...
+		Average: 3.45972e-26
+		Maximum: 2.07468e-25
+	Total Idle Time per Teller:
+Teller 1: 3
+Teller 2: 5.05252e+07
+Teller 3: 5.05252e+07
+
+Teller Setup: 1 Lines, 3Tellers
+	Average Simulation Time...
+		CPU Time: inf s
+		Virtual Time: inf units
+	Wait Times...
+		Average per Customer: inf units
+		Maximum per Customer: inf units
+	Line Lengths...
+		Average: inf
+		Maximum: inf
+	Total Idle Time per Teller:
+Teller 1: 153
+Teller 2: 233
+Teller 3: 251
+

@@ -1,0 +1,171 @@
+\hypertarget{class_teller}{}\section{Teller Class Reference}
+\label{class_teller}\index{Teller@{Teller}}
+
+
+Models a bank teller.  
+
+
+
+
+{\ttfamily \#include $<$Teller\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for Teller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{class_teller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Teller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_teller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_teller_ad4e81dd3ee7aa9fec8464e97754a89f2}{Teller} (\hyperlink{class_event_queue}{Event\+Queue} $\ast$ln, int $\ast$nc, double $\ast$twt, double $\ast$mwt)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{class_teller}{Teller} with given stat vars and source line. \end{DoxyCompactList}\item 
+void \hyperlink{class_teller_aa8cf7bb201a88b959b42a3c4358565c3}{tick} (int now)
+\item 
+int \hyperlink{class_teller_a10106b3a286c21870bde1751aec0f9b6}{when\+Next} ()
+\item 
+void \hyperlink{class_teller_aaedc2bff64e9223f295cf9f05226b12e}{finish} (int now)
+\begin{DoxyCompactList}\small\item\em Finishes the \hyperlink{class_teller}{Teller} model. Should be called at sim end. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_teller_a09db98c5db957cd1937b3b5e9fa2820b}{idle\+Time}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_event_queue}{Event\+Queue} $\ast$ \hyperlink{class_teller_ad43bf4c0eeee493a6dce005ba95527a4}{line}
+\item 
+int $\ast$ \hyperlink{class_teller_aeb31b3f7b01ecc86be2aecf9899d29cd}{num\+Customers}
+\item 
+double $\ast$ \hyperlink{class_teller_a0fe70e6fab108e4f1f478835d0856b38}{tot\+Wait\+Time}
+\item 
+double $\ast$ \hyperlink{class_teller_af14fc15803a686d5a4a94e5538f15077}{max\+Wait\+Time}
+\item 
+int \hyperlink{class_teller_a7b9a77eab83010cba4e56ec487c90f9a}{idle\+Start}
+\item 
+bool \hyperlink{class_teller_a755cb7ba947e09ef875201bdaa38736e}{busy}
+\item 
+int \hyperlink{class_teller_a7ca8b1718a8dfcc84c300496430981af}{busy\+Until}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Models a bank teller. 
+
+For use by \hyperlink{class_teller_setup}{Teller\+Setup}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Teller@{Teller}!Teller@{Teller}}
+\index{Teller@{Teller}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{Teller(\+Event\+Queue $\ast$ln, int $\ast$nc, double $\ast$twt, double $\ast$mwt)}{Teller(EventQueue *ln, int *nc, double *twt, double *mwt)}}]{\setlength{\rightskip}{0pt plus 5cm}Teller\+::\+Teller (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\+Queue} $\ast$}]{ln, }
+\item[{int $\ast$}]{nc, }
+\item[{double $\ast$}]{twt, }
+\item[{double $\ast$}]{mwt}
+\end{DoxyParamCaption}
+)}\hypertarget{class_teller_ad4e81dd3ee7aa9fec8464e97754a89f2}{}\label{class_teller_ad4e81dd3ee7aa9fec8464e97754a89f2}
+
+
+Construct a \hyperlink{class_teller}{Teller} with given stat vars and source line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ln} & The line to draw customers from. \\
+\hline
+{\em nc} & Pointer to the customer counter. \\
+\hline
+{\em twt} & Pointer to the wait time counter. \\
+\hline
+{\em mwt} & Pointer to the max wait time. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Teller@{Teller}!finish@{finish}}
+\index{finish@{finish}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{finish(int now)}{finish(int now)}}]{\setlength{\rightskip}{0pt plus 5cm}void Teller\+::finish (
+\begin{DoxyParamCaption}
+\item[{int}]{now}
+\end{DoxyParamCaption}
+)}\hypertarget{class_teller_aaedc2bff64e9223f295cf9f05226b12e}{}\label{class_teller_aaedc2bff64e9223f295cf9f05226b12e}
+
+
+Finishes the \hyperlink{class_teller}{Teller} model. Should be called at sim end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em now} & The last tick. \\
+\hline
+\end{DoxyParams}
+\index{Teller@{Teller}!tick@{tick}}
+\index{tick@{tick}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{tick(int now)}{tick(int now)}}]{\setlength{\rightskip}{0pt plus 5cm}void Teller\+::tick (
+\begin{DoxyParamCaption}
+\item[{int}]{now}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_teller_aa8cf7bb201a88b959b42a3c4358565c3}{}\label{class_teller_aa8cf7bb201a88b959b42a3c4358565c3}
+Do one tick at the given time. 
+
+Implements \hyperlink{class_tickable_a0ca181a29c3e1539e4221d2cbcfa83c2}{Tickable}.
+
+\index{Teller@{Teller}!when\+Next@{when\+Next}}
+\index{when\+Next@{when\+Next}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{when\+Next()}{whenNext()}}]{\setlength{\rightskip}{0pt plus 5cm}int Teller\+::when\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_teller_a10106b3a286c21870bde1751aec0f9b6}{}\label{class_teller_a10106b3a286c21870bde1751aec0f9b6}
+Get when this tickable needs to be ticked next. 
+
+Implements \hyperlink{class_tickable_ac65be54f32d39d1450a37cf4acb1ad15}{Tickable}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Teller@{Teller}!busy@{busy}}
+\index{busy@{busy}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{busy}{busy}}]{\setlength{\rightskip}{0pt plus 5cm}bool Teller\+::busy\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_a755cb7ba947e09ef875201bdaa38736e}{}\label{class_teller_a755cb7ba947e09ef875201bdaa38736e}
+\index{Teller@{Teller}!busy\+Until@{busy\+Until}}
+\index{busy\+Until@{busy\+Until}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{busy\+Until}{busyUntil}}]{\setlength{\rightskip}{0pt plus 5cm}int Teller\+::busy\+Until\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_a7ca8b1718a8dfcc84c300496430981af}{}\label{class_teller_a7ca8b1718a8dfcc84c300496430981af}
+\index{Teller@{Teller}!idle\+Start@{idle\+Start}}
+\index{idle\+Start@{idle\+Start}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{idle\+Start}{idleStart}}]{\setlength{\rightskip}{0pt plus 5cm}int Teller\+::idle\+Start\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_a7b9a77eab83010cba4e56ec487c90f9a}{}\label{class_teller_a7b9a77eab83010cba4e56ec487c90f9a}
+\index{Teller@{Teller}!idle\+Time@{idle\+Time}}
+\index{idle\+Time@{idle\+Time}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{idle\+Time}{idleTime}}]{\setlength{\rightskip}{0pt plus 5cm}int Teller\+::idle\+Time}\hypertarget{class_teller_a09db98c5db957cd1937b3b5e9fa2820b}{}\label{class_teller_a09db98c5db957cd1937b3b5e9fa2820b}
+\index{Teller@{Teller}!line@{line}}
+\index{line@{line}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{line}{line}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Queue}$\ast$ Teller\+::line\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_ad43bf4c0eeee493a6dce005ba95527a4}{}\label{class_teller_ad43bf4c0eeee493a6dce005ba95527a4}
+\index{Teller@{Teller}!max\+Wait\+Time@{max\+Wait\+Time}}
+\index{max\+Wait\+Time@{max\+Wait\+Time}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{max\+Wait\+Time}{maxWaitTime}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Teller\+::max\+Wait\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_af14fc15803a686d5a4a94e5538f15077}{}\label{class_teller_af14fc15803a686d5a4a94e5538f15077}
+\index{Teller@{Teller}!num\+Customers@{num\+Customers}}
+\index{num\+Customers@{num\+Customers}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{num\+Customers}{numCustomers}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Teller\+::num\+Customers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_aeb31b3f7b01ecc86be2aecf9899d29cd}{}\label{class_teller_aeb31b3f7b01ecc86be2aecf9899d29cd}
+\index{Teller@{Teller}!tot\+Wait\+Time@{tot\+Wait\+Time}}
+\index{tot\+Wait\+Time@{tot\+Wait\+Time}!Teller@{Teller}}
+\subsubsection[{\texorpdfstring{tot\+Wait\+Time}{totWaitTime}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Teller\+::tot\+Wait\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_a0fe70e6fab108e4f1f478835d0856b38}{}\label{class_teller_a0fe70e6fab108e4f1f478835d0856b38}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_teller_setup_8h}{Teller\+Setup.\+h}\item 
+\hyperlink{_teller_setup_8cpp}{Teller\+Setup.\+cpp}\end{DoxyCompactItemize}

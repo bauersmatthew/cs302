@@ -1,0 +1,283 @@
+\begin{theindex}
+
+  \item {$\sim$\+A\+B\+Event\+Queue}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{8}
+  \item {$\sim$\+Event\+Queue}
+    \subitem {Event\+Queue}, \hyperpage{11}
+  \item {$\sim$\+L\+L\+Event\+Queue}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{15}
+
+  \indexspace
+
+  \item {A\+B\+Event\+Queue}, \hyperpage{7}
+    \subitem {$\sim$\+A\+B\+Event\+Queue}, \hyperpage{8}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{8}
+    \subitem {add\+Back}, \hyperpage{9}
+    \subitem {cap}, \hyperpage{9}
+    \subitem {event\+Array}, \hyperpage{9}
+    \subitem {len}, \hyperpage{9}
+    \subitem {length}, \hyperpage{9}
+    \subitem {peek\+Front}, \hyperpage{9}
+    \subitem {pop\+Front}, \hyperpage{9}
+  \item {A\+B\+Event\+Queue.\+cpp}, \hyperpage{29}
+  \item {A\+B\+Event\+Queue.\+h}, \hyperpage{29}
+  \item {add\+Back}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{9}
+    \subitem {Event\+Queue}, \hyperpage{11}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{15}
+  \item {arrival}
+    \subitem {Event}, \hyperpage{10}
+
+  \indexspace
+
+  \item {busy}
+    \subitem {Teller}, \hyperpage{18}
+  \item {busy\+Until}
+    \subitem {Teller}, \hyperpage{18}
+
+  \indexspace
+
+  \item {cap}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{9}
+
+  \indexspace
+
+  \item {dest\+Lines}
+    \subitem {Tickable\+Queue}, \hyperpage{27}
+  \item {duration}
+    \subitem {Event}, \hyperpage{10}
+
+  \indexspace
+
+  \item {eq}
+    \subitem {Tickable\+Queue}, \hyperpage{27}
+  \item {ev}
+    \subitem {L\+L\+E\+Q\+Node}, \hyperpage{13}
+  \item {Event}, \hyperpage{10}
+    \subitem {arrival}, \hyperpage{10}
+    \subitem {duration}, \hyperpage{10}
+  \item {Event.\+h}, \hyperpage{31}
+  \item {event\+Array}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{9}
+  \item {Event\+Queue}, \hyperpage{10}
+    \subitem {$\sim$\+Event\+Queue}, \hyperpage{11}
+    \subitem {add\+Back}, \hyperpage{11}
+    \subitem {fill\+Randomly}, \hyperpage{11}
+    \subitem {is\+Empty}, \hyperpage{12}
+    \subitem {length}, \hyperpage{12}
+    \subitem {peek\+Front}, \hyperpage{12}
+    \subitem {pop\+Front}, \hyperpage{12}
+  \item {Event\+Queue.\+cpp}, \hyperpage{31}
+  \item {Event\+Queue.\+h}, \hyperpage{32}
+
+  \indexspace
+
+  \item {fill\+Randomly}
+    \subitem {Event\+Queue}, \hyperpage{11}
+  \item {finish}
+    \subitem {Teller}, \hyperpage{18}
+
+  \indexspace
+
+  \item {get\+Earliest\+Time}
+    \subitem {Teller\+Setup.\+cpp}, \hyperpage{37}
+    \subitem {Teller\+Setup.\+h}, \hyperpage{39}
+
+  \indexspace
+
+  \item {head}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{16}
+
+  \indexspace
+
+  \item {idle\+Start}
+    \subitem {Teller}, \hyperpage{18}
+  \item {idle\+Time}
+    \subitem {Teller}, \hyperpage{18}
+  \item {is\+Empty}
+    \subitem {Event\+Queue}, \hyperpage{12}
+
+  \indexspace
+
+  \item {L\+L\+E\+Q\+Node}, \hyperpage{13}
+    \subitem {ev}, \hyperpage{13}
+    \subitem {next}, \hyperpage{13}
+  \item {L\+L\+Event\+Queue}, \hyperpage{14}
+    \subitem {$\sim$\+L\+L\+Event\+Queue}, \hyperpage{15}
+    \subitem {add\+Back}, \hyperpage{15}
+    \subitem {head}, \hyperpage{16}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{15}
+    \subitem {len}, \hyperpage{16}
+    \subitem {length}, \hyperpage{15}
+    \subitem {peek\+Front}, \hyperpage{15}
+    \subitem {pop\+Front}, \hyperpage{16}
+    \subitem {tail}, \hyperpage{16}
+  \item {L\+L\+Event\+Queue.\+cpp}, \hyperpage{33}
+  \item {L\+L\+Event\+Queue.\+h}, \hyperpage{33}
+  \item {last\+Ticked}
+    \subitem {Tickable\+Queue}, \hyperpage{27}
+  \item {len}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{9}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{16}
+  \item {length}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{9}
+    \subitem {Event\+Queue}, \hyperpage{12}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{15}
+  \item {line}
+    \subitem {Teller}, \hyperpage{18}
+
+  \indexspace
+
+  \item {M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL}
+    \subitem {P\+A05.\+cpp}, \hyperpage{36}
+  \item {M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON}
+    \subitem {P\+A05.\+cpp}, \hyperpage{36}
+  \item {M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL}
+    \subitem {P\+A05.\+cpp}, \hyperpage{36}
+  \item {M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON}
+    \subitem {P\+A05.\+cpp}, \hyperpage{36}
+  \item {main}
+    \subitem {P\+A05.\+cpp}, \hyperpage{36}
+  \item {max\+Line\+Len}
+    \subitem {Tickable\+Queue}, \hyperpage{27}
+  \item {max\+Wait\+Time}
+    \subitem {Teller}, \hyperpage{18}
+
+  \indexspace
+
+  \item {N\+U\+M\+\_\+\+E\+V\+E\+N\+TS}
+    \subitem {P\+A05.\+cpp}, \hyperpage{36}
+  \item {next}
+    \subitem {L\+L\+E\+Q\+Node}, \hyperpage{13}
+  \item {num\+Customers}
+    \subitem {Teller}, \hyperpage{18}
+  \item {num\+Lines}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {num\+Tellers}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {num\+Trials}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+
+  \indexspace
+
+  \item {P\+A05.\+cpp}, \hyperpage{35}
+    \subitem {M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL}, \hyperpage{36}
+    \subitem {M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON}, \hyperpage{36}
+    \subitem {M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL}, \hyperpage{36}
+    \subitem {M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON}, \hyperpage{36}
+    \subitem {main}, \hyperpage{36}
+    \subitem {N\+U\+M\+\_\+\+E\+V\+E\+N\+TS}, \hyperpage{36}
+    \subitem {Test\+Setup}, \hyperpage{36}
+  \item {peek\+Front}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{9}
+    \subitem {Event\+Queue}, \hyperpage{12}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{15}
+  \item {pop\+Front}
+    \subitem {A\+B\+Event\+Queue}, \hyperpage{9}
+    \subitem {Event\+Queue}, \hyperpage{12}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{16}
+  \item {print\+Stats}
+    \subitem {Teller\+Setup}, \hyperpage{19}
+
+  \indexspace
+
+  \item {reg\+Dest\+Queue}
+    \subitem {Tickable\+Queue}, \hyperpage{26}
+
+  \indexspace
+
+  \item {simulate}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+    \subitem {Teller\+Setup\+\_\+1\+QnT}, \hyperpage{22}
+    \subitem {Teller\+Setup\+\_\+n\+QnT}, \hyperpage{23}
+
+  \indexspace
+
+  \item {tail}
+    \subitem {L\+L\+Event\+Queue}, \hyperpage{16}
+  \item {Teller}, \hyperpage{16}
+    \subitem {busy}, \hyperpage{18}
+    \subitem {busy\+Until}, \hyperpage{18}
+    \subitem {finish}, \hyperpage{18}
+    \subitem {idle\+Start}, \hyperpage{18}
+    \subitem {idle\+Time}, \hyperpage{18}
+    \subitem {line}, \hyperpage{18}
+    \subitem {max\+Wait\+Time}, \hyperpage{18}
+    \subitem {num\+Customers}, \hyperpage{18}
+    \subitem {Teller}, \hyperpage{17}
+    \subitem {tick}, \hyperpage{18}
+    \subitem {tot\+Wait\+Time}, \hyperpage{18}
+    \subitem {when\+Next}, \hyperpage{18}
+  \item {Teller\+Setup}, \hyperpage{19}
+    \subitem {num\+Lines}, \hyperpage{20}
+    \subitem {num\+Tellers}, \hyperpage{20}
+    \subitem {num\+Trials}, \hyperpage{20}
+    \subitem {print\+Stats}, \hyperpage{19}
+    \subitem {simulate}, \hyperpage{20}
+    \subitem {tot\+Avg\+Line\+Len}, \hyperpage{20}
+    \subitem {tot\+Avg\+Wait\+Time}, \hyperpage{20}
+    \subitem {tot\+C\+P\+U\+Time}, \hyperpage{20}
+    \subitem {tot\+Idle\+Time\+Per\+Teller}, \hyperpage{20}
+    \subitem {tot\+Max\+Line\+Len}, \hyperpage{20}
+    \subitem {tot\+Max\+Wait\+Time}, \hyperpage{20}
+    \subitem {tot\+Virt\+Time}, \hyperpage{20}
+  \item {Teller\+Setup.\+cpp}, \hyperpage{36}
+    \subitem {get\+Earliest\+Time}, \hyperpage{37}
+  \item {Teller\+Setup.\+h}, \hyperpage{37}
+    \subitem {get\+Earliest\+Time}, \hyperpage{39}
+  \item {Teller\+Setup\+\_\+1\+Qn\+T.\+cpp}, \hyperpage{39}
+  \item {Teller\+Setup\+\_\+1\+Qn\+T.\+h}, \hyperpage{40}
+  \item {Teller\+Setup\+\_\+1\+QnT}, \hyperpage{21}
+    \subitem {simulate}, \hyperpage{22}
+    \subitem {Teller\+Setup\+\_\+1\+QnT}, \hyperpage{21}
+  \item {Teller\+Setup\+\_\+n\+Qn\+T.\+cpp}, \hyperpage{42}
+  \item {Teller\+Setup\+\_\+n\+Qn\+T.\+h}, \hyperpage{42}
+  \item {Teller\+Setup\+\_\+n\+QnT}, \hyperpage{22}
+    \subitem {simulate}, \hyperpage{23}
+    \subitem {Teller\+Setup\+\_\+n\+QnT}, \hyperpage{23}
+  \item {Test\+Setup}
+    \subitem {P\+A05.\+cpp}, \hyperpage{36}
+  \item {tick}
+    \subitem {Teller}, \hyperpage{18}
+    \subitem {Tickable}, \hyperpage{24}
+    \subitem {Tickable\+Queue}, \hyperpage{26}
+  \item {Tickable}, \hyperpage{23}
+    \subitem {tick}, \hyperpage{24}
+    \subitem {when\+Next}, \hyperpage{24}
+  \item {Tickable\+Queue}, \hyperpage{25}
+    \subitem {dest\+Lines}, \hyperpage{27}
+    \subitem {eq}, \hyperpage{27}
+    \subitem {last\+Ticked}, \hyperpage{27}
+    \subitem {max\+Line\+Len}, \hyperpage{27}
+    \subitem {reg\+Dest\+Queue}, \hyperpage{26}
+    \subitem {tick}, \hyperpage{26}
+    \subitem {Tickable\+Queue}, \hyperpage{26}
+    \subitem {tot\+Line\+Len}, \hyperpage{27}
+    \subitem {when\+Next}, \hyperpage{26}
+  \item {tot\+Avg\+Line\+Len}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {tot\+Avg\+Wait\+Time}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {tot\+C\+P\+U\+Time}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {tot\+Idle\+Time\+Per\+Teller}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {tot\+Line\+Len}
+    \subitem {Tickable\+Queue}, \hyperpage{27}
+  \item {tot\+Max\+Line\+Len}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {tot\+Max\+Wait\+Time}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {tot\+Virt\+Time}
+    \subitem {Teller\+Setup}, \hyperpage{20}
+  \item {tot\+Wait\+Time}
+    \subitem {Teller}, \hyperpage{18}
+
+  \indexspace
+
+  \item {when\+Next}
+    \subitem {Teller}, \hyperpage{18}
+    \subitem {Tickable}, \hyperpage{24}
+    \subitem {Tickable\+Queue}, \hyperpage{26}
+
+\end{theindex}

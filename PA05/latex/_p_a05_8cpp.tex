@@ -1,0 +1,105 @@
+\hypertarget{_p_a05_8cpp}{}\section{P\+A05.\+cpp File Reference}
+\label{_p_a05_8cpp}\index{P\+A05.\+cpp@{P\+A05.\+cpp}}
+
+
+Main file for C\+S302/\+P\+A05.  
+
+
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Event.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+B\+Event\+Queue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+L\+Event\+Queue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Teller\+Setup\+\_\+1\+Qn\+T.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Teller\+Setup\+\_\+n\+Qn\+T.\+h\char`\"{}}\\*
+Include dependency graph for P\+A05.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_a05_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_p_a05_8cpp_a41b59b08be156a44fb1d0d69c2d3d606}{Test\+Setup} (\hyperlink{class_teller_setup}{Teller\+Setup} $\ast$setup, std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Test the given \hyperlink{class_teller_setup}{Teller\+Setup} on 10 samples. \end{DoxyCompactList}\item 
+int \hyperlink{_p_a05_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Program entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{_p_a05_8cpp_a5da6d9ec042926de0511396589d1a77a}{N\+U\+M\+\_\+\+E\+V\+E\+N\+TS} = 99999
+\begin{DoxyCompactList}\small\item\em The number of events to use per simulation. \end{DoxyCompactList}\item 
+const int \hyperlink{_p_a05_8cpp_aa39d0f8ca69f2dceb1efdb2c8030e34a}{M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL} = 0
+\item 
+const int \hyperlink{_p_a05_8cpp_a39c92f8642d5e116d10a3c45fc60a2c3}{M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL} = 100000
+\item 
+const int \hyperlink{_p_a05_8cpp_af00d30c4c9cd2a4bcd0cb0084bcabd30}{M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON} = 1
+\item 
+const int \hyperlink{_p_a05_8cpp_a2564fde0b4c94421653b40a37597aa62}{M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON} = 100
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main file for C\+S302/\+P\+A05. 
+
+\begin{DoxyAuthor}{Author}
+Matthew Bauer 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{P\+A05.\+cpp@{P\+A05.\+cpp}!main@{main}}
+\index{main@{main}!P\+A05.\+cpp@{P\+A05.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a05_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{_p_a05_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Program entry point. 
+
+\index{P\+A05.\+cpp@{P\+A05.\+cpp}!Test\+Setup@{Test\+Setup}}
+\index{Test\+Setup@{Test\+Setup}!P\+A05.\+cpp@{P\+A05.\+cpp}}
+\subsubsection[{\texorpdfstring{Test\+Setup(\+Teller\+Setup $\ast$setup, std\+::ostream \&out)}{TestSetup(TellerSetup *setup, std::ostream &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Setup (
+\begin{DoxyParamCaption}
+\item[{{\bf Teller\+Setup} $\ast$}]{setup, }
+\item[{std\+::ostream \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_a05_8cpp_a41b59b08be156a44fb1d0d69c2d3d606}{}\label{_p_a05_8cpp_a41b59b08be156a44fb1d0d69c2d3d606}
+
+
+Test the given \hyperlink{class_teller_setup}{Teller\+Setup} on 10 samples. 
+
+Uses array-\/based queues. 
+\begin{DoxyParams}{Parameters}
+{\em p\+EvQ} & A pointer to the \hyperlink{class_event_queue}{Event\+Queue} to test. \\
+\hline
+{\em out} & The stream to send output to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{P\+A05.\+cpp@{P\+A05.\+cpp}!M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL@{M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL}}
+\index{M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL@{M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL}!P\+A05.\+cpp@{P\+A05.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL}{MAX_ARRIVAL}}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+A\+X\+\_\+\+A\+R\+R\+I\+V\+AL = 100000}\hypertarget{_p_a05_8cpp_a39c92f8642d5e116d10a3c45fc60a2c3}{}\label{_p_a05_8cpp_a39c92f8642d5e116d10a3c45fc60a2c3}
+\index{P\+A05.\+cpp@{P\+A05.\+cpp}!M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON}}
+\index{M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON}!P\+A05.\+cpp@{P\+A05.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON}{MAX_DURATION}}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON = 100}\hypertarget{_p_a05_8cpp_a2564fde0b4c94421653b40a37597aa62}{}\label{_p_a05_8cpp_a2564fde0b4c94421653b40a37597aa62}
+\index{P\+A05.\+cpp@{P\+A05.\+cpp}!M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL@{M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL}}
+\index{M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL@{M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL}!P\+A05.\+cpp@{P\+A05.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL}{MIN_ARRIVAL}}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+I\+N\+\_\+\+A\+R\+R\+I\+V\+AL = 0}\hypertarget{_p_a05_8cpp_aa39d0f8ca69f2dceb1efdb2c8030e34a}{}\label{_p_a05_8cpp_aa39d0f8ca69f2dceb1efdb2c8030e34a}
+\index{P\+A05.\+cpp@{P\+A05.\+cpp}!M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON}}
+\index{M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON}!P\+A05.\+cpp@{P\+A05.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON}{MIN_DURATION}}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON = 1}\hypertarget{_p_a05_8cpp_af00d30c4c9cd2a4bcd0cb0084bcabd30}{}\label{_p_a05_8cpp_af00d30c4c9cd2a4bcd0cb0084bcabd30}
+\index{P\+A05.\+cpp@{P\+A05.\+cpp}!N\+U\+M\+\_\+\+E\+V\+E\+N\+TS@{N\+U\+M\+\_\+\+E\+V\+E\+N\+TS}}
+\index{N\+U\+M\+\_\+\+E\+V\+E\+N\+TS@{N\+U\+M\+\_\+\+E\+V\+E\+N\+TS}!P\+A05.\+cpp@{P\+A05.\+cpp}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+\_\+\+E\+V\+E\+N\+TS}{NUM_EVENTS}}]{\setlength{\rightskip}{0pt plus 5cm}const int N\+U\+M\+\_\+\+E\+V\+E\+N\+TS = 99999}\hypertarget{_p_a05_8cpp_a5da6d9ec042926de0511396589d1a77a}{}\label{_p_a05_8cpp_a5da6d9ec042926de0511396589d1a77a}
+
+
+The number of events to use per simulation. 
+

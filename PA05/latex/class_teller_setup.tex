@@ -1,0 +1,124 @@
+\hypertarget{class_teller_setup}{}\section{Teller\+Setup Class Reference}
+\label{class_teller_setup}\index{Teller\+Setup@{Teller\+Setup}}
+
+
+{\ttfamily \#include $<$Teller\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for Teller\+Setup\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_teller_setup__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_teller_setup_a2050cd6f277e76cd662b68cf33396034}{simulate} (\hyperlink{class_event_queue}{Event\+Queue} $\ast$p\+Eq)=0
+\begin{DoxyCompactList}\small\item\em Run the simulation (1 trial). \end{DoxyCompactList}\item 
+void \hyperlink{class_teller_setup_a0a95ca183af3f059b3a78d418f6ce840}{print\+Stats} (std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Output setup stats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_teller_setup_a173e4329c08235e8c4e9ba2621ccc1fa}{num\+Trials}
+\item 
+double \hyperlink{class_teller_setup_ae8ef4ccdd294ced6548359d881f86b0a}{tot\+C\+P\+U\+Time}
+\item 
+double \hyperlink{class_teller_setup_adaeb7d70c8f45a5439f302ff8aaa8f88}{tot\+Virt\+Time}
+\item 
+double \hyperlink{class_teller_setup_a3eefb44531accf95b6a53351a6fa0998}{tot\+Avg\+Wait\+Time}
+\item 
+double \hyperlink{class_teller_setup_ac9453ba402c036596a08cb17f32cd117}{tot\+Max\+Wait\+Time}
+\item 
+double \hyperlink{class_teller_setup_ae8f40bfa4264225d89073489523f5af5}{tot\+Avg\+Line\+Len}
+\item 
+double \hyperlink{class_teller_setup_af54ac3ef30003e2b568e5b525775c7f2}{tot\+Max\+Line\+Len}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{class_teller_setup_a9cec8b17536649bf75d13a37ea5d6503}{tot\+Idle\+Time\+Per\+Teller}
+\item 
+int \hyperlink{class_teller_setup_a13bbfedd5addeb9ee28f08be33d899ae}{num\+Tellers}
+\item 
+int \hyperlink{class_teller_setup_a4020566b4410400d984ced7c44424390}{num\+Lines}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Teller\+Setup@{Teller\+Setup}!print\+Stats@{print\+Stats}}
+\index{print\+Stats@{print\+Stats}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{print\+Stats(std\+::ostream \&out)}{printStats(std::ostream &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void Teller\+Setup\+::print\+Stats (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{class_teller_setup_a0a95ca183af3f059b3a78d418f6ce840}{}\label{class_teller_setup_a0a95ca183af3f059b3a78d418f6ce840}
+
+
+Output setup stats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & The stream to write to. \\
+\hline
+\end{DoxyParams}
+\index{Teller\+Setup@{Teller\+Setup}!simulate@{simulate}}
+\index{simulate@{simulate}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{simulate(\+Event\+Queue $\ast$p\+Eq)=0}{simulate(EventQueue *pEq)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Teller\+Setup\+::simulate (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\+Queue} $\ast$}]{p\+Eq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_teller_setup_a2050cd6f277e76cd662b68cf33396034}{}\label{class_teller_setup_a2050cd6f277e76cd662b68cf33396034}
+
+
+Run the simulation (1 trial). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Eq} & Pointer to the \hyperlink{class_event_queue}{Event\+Queue} of events to feed the simulation. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_teller_setup__1_qn_t_a99b00d1025e46b359f6d1f05f51ebde1}{Teller\+Setup\+\_\+1\+QnT}, and \hyperlink{class_teller_setup__n_qn_t_a2fcbc047bcbdc25f1d123fe65ee80625}{Teller\+Setup\+\_\+n\+QnT}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Teller\+Setup@{Teller\+Setup}!num\+Lines@{num\+Lines}}
+\index{num\+Lines@{num\+Lines}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{num\+Lines}{numLines}}]{\setlength{\rightskip}{0pt plus 5cm}int Teller\+Setup\+::num\+Lines\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_a4020566b4410400d984ced7c44424390}{}\label{class_teller_setup_a4020566b4410400d984ced7c44424390}
+\index{Teller\+Setup@{Teller\+Setup}!num\+Tellers@{num\+Tellers}}
+\index{num\+Tellers@{num\+Tellers}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{num\+Tellers}{numTellers}}]{\setlength{\rightskip}{0pt plus 5cm}int Teller\+Setup\+::num\+Tellers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_a13bbfedd5addeb9ee28f08be33d899ae}{}\label{class_teller_setup_a13bbfedd5addeb9ee28f08be33d899ae}
+\index{Teller\+Setup@{Teller\+Setup}!num\+Trials@{num\+Trials}}
+\index{num\+Trials@{num\+Trials}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{num\+Trials}{numTrials}}]{\setlength{\rightskip}{0pt plus 5cm}double Teller\+Setup\+::num\+Trials\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_a173e4329c08235e8c4e9ba2621ccc1fa}{}\label{class_teller_setup_a173e4329c08235e8c4e9ba2621ccc1fa}
+\index{Teller\+Setup@{Teller\+Setup}!tot\+Avg\+Line\+Len@{tot\+Avg\+Line\+Len}}
+\index{tot\+Avg\+Line\+Len@{tot\+Avg\+Line\+Len}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{tot\+Avg\+Line\+Len}{totAvgLineLen}}]{\setlength{\rightskip}{0pt plus 5cm}double Teller\+Setup\+::tot\+Avg\+Line\+Len\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_ae8f40bfa4264225d89073489523f5af5}{}\label{class_teller_setup_ae8f40bfa4264225d89073489523f5af5}
+\index{Teller\+Setup@{Teller\+Setup}!tot\+Avg\+Wait\+Time@{tot\+Avg\+Wait\+Time}}
+\index{tot\+Avg\+Wait\+Time@{tot\+Avg\+Wait\+Time}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{tot\+Avg\+Wait\+Time}{totAvgWaitTime}}]{\setlength{\rightskip}{0pt plus 5cm}double Teller\+Setup\+::tot\+Avg\+Wait\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_a3eefb44531accf95b6a53351a6fa0998}{}\label{class_teller_setup_a3eefb44531accf95b6a53351a6fa0998}
+\index{Teller\+Setup@{Teller\+Setup}!tot\+C\+P\+U\+Time@{tot\+C\+P\+U\+Time}}
+\index{tot\+C\+P\+U\+Time@{tot\+C\+P\+U\+Time}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{tot\+C\+P\+U\+Time}{totCPUTime}}]{\setlength{\rightskip}{0pt plus 5cm}double Teller\+Setup\+::tot\+C\+P\+U\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_ae8ef4ccdd294ced6548359d881f86b0a}{}\label{class_teller_setup_ae8ef4ccdd294ced6548359d881f86b0a}
+\index{Teller\+Setup@{Teller\+Setup}!tot\+Idle\+Time\+Per\+Teller@{tot\+Idle\+Time\+Per\+Teller}}
+\index{tot\+Idle\+Time\+Per\+Teller@{tot\+Idle\+Time\+Per\+Teller}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{tot\+Idle\+Time\+Per\+Teller}{totIdleTimePerTeller}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Teller\+Setup\+::tot\+Idle\+Time\+Per\+Teller\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_a9cec8b17536649bf75d13a37ea5d6503}{}\label{class_teller_setup_a9cec8b17536649bf75d13a37ea5d6503}
+\index{Teller\+Setup@{Teller\+Setup}!tot\+Max\+Line\+Len@{tot\+Max\+Line\+Len}}
+\index{tot\+Max\+Line\+Len@{tot\+Max\+Line\+Len}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{tot\+Max\+Line\+Len}{totMaxLineLen}}]{\setlength{\rightskip}{0pt plus 5cm}double Teller\+Setup\+::tot\+Max\+Line\+Len\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_af54ac3ef30003e2b568e5b525775c7f2}{}\label{class_teller_setup_af54ac3ef30003e2b568e5b525775c7f2}
+\index{Teller\+Setup@{Teller\+Setup}!tot\+Max\+Wait\+Time@{tot\+Max\+Wait\+Time}}
+\index{tot\+Max\+Wait\+Time@{tot\+Max\+Wait\+Time}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{tot\+Max\+Wait\+Time}{totMaxWaitTime}}]{\setlength{\rightskip}{0pt plus 5cm}double Teller\+Setup\+::tot\+Max\+Wait\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_ac9453ba402c036596a08cb17f32cd117}{}\label{class_teller_setup_ac9453ba402c036596a08cb17f32cd117}
+\index{Teller\+Setup@{Teller\+Setup}!tot\+Virt\+Time@{tot\+Virt\+Time}}
+\index{tot\+Virt\+Time@{tot\+Virt\+Time}!Teller\+Setup@{Teller\+Setup}}
+\subsubsection[{\texorpdfstring{tot\+Virt\+Time}{totVirtTime}}]{\setlength{\rightskip}{0pt plus 5cm}double Teller\+Setup\+::tot\+Virt\+Time\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_teller_setup_adaeb7d70c8f45a5439f302ff8aaa8f88}{}\label{class_teller_setup_adaeb7d70c8f45a5439f302ff8aaa8f88}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_teller_setup_8h}{Teller\+Setup.\+h}\item 
+\hyperlink{_teller_setup_8cpp}{Teller\+Setup.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,150 @@
+\hypertarget{class_tickable_queue}{}\section{Tickable\+Queue Class Reference}
+\label{class_tickable_queue}\index{Tickable\+Queue@{Tickable\+Queue}}
+
+
+An \hyperlink{class_event_queue}{Event\+Queue} wrapper that enables tick functionality.  
+
+
+
+
+{\ttfamily \#include $<$Teller\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for Tickable\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_tickable_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tickable\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_tickable_queue__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tickable_queue_ae4bc32b25ba1dc036173444df9c92d91}{Tickable\+Queue} (\hyperlink{class_event_queue}{Event\+Queue} $\ast$evQ, double $\ast$tll, double $\ast$mll)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{class_tickable_queue}{Tickable\+Queue} around the given \hyperlink{class_event_queue}{Event\+Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{class_tickable_queue_ac0a0fb1ed5312a1e93f471ae12e0238e}{reg\+Dest\+Queue} (\hyperlink{class_event_queue}{Event\+Queue} $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Register a destination queue for this queue to feed into. \end{DoxyCompactList}\item 
+void \hyperlink{class_tickable_queue_afabd7085cb5f7cba4286246d69f42211}{tick} (int now)
+\item 
+int \hyperlink{class_tickable_queue_a7ce766623b9b1610147b920018de5066}{when\+Next} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_event_queue}{Event\+Queue} $\ast$ \hyperlink{class_tickable_queue_ad14bee370bdfb8db2550fa3fd7a11a3a}{eq}
+\item 
+std\+::vector$<$ \hyperlink{class_event_queue}{Event\+Queue} $\ast$ $>$ \hyperlink{class_tickable_queue_a44b1ef6bc662fc500030f35a4f10e73a}{dest\+Lines}
+\item 
+double $\ast$ \hyperlink{class_tickable_queue_a29b6a86071a7c56798a5a8633435260e}{tot\+Line\+Len}
+\item 
+double $\ast$ \hyperlink{class_tickable_queue_a86b7e60ef45f0405279725058820f4a8}{max\+Line\+Len}
+\item 
+int \hyperlink{class_tickable_queue_a1bab2d5f40fb2a9f8ba171239843f422}{last\+Ticked}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An \hyperlink{class_event_queue}{Event\+Queue} wrapper that enables tick functionality. 
+
+An \hyperlink{class_event_queue}{Event\+Queue} wrapper that can be \char`\"{}ticked\char`\"{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Tickable\+Queue@{Tickable\+Queue}!Tickable\+Queue@{Tickable\+Queue}}
+\index{Tickable\+Queue@{Tickable\+Queue}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{Tickable\+Queue(\+Event\+Queue $\ast$ev\+Q, double $\ast$tll, double $\ast$mll)}{TickableQueue(EventQueue *evQ, double *tll, double *mll)}}]{\setlength{\rightskip}{0pt plus 5cm}Tickable\+Queue\+::\+Tickable\+Queue (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\+Queue} $\ast$}]{evQ, }
+\item[{double $\ast$}]{tll, }
+\item[{double $\ast$}]{mll}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tickable_queue_ae4bc32b25ba1dc036173444df9c92d91}{}\label{class_tickable_queue_ae4bc32b25ba1dc036173444df9c92d91}
+
+
+Constructs a \hyperlink{class_tickable_queue}{Tickable\+Queue} around the given \hyperlink{class_event_queue}{Event\+Queue}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evQ} & The \hyperlink{class_event_queue}{Event\+Queue} to wrap. \\
+\hline
+{\em tll} & Pointer to the total line length over time counter. \\
+\hline
+{\em mll} & Pointer to the max line length counter. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Tickable\+Queue@{Tickable\+Queue}!reg\+Dest\+Queue@{reg\+Dest\+Queue}}
+\index{reg\+Dest\+Queue@{reg\+Dest\+Queue}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{reg\+Dest\+Queue(\+Event\+Queue $\ast$dest)}{regDestQueue(EventQueue *dest)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tickable\+Queue\+::reg\+Dest\+Queue (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\+Queue} $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tickable_queue_ac0a0fb1ed5312a1e93f471ae12e0238e}{}\label{class_tickable_queue_ac0a0fb1ed5312a1e93f471ae12e0238e}
+
+
+Register a destination queue for this queue to feed into. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The queue to register. \\
+\hline
+\end{DoxyParams}
+\index{Tickable\+Queue@{Tickable\+Queue}!tick@{tick}}
+\index{tick@{tick}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{tick(int now)}{tick(int now)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tickable\+Queue\+::tick (
+\begin{DoxyParamCaption}
+\item[{int}]{now}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_tickable_queue_afabd7085cb5f7cba4286246d69f42211}{}\label{class_tickable_queue_afabd7085cb5f7cba4286246d69f42211}
+Do one tick at the given time. 
+
+Implements \hyperlink{class_tickable_a0ca181a29c3e1539e4221d2cbcfa83c2}{Tickable}.
+
+\index{Tickable\+Queue@{Tickable\+Queue}!when\+Next@{when\+Next}}
+\index{when\+Next@{when\+Next}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{when\+Next()}{whenNext()}}]{\setlength{\rightskip}{0pt plus 5cm}int Tickable\+Queue\+::when\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_tickable_queue_a7ce766623b9b1610147b920018de5066}{}\label{class_tickable_queue_a7ce766623b9b1610147b920018de5066}
+Get when this tickable needs to be ticked next. 
+
+Implements \hyperlink{class_tickable_ac65be54f32d39d1450a37cf4acb1ad15}{Tickable}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Tickable\+Queue@{Tickable\+Queue}!dest\+Lines@{dest\+Lines}}
+\index{dest\+Lines@{dest\+Lines}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{dest\+Lines}{destLines}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Event\+Queue}$\ast$$>$ Tickable\+Queue\+::dest\+Lines\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_tickable_queue_a44b1ef6bc662fc500030f35a4f10e73a}{}\label{class_tickable_queue_a44b1ef6bc662fc500030f35a4f10e73a}
+\index{Tickable\+Queue@{Tickable\+Queue}!eq@{eq}}
+\index{eq@{eq}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{eq}{eq}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Queue}$\ast$ Tickable\+Queue\+::eq\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_tickable_queue_ad14bee370bdfb8db2550fa3fd7a11a3a}{}\label{class_tickable_queue_ad14bee370bdfb8db2550fa3fd7a11a3a}
+\index{Tickable\+Queue@{Tickable\+Queue}!last\+Ticked@{last\+Ticked}}
+\index{last\+Ticked@{last\+Ticked}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{last\+Ticked}{lastTicked}}]{\setlength{\rightskip}{0pt plus 5cm}int Tickable\+Queue\+::last\+Ticked\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_tickable_queue_a1bab2d5f40fb2a9f8ba171239843f422}{}\label{class_tickable_queue_a1bab2d5f40fb2a9f8ba171239843f422}
+\index{Tickable\+Queue@{Tickable\+Queue}!max\+Line\+Len@{max\+Line\+Len}}
+\index{max\+Line\+Len@{max\+Line\+Len}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{max\+Line\+Len}{maxLineLen}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Tickable\+Queue\+::max\+Line\+Len\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_tickable_queue_a86b7e60ef45f0405279725058820f4a8}{}\label{class_tickable_queue_a86b7e60ef45f0405279725058820f4a8}
+\index{Tickable\+Queue@{Tickable\+Queue}!tot\+Line\+Len@{tot\+Line\+Len}}
+\index{tot\+Line\+Len@{tot\+Line\+Len}!Tickable\+Queue@{Tickable\+Queue}}
+\subsubsection[{\texorpdfstring{tot\+Line\+Len}{totLineLen}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Tickable\+Queue\+::tot\+Line\+Len\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_tickable_queue_a29b6a86071a7c56798a5a8633435260e}{}\label{class_tickable_queue_a29b6a86071a7c56798a5a8633435260e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_teller_setup_8h}{Teller\+Setup.\+h}\item 
+\hyperlink{_teller_setup_8cpp}{Teller\+Setup.\+cpp}\end{DoxyCompactItemize}

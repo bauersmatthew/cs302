@@ -1,0 +1,69 @@
+\hypertarget{_teller_setup_8h}{}\section{Teller\+Setup.\+h File Reference}
+\label{_teller_setup_8h}\index{Teller\+Setup.\+h@{Teller\+Setup.\+h}}
+
+
+Declares the \hyperlink{class_teller_setup}{Teller\+Setup} abstract class.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Event\+Queue.\+h\char`\"{}}\\*
+Include dependency graph for Teller\+Setup.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{_teller_setup_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_teller_setup_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_teller_setup}{Teller\+Setup}
+\item 
+class \hyperlink{class_tickable}{Tickable}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{class_tickable}{Tickable} object. \end{DoxyCompactList}\item 
+class \hyperlink{class_teller}{Teller}
+\begin{DoxyCompactList}\small\item\em Models a bank teller. \end{DoxyCompactList}\item 
+class \hyperlink{class_tickable_queue}{Tickable\+Queue}
+\begin{DoxyCompactList}\small\item\em An \hyperlink{class_event_queue}{Event\+Queue} wrapper that enables tick functionality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_teller_setup_8h_ae065b9357496e41e5ca7db6df6287b82}{get\+Earliest\+Time} (const std\+::vector$<$ int $>$ \&times)
+\begin{DoxyCompactList}\small\item\em Take the min of the given numbers, with -\/1 values excluded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Declares the \hyperlink{class_teller_setup}{Teller\+Setup} abstract class. 
+
+\begin{DoxyAuthor}{Author}
+Matthew Bauer 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{Teller\+Setup.\+h@{Teller\+Setup.\+h}!get\+Earliest\+Time@{get\+Earliest\+Time}}
+\index{get\+Earliest\+Time@{get\+Earliest\+Time}!Teller\+Setup.\+h@{Teller\+Setup.\+h}}
+\subsubsection[{\texorpdfstring{get\+Earliest\+Time(const std\+::vector$<$ int $>$ \&times)}{getEarliestTime(const std::vector< int > &times)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Earliest\+Time (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{times}
+\end{DoxyParamCaption}
+)}\hypertarget{_teller_setup_8h_ae065b9357496e41e5ca7db6df6287b82}{}\label{_teller_setup_8h_ae065b9357496e41e5ca7db6df6287b82}
+
+
+Take the min of the given numbers, with -\/1 values excluded. 
+
+For use by \hyperlink{class_teller_setup}{Teller\+Setup}. 
+\begin{DoxyParams}{Parameters}
+{\em times} & The times. \\
+\hline
+\end{DoxyParams}

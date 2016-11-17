@@ -1,0 +1,181 @@
+\hypertarget{class_a_b_event_queue}{}\section{A\+B\+Event\+Queue Class Reference}
+\label{class_a_b_event_queue}\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+
+
+An Array-\/\+Based \hyperlink{struct_event}{Event} Queue.  
+
+
+
+
+{\ttfamily \#include $<$A\+B\+Event\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for A\+B\+Event\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_a_b_event_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+B\+Event\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_a_b_event_queue__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_b_event_queue_a8e2c4bb3d9315eb6fe227250d0d67cd7}{A\+B\+Event\+Queue} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructs an empty queue with given capacity. \end{DoxyCompactList}\item 
+\hyperlink{class_a_b_event_queue_a260b9f55c3ee4d3eae601e03ceb168ea}{A\+B\+Event\+Queue} (int capacity, int lob\+Arrival, int hib\+Arrival, int lob\+Duration, int hib\+Duration)
+\begin{DoxyCompactList}\small\item\em Constructs a queue with given capacity and fills it randomly. \end{DoxyCompactList}\item 
+\hyperlink{class_a_b_event_queue_a1294c9f60862ba7c384aee7291f82241}{$\sim$\+A\+B\+Event\+Queue} ()
+\item 
+int \hyperlink{class_a_b_event_queue_a59443fdc10016ddc1a6949f10c49c2ed}{length} ()
+\item 
+void \hyperlink{class_a_b_event_queue_adc34af0cd37c4ba62988eb2ee892357e}{add\+Back} (\hyperlink{struct_event}{Event} new\+Ev)
+\item 
+\hyperlink{struct_event}{Event} \hyperlink{class_a_b_event_queue_a0c1f23891bc06650703034f1854989d1}{pop\+Front} ()
+\item 
+\hyperlink{struct_event}{Event} \hyperlink{class_a_b_event_queue_aad5e909e29cb0eb71fbb5bf330e699eb}{peek\+Front} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_event}{Event} $\ast$ \hyperlink{class_a_b_event_queue_acb0bc62d6a21b4633ba50ae83fd4d79e}{event\+Array}
+\item 
+int \hyperlink{class_a_b_event_queue_a3f8d4bf9c3dad9b88a9f99220b567ed6}{cap}
+\item 
+int \hyperlink{class_a_b_event_queue_a26f1044edfb22cd3438b6da3839f6087}{len}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An Array-\/\+Based \hyperlink{struct_event}{Event} Queue. 
+
+Capacity cannot change. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{A\+B\+Event\+Queue(int capacity)}{ABEventQueue(int capacity)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+B\+Event\+Queue\+::\+A\+B\+Event\+Queue (
+\begin{DoxyParamCaption}
+\item[{int}]{capacity}
+\end{DoxyParamCaption}
+)}\hypertarget{class_a_b_event_queue_a8e2c4bb3d9315eb6fe227250d0d67cd7}{}\label{class_a_b_event_queue_a8e2c4bb3d9315eb6fe227250d0d67cd7}
+
+
+Constructs an empty queue with given capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The capacity of the queue. \\
+\hline
+\end{DoxyParams}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{A\+B\+Event\+Queue(int capacity, int lob\+Arrival, int hib\+Arrival, int lob\+Duration, int hib\+Duration)}{ABEventQueue(int capacity, int lobArrival, int hibArrival, int lobDuration, int hibDuration)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+B\+Event\+Queue\+::\+A\+B\+Event\+Queue (
+\begin{DoxyParamCaption}
+\item[{int}]{capacity, }
+\item[{int}]{lob\+Arrival, }
+\item[{int}]{hib\+Arrival, }
+\item[{int}]{lob\+Duration, }
+\item[{int}]{hib\+Duration}
+\end{DoxyParamCaption}
+)}\hypertarget{class_a_b_event_queue_a260b9f55c3ee4d3eae601e03ceb168ea}{}\label{class_a_b_event_queue_a260b9f55c3ee4d3eae601e03ceb168ea}
+
+
+Constructs a queue with given capacity and fills it randomly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The capacity of the queue. \\
+\hline
+{\em lob\+Arrival} & Passed to fill\+Randomly. \\
+\hline
+{\em hib\+Arrival} & Passed to fill\+Randomly. \\
+\hline
+{\em lob\+Duration} & Passed to fill\+Randomly. \\
+\hline
+{\em hib\+Duration} & Passed to fill\+Randomly. \\
+\hline
+\end{DoxyParams}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!````~A\+B\+Event\+Queue@{$\sim$\+A\+B\+Event\+Queue}}
+\index{````~A\+B\+Event\+Queue@{$\sim$\+A\+B\+Event\+Queue}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{$\sim$\+A\+B\+Event\+Queue()}{~ABEventQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}A\+B\+Event\+Queue\+::$\sim$\+A\+B\+Event\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_a_b_event_queue_a1294c9f60862ba7c384aee7291f82241}{}\label{class_a_b_event_queue_a1294c9f60862ba7c384aee7291f82241}
+Cleans up the queue. 
+
+\subsection{Member Function Documentation}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!add\+Back@{add\+Back}}
+\index{add\+Back@{add\+Back}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{add\+Back(\+Event new\+Ev)}{addBack(Event newEv)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+B\+Event\+Queue\+::add\+Back (
+\begin{DoxyParamCaption}
+\item[{{\bf Event}}]{new\+Ev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_a_b_event_queue_adc34af0cd37c4ba62988eb2ee892357e}{}\label{class_a_b_event_queue_adc34af0cd37c4ba62988eb2ee892357e}
+Adds to the back of the queue. 
+
+Implements \hyperlink{class_event_queue_ada350083afd0db585c0e023336e57d7b}{Event\+Queue}.
+
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!length@{length}}
+\index{length@{length}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{length()}{length()}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+B\+Event\+Queue\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_a_b_event_queue_a59443fdc10016ddc1a6949f10c49c2ed}{}\label{class_a_b_event_queue_a59443fdc10016ddc1a6949f10c49c2ed}
+Get the length of the queue. 
+
+Implements \hyperlink{class_event_queue_afc947be4a7122a4dd9a7ede8a7048f5c}{Event\+Queue}.
+
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!peek\+Front@{peek\+Front}}
+\index{peek\+Front@{peek\+Front}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{peek\+Front()}{peekFront()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event} A\+B\+Event\+Queue\+::peek\+Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_a_b_event_queue_aad5e909e29cb0eb71fbb5bf330e699eb}{}\label{class_a_b_event_queue_aad5e909e29cb0eb71fbb5bf330e699eb}
+Peek at the front of the queue. 
+
+Implements \hyperlink{class_event_queue_ab16064eee197687eca21cedde00ab2ac}{Event\+Queue}.
+
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!pop\+Front@{pop\+Front}}
+\index{pop\+Front@{pop\+Front}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{pop\+Front()}{popFront()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event} A\+B\+Event\+Queue\+::pop\+Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_a_b_event_queue_a0c1f23891bc06650703034f1854989d1}{}\label{class_a_b_event_queue_a0c1f23891bc06650703034f1854989d1}
+Get and remove the event at the front of the queue. 
+
+Implements \hyperlink{class_event_queue_a4f49434cc8ca60030f2b5737399527e2}{Event\+Queue}.
+
+
+
+\subsection{Member Data Documentation}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!cap@{cap}}
+\index{cap@{cap}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{cap}{cap}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+B\+Event\+Queue\+::cap\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_a_b_event_queue_a3f8d4bf9c3dad9b88a9f99220b567ed6}{}\label{class_a_b_event_queue_a3f8d4bf9c3dad9b88a9f99220b567ed6}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!event\+Array@{event\+Array}}
+\index{event\+Array@{event\+Array}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{event\+Array}{eventArray}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event}$\ast$ A\+B\+Event\+Queue\+::event\+Array\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_a_b_event_queue_acb0bc62d6a21b4633ba50ae83fd4d79e}{}\label{class_a_b_event_queue_acb0bc62d6a21b4633ba50ae83fd4d79e}
+\index{A\+B\+Event\+Queue@{A\+B\+Event\+Queue}!len@{len}}
+\index{len@{len}!A\+B\+Event\+Queue@{A\+B\+Event\+Queue}}
+\subsubsection[{\texorpdfstring{len}{len}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+B\+Event\+Queue\+::len\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_a_b_event_queue_a26f1044edfb22cd3438b6da3839f6087}{}\label{class_a_b_event_queue_a26f1044edfb22cd3438b6da3839f6087}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_a_b_event_queue_8h}{A\+B\+Event\+Queue.\+h}\item 
+\hyperlink{_a_b_event_queue_8cpp}{A\+B\+Event\+Queue.\+cpp}\end{DoxyCompactItemize}

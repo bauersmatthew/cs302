@@ -1,0 +1,170 @@
+\hypertarget{class_event_queue}{}\section{Event\+Queue Class Reference}
+\label{class_event_queue}\index{Event\+Queue@{Event\+Queue}}
+
+
+{\ttfamily \#include $<$Event\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for Event\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{class_event_queue__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_event_queue_ac57db8e2366f2c6c594e6afc975e3b59}{$\sim$\+Event\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Cleans up the queue. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_event_queue_afc947be4a7122a4dd9a7ede8a7048f5c}{length} ()=0
+\begin{DoxyCompactList}\small\item\em Get the length of the queue. \end{DoxyCompactList}\item 
+bool \hyperlink{class_event_queue_aa29d017edc0198d2113018d71d19369c}{is\+Empty} ()
+\begin{DoxyCompactList}\small\item\em Get whether the queue is empty. \end{DoxyCompactList}\item 
+void \hyperlink{class_event_queue_ad74cde47893e33c1288344f308c394d0}{fill\+Randomly} (int num, int lob\+Arrival, int hib\+Arrival, int lob\+Duration, int hib\+Duration)
+\begin{DoxyCompactList}\small\item\em Fills the queue with randomly generated events. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_event_queue_ada350083afd0db585c0e023336e57d7b}{add\+Back} (\hyperlink{struct_event}{Event} new\+Ev)=0
+\begin{DoxyCompactList}\small\item\em Adds to the back of the queue. \end{DoxyCompactList}\item 
+virtual \hyperlink{struct_event}{Event} \hyperlink{class_event_queue_a4f49434cc8ca60030f2b5737399527e2}{pop\+Front} ()=0
+\begin{DoxyCompactList}\small\item\em Get and remove the event at the front of the queue. \end{DoxyCompactList}\item 
+virtual \hyperlink{struct_event}{Event} \hyperlink{class_event_queue_ab16064eee197687eca21cedde00ab2ac}{peek\+Front} ()=0
+\begin{DoxyCompactList}\small\item\em Peek at the front of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Event\+Queue@{Event\+Queue}!````~Event\+Queue@{$\sim$\+Event\+Queue}}
+\index{````~Event\+Queue@{$\sim$\+Event\+Queue}!Event\+Queue@{Event\+Queue}}
+\subsubsection[{\texorpdfstring{$\sim$\+Event\+Queue()}{~EventQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Queue\+::$\sim$\+Event\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_event_queue_ac57db8e2366f2c6c594e6afc975e3b59}{}\label{class_event_queue_ac57db8e2366f2c6c594e6afc975e3b59}
+
+
+Cleans up the queue. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Event\+Queue@{Event\+Queue}!add\+Back@{add\+Back}}
+\index{add\+Back@{add\+Back}!Event\+Queue@{Event\+Queue}}
+\subsubsection[{\texorpdfstring{add\+Back(\+Event new\+Ev)=0}{addBack(Event newEv)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Event\+Queue\+::add\+Back (
+\begin{DoxyParamCaption}
+\item[{{\bf Event}}]{new\+Ev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_event_queue_ada350083afd0db585c0e023336e57d7b}{}\label{class_event_queue_ada350083afd0db585c0e023336e57d7b}
+
+
+Adds to the back of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Ev} & The event to add. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_l_l_event_queue_a0965f4171186e119b2e63c1fbdafedd8}{L\+L\+Event\+Queue}, and \hyperlink{class_a_b_event_queue_adc34af0cd37c4ba62988eb2ee892357e}{A\+B\+Event\+Queue}.
+
+\index{Event\+Queue@{Event\+Queue}!fill\+Randomly@{fill\+Randomly}}
+\index{fill\+Randomly@{fill\+Randomly}!Event\+Queue@{Event\+Queue}}
+\subsubsection[{\texorpdfstring{fill\+Randomly(int num, int lob\+Arrival, int hib\+Arrival, int lob\+Duration, int hib\+Duration)}{fillRandomly(int num, int lobArrival, int hibArrival, int lobDuration, int hibDuration)}}]{\setlength{\rightskip}{0pt plus 5cm}void Event\+Queue\+::fill\+Randomly (
+\begin{DoxyParamCaption}
+\item[{int}]{num, }
+\item[{int}]{lob\+Arrival, }
+\item[{int}]{hib\+Arrival, }
+\item[{int}]{lob\+Duration, }
+\item[{int}]{hib\+Duration}
+\end{DoxyParamCaption}
+)}\hypertarget{class_event_queue_ad74cde47893e33c1288344f308c394d0}{}\label{class_event_queue_ad74cde47893e33c1288344f308c394d0}
+
+
+Fills the queue with randomly generated events. 
+
+num The number of events to generate. 
+\begin{DoxyParams}{Parameters}
+{\em lob\+Arrival} & The low bound for arrival times. \\
+\hline
+{\em hib\+Arrival} & The high bound for arrival times. \\
+\hline
+{\em lob\+Duration} & The low bound for duration times. \\
+\hline
+{\em hib\+Duration} & The high bound for duration times. \\
+\hline
+\end{DoxyParams}
+\index{Event\+Queue@{Event\+Queue}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Event\+Queue@{Event\+Queue}}
+\subsubsection[{\texorpdfstring{is\+Empty()}{isEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Event\+Queue\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_event_queue_aa29d017edc0198d2113018d71d19369c}{}\label{class_event_queue_aa29d017edc0198d2113018d71d19369c}
+
+
+Get whether the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if empty; false otherwise. 
+\end{DoxyReturn}
+\index{Event\+Queue@{Event\+Queue}!length@{length}}
+\index{length@{length}!Event\+Queue@{Event\+Queue}}
+\subsubsection[{\texorpdfstring{length()=0}{length()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Event\+Queue\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_event_queue_afc947be4a7122a4dd9a7ede8a7048f5c}{}\label{class_event_queue_afc947be4a7122a4dd9a7ede8a7048f5c}
+
+
+Get the length of the queue. 
+
+\begin{DoxyReturn}{Returns}
+The length of the queue. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_l_l_event_queue_a6ca56aeb714d44bb3c93748c4fe87bb6}{L\+L\+Event\+Queue}, and \hyperlink{class_a_b_event_queue_a59443fdc10016ddc1a6949f10c49c2ed}{A\+B\+Event\+Queue}.
+
+\index{Event\+Queue@{Event\+Queue}!peek\+Front@{peek\+Front}}
+\index{peek\+Front@{peek\+Front}!Event\+Queue@{Event\+Queue}}
+\subsubsection[{\texorpdfstring{peek\+Front()=0}{peekFront()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Event} Event\+Queue\+::peek\+Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_event_queue_ab16064eee197687eca21cedde00ab2ac}{}\label{class_event_queue_ab16064eee197687eca21cedde00ab2ac}
+
+
+Peek at the front of the queue. 
+
+\begin{DoxyReturn}{Returns}
+The event at the front of the queue. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_l_l_event_queue_a363c623da23cfc4baa0ff29c1801759f}{L\+L\+Event\+Queue}, and \hyperlink{class_a_b_event_queue_aad5e909e29cb0eb71fbb5bf330e699eb}{A\+B\+Event\+Queue}.
+
+\index{Event\+Queue@{Event\+Queue}!pop\+Front@{pop\+Front}}
+\index{pop\+Front@{pop\+Front}!Event\+Queue@{Event\+Queue}}
+\subsubsection[{\texorpdfstring{pop\+Front()=0}{popFront()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Event} Event\+Queue\+::pop\+Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_event_queue_a4f49434cc8ca60030f2b5737399527e2}{}\label{class_event_queue_a4f49434cc8ca60030f2b5737399527e2}
+
+
+Get and remove the event at the front of the queue. 
+
+\begin{DoxyReturn}{Returns}
+The event at the front of the queue. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_l_l_event_queue_aad3c57796c1ba1e06933083d714722e7}{L\+L\+Event\+Queue}, and \hyperlink{class_a_b_event_queue_a0c1f23891bc06650703034f1854989d1}{A\+B\+Event\+Queue}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_event_queue_8h}{Event\+Queue.\+h}\item 
+\hyperlink{_event_queue_8cpp}{Event\+Queue.\+cpp}\end{DoxyCompactItemize}

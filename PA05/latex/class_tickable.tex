@@ -1,0 +1,79 @@
+\hypertarget{class_tickable}{}\section{Tickable Class Reference}
+\label{class_tickable}\index{Tickable@{Tickable}}
+
+
+A \hyperlink{class_tickable}{Tickable} object.  
+
+
+
+
+{\ttfamily \#include $<$Teller\+Setup.\+h$>$}
+
+
+
+Inheritance diagram for Tickable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_tickable__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_tickable_a0ca181a29c3e1539e4221d2cbcfa83c2}{tick} (int now)=0
+\begin{DoxyCompactList}\small\item\em Do one tick at the given time. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_tickable_ac65be54f32d39d1450a37cf4acb1ad15}{when\+Next} ()=0
+\begin{DoxyCompactList}\small\item\em Get when this tickable needs to be ticked next. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_tickable}{Tickable} object. 
+
+For use by \hyperlink{class_teller_setup}{Teller\+Setup}. 
+
+\subsection{Member Function Documentation}
+\index{Tickable@{Tickable}!tick@{tick}}
+\index{tick@{tick}!Tickable@{Tickable}}
+\subsubsection[{\texorpdfstring{tick(int now)=0}{tick(int now)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tickable\+::tick (
+\begin{DoxyParamCaption}
+\item[{int}]{now}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_tickable_a0ca181a29c3e1539e4221d2cbcfa83c2}{}\label{class_tickable_a0ca181a29c3e1539e4221d2cbcfa83c2}
+
+
+Do one tick at the given time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em now} & The current time. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tickable_queue_afabd7085cb5f7cba4286246d69f42211}{Tickable\+Queue}, and \hyperlink{class_teller_aa8cf7bb201a88b959b42a3c4358565c3}{Teller}.
+
+\index{Tickable@{Tickable}!when\+Next@{when\+Next}}
+\index{when\+Next@{when\+Next}!Tickable@{Tickable}}
+\subsubsection[{\texorpdfstring{when\+Next()=0}{whenNext()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Tickable\+::when\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_tickable_ac65be54f32d39d1450a37cf4acb1ad15}{}\label{class_tickable_ac65be54f32d39d1450a37cf4acb1ad15}
+
+
+Get when this tickable needs to be ticked next. 
+
+Returns -\/1 when there is no future event. \begin{DoxyReturn}{Returns}
+When this tickable needs to be ticked next. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tickable_queue_a7ce766623b9b1610147b920018de5066}{Tickable\+Queue}, and \hyperlink{class_teller_a10106b3a286c21870bde1751aec0f9b6}{Teller}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_teller_setup_8h}{Teller\+Setup.\+h}\end{DoxyCompactItemize}
