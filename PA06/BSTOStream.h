@@ -101,6 +101,7 @@ class BSTOStream : public std::ostringstream
 {
 private:
     BinSearchTree *currBST;
+    int nameLen;
 
 public:
     /**

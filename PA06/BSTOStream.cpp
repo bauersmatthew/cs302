@@ -41,6 +41,7 @@ bool bstos::token::operator==(const bstos::token& other) const
 BSTOStream::BSTOStream() : std::ostringstream()
 {
     currBST = nullptr;
+    nameLen = 0;
 }
 
 BSTOStream& BSTOStream::operator<<(BinSearchTree* bst)
@@ -52,6 +53,7 @@ BSTOStream& BSTOStream::operator<<(BinSearchTree* bst)
 BSTOStream& BSTOStream::operator<<(const bstos::begin& bgn)
 {
     *this << HBAR_SEP << bgn.name << HBAR_SEP << "\n";
+    nameLen = bgn.name.size();
     return *this;
 }
 
@@ -59,7 +61,12 @@ BSTOStream& BSTOStream::operator<<(const bstos::token& tkn)
 {
     if(tkn == bstos::end)
     {
-        *this << HBAR_SEP << HBAR_SEP << "\n\n";
+        *this << HBAR_SEP << HBAR_SEP;
+        for(int iter = 0; iter < nameLen; iter++)
+        {
+            *this << "-";
+        }
+        *this << "\n\n";
     }
     else if(currBST)
     {
