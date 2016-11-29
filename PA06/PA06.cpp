@@ -63,7 +63,7 @@ std::vector<int> genSubset(const std::vector<int>& set, int size)
     while(subset.size() < size)
     {
         // try to add value
-        randAddr = rand()%set.size();
+        int randAddr = rand()%set.size();
         if(!vecContains(randAddr, alreadyPicked))
         {
             subset.push_back(set[randAddr]);
