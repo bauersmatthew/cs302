@@ -50,6 +50,30 @@ std::vector<int> genRandset(int num)
 }
 
 /**
+ * @brief Generate a randomly picked subset of values from another vector.
+ * @param set The vector to pick values from
+ * @param size The size of the subset to create.
+ * @pre size <= set.size()
+ * @return The subset generated.
+ */
+std::vector<int> genSubset(const std::vector<int>& set, int size)
+{
+    std::vector<int> subset;
+    std::vector<int> alreadyPicked;
+    while(subset.size() < size)
+    {
+        // try to add value
+        randAddr = rand()%set.size();
+        if(!vecContains(randAddr, alreadyPicked))
+        {
+            subset.push_back(set[randAddr]);
+            alreadyPicked.push_back(randAddr);
+        }
+    }
+    return subset;
+}
+
+/**
  * @brief Fill a BinSearchTree with numbers in a given vector.
  * @param pBst A pointer to the BinSearchTree to fill.
  * @param nums The vector of numbers to fill the BinSearchTree with.
@@ -73,7 +97,8 @@ int main()
     srand(time(0));
 
     // fill BST1
-    BinSearchTree *bst1 = fillBST(new BinSearchTree, genRandset(100));
+    std::vector<int> bst1set = genRandset(100);
+    BinSearchTree *bst1 = fillBST(new BinSearchTree, bst1set);
     log
         << bstos::begin("BST1") << bst1
         << bstos::height
@@ -81,7 +106,7 @@ int main()
         << bstos::end;
 
     // fill BST2
-    BinSearchTree *bst2 = fillBST(new BinSearchTree, genRandset(10));
+    BinSearchTree *bst2 = fillBST(new BinSearchTree, genSubset(bst1set, 10));
     log
         << bstos::begin("BST2") << bst2
         << bstos::preorder
