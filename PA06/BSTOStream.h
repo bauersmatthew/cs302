@@ -13,7 +13,7 @@
 namespace bstos
 {
     /**
-     * @brief Tellthe BSTOStream to begin a section.
+     * @brief Tell the BSTOStream to begin a section.
      * @details Holds the the name that BSTOStream uses to title the section.
      */
     struct begin
