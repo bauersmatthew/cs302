@@ -39,7 +39,12 @@ std::vector<int> genRandset(int num)
     std::vector<int> set;
     while(num--)
     {
-        set.push_back((rand()%200)+1)
+        int nxtVal = (rand()%200)+1;
+        while(vecContains(nxtVal, set))
+        {
+            nxtVal = (rand()%200)+1;
+        }
+        set.push_back(nxtVal);
     }
     return set;
 }
