@@ -200,14 +200,14 @@ void BinSearchTree::clear()
 }
 
 // info functions
-int BinSearchTree::height()
+int BinSearchTree::height() const
 {
     int leftHeight = left ? left->height()+1 : 0;
     int rightHeight = right ? right->height()+1 : 0;
     return (leftHeight > rightHeight ? leftHeight : rightHeight);
 }
 
-int BinSearchTree::size()
+int BinSearchTree::size() const
 {
     if(!hasRoot)
     {
@@ -221,13 +221,13 @@ int BinSearchTree::size()
     }
 }
 
-bool BinSearchTree::isEmpty()
+bool BinSearchTree::isEmpty() const
 {
     return !size();
 }
 
 // vec-out functions
-std::vector<int> BinSearchTree::preorder()
+std::vector<int> BinSearchTree::preorder() const
 {
     std::vector<int> list;
 
@@ -250,7 +250,7 @@ std::vector<int> BinSearchTree::preorder()
     }
 }
 
-std::vector<int> BinSearchTree::inorder()
+std::vector<int> BinSearchTree::inorder() const
 {
     std::vector<int> list;
 
@@ -273,7 +273,7 @@ std::vector<int> BinSearchTree::inorder()
     }
 }
 
-std::vector<int> BinSearchTree::postorder()
+std::vector<int> BinSearchTree::postorder() const
 {
     std::vector<int> list;
 

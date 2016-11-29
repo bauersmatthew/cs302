@@ -80,37 +80,37 @@ public:
      * @brief Get the height of the tree.
      * @return The height of the tree.
      */
-     int height();
+     int height() const;
 
      /**
       * @brief Get the size of the tree.
       * @return The size of the tree.
       */
-     int size();
+     int size() const;
 
      /**
       * @brief Get whether the tree is empty.
       * @return Whether the tree is empty.
       */
-     bool isEmpty();
+     bool isEmpty() const;
 
      /**
       * @brief Get a vector containing the tree values in PREORDER.
       * @return A vector containing the tree values in PREORDER.
       */
-     std::vector<int> preorder();
+     std::vector<int> preorder() const;
 
      /**
       * @brief Get a vector containing the tree values in INORDER.
       * @return A vector containing the tree values in INORDER.
       */
-     std::vector<int> inorder();
+     std::vector<int> inorder() const;
 
      /**
       * @brief Get a vector containing the tree values in POSTORDER.
       * @return A vector containing the tree values in POSTORDER.
       */
-     std::vector<int> postorder();
+     std::vector<int> postorder() const;
 };
 
 #endif
