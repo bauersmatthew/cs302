@@ -81,16 +81,19 @@ BSTOStream& BSTOStream::operator<<(const bstos::token& tkn)
         {
             *this << "Data in PREORDER:\n";
             ossTakeVec(currBST->preorder(), (std::ostringstream*)this);
+            *this << "\n";
         }
         else if(tkn == bstos::inorder)
         {
             *this << "Data in INORDER:\n";
             ossTakeVec(currBST->inorder(), (std::ostringstream*)this);
+            *this << "\n";
         }
         else if(tkn == bstos::postorder)
         {
             *this << "Data in POSTORDER:\n";
             ossTakeVec(currBST->postorder(), (std::ostringstream*)this);
+            *this << "\n";
         }
         else
         {
