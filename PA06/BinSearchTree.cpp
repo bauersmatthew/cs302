@@ -198,3 +198,30 @@ void BinSearchTree::clear()
     }
     hasRoot = false;
 }
+
+// info functions
+int BinSearchTree::height()
+{
+    int leftHeight = left ? left->height()+1 : 0;
+    int rightHeight = right ? right->height()+1 : 0;
+    return (leftHeight > rightHeight ? leftHeight : rightHeight);
+}
+
+int BinSearchTree::size()
+{
+    if(!hasRoot)
+    {
+        return 0;
+    }
+    else
+    {
+        int leftSize = left ? left->size() : 0;
+        int rightSize = right ? right->size() : 0;
+        return (leftSize + rightSize + 1);
+    }
+}
+
+bool BinSearchTree::isEmpty()
+{
+    return !size();
+}
