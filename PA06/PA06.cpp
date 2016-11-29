@@ -167,4 +167,5 @@ int main()
     mainAlgorithm(100, 200);
     std::cout << "\n==========EXTRA CREDIT==========\n";
     mainAlgorithm(100000, 100000);
+    return 0;
 }
