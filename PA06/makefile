@@ -29,7 +29,7 @@ doxygen:
 	
 zip:
 	mkdir $(MAIN)_MatthewBauer
-	cp $(SRCS) $(HDRS) $(MAIN).pdf $(MAIN)_MatthewBauer/
+	cp $(SRCS) $(HDRS) $(MAIN).pdf makefile $(MAIN)_MatthewBauer/
 	cp out.txt $(MAIN)_MatthewBauer/
 	rm -f $(MAIN)_MatthewBauer.zip
 	zip -r $(MAIN)_MatthewBauer $(MAIN)_MatthewBauer
