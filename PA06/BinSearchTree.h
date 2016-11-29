@@ -82,7 +82,7 @@ public:
      */
     void insert(int val);
 
-    /*
+    /**
      * @brief Try to remove a value.
      * @details If the value is present in the tree, remove the first instance
      *     found. If the value is not present, do nothing.
