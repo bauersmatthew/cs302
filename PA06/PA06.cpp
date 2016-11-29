@@ -120,4 +120,9 @@ int main()
     // clean up
     delete bst1;
     delete bst2;
+
+    // dump log to console
+    std::cout << log.str();
+
+    return 0;
 }
