@@ -18,8 +18,8 @@ $(MAIN): $(OBJS)
 	$(CXX) -c $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm *.o
-	rm -rf latex/
+	-rm *.o
+	-rm -rf latex/
 	
 doxygen:
 	doxygen .
