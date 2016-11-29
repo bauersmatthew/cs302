@@ -5,9 +5,26 @@
  */
 
 #include <iostream>
-#include <string>
+#include <vector>
+#include <ctime>
+#include <cstdlib>
 #include "BinSearchTree.h"
 #include "BSTOStream.h"
+
+/**
+ * @brief Generate a set of random integers 1-200 with given length.
+ * @param num The length of the set to generate.
+ * @return The generated set.
+ */
+std::vector<int> genRandset(int num)
+{
+    std::vector<int> set;
+    while(num--)
+    {
+        set.push_back((rand()%200)+1)
+    }
+    return set;
+}
 
 /**
  * @brief Program entry point.
@@ -15,6 +32,7 @@
 int main()
 {
     BSTOStream log;
+    srand(time(0));
 
     // fill BST1
     BinSeachTree *bst1 = fillBST(new BinSeachTree, genRandset(100));
