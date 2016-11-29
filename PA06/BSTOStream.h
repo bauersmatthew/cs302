@@ -25,7 +25,12 @@ namespace bstos
          * @brief Construct a begin token with the given name.
          * @param name The name of the section.
          */
-        explicit begin(const std::string& name);
+        begin(const std::string& name);
+
+        /**
+         * @brief Construct a begin token with no (aka a blank) name.
+         */
+        begin();
     };
 
     /**

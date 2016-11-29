@@ -22,6 +22,11 @@ bstos::begin::begin(const std::string& name)
     this->name = name;
 }
 
+bstos::begin::begin()
+{
+    name = "";
+}
+
 bstos::token::token(int id)
 {
     this->id = id;
