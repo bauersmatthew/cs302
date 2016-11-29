@@ -27,6 +27,21 @@ std::vector<int> genRandset(int num)
 }
 
 /**
+ * @brief Fill a BinSearchTree with numbers in a given vector.
+ * @param pBst A pointer to the BinSearchTree to fill.
+ * @param nums The vector of numbers to fill the BinSearchTree with.
+ * @return pBst
+ */
+BinSearchTree *fillBST(BinSearchTree *pBst, const std::vector<int>& nums)
+{
+    for(int num : nums)
+    {
+        pBst->insert(num);
+    }
+    return pBst;
+}
+
+/**
  * @brief Program entry point.
  */
 int main()
