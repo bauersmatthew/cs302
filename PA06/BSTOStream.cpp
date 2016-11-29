@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Implementation file for the BSTOS interface.
+ * @author Matthew Bauer
+ */
+
 #include "BSTOStream.h"
 #include <vector>
 

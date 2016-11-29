@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Implementation file for the BinSearchTree.
+ * @author Matthew Bauer
+ */
+
 #include "BinSearchTree.h"
 
 // convenience funcs
