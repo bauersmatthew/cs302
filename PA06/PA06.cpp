@@ -30,19 +30,21 @@ bool vecContains(int val, const std::vector<int>& vec)
 }
 
 /**
- * @brief Generate a set of unique random integers 1-200 with given length.
+ * @brief Generate a set of unique random integers 1-max inclusive with given
+ *     length.
  * @param num The length of the set to generate.
+ * @param max The largest possible number to generate.
  * @return The generated set.
  */
-std::vector<int> genRandset(int num)
+std::vector<int> genRandset(int num, int max)
 {
     std::vector<int> set;
     while(num--)
     {
-        int nxtVal = (rand()%200)+1;
+        int nxtVal = (rand()%max)+1;
         while(vecContains(nxtVal, set))
         {
-            nxtVal = (rand()%200)+1;
+            nxtVal = (rand()%max)+1;
         }
         set.push_back(nxtVal);
     }
@@ -97,7 +99,7 @@ int main()
     srand(time(0));
 
     // fill BST1
-    std::vector<int> bst1set = genRandset(100);
+    std::vector<int> bst1set = genRandset(100, 200);
     BinSearchTree *bst1 = fillBST(new BinSearchTree, bst1set);
     log
         << bstos::begin("BST1") << bst1
