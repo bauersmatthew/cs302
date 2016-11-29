@@ -19,6 +19,9 @@ private:
     BinSearchTree *left;
     BinSearchTree *right;
 
+    // the parent node's pointer to this tree.
+    BinSearchTree **parentThis;
+
     /**
      * @brief Get the second-to-rightmost node in the tree.
      * @details For internal use.
@@ -27,6 +30,14 @@ private:
      */
     BinSearchTree *get2ndRightNode();
 
+    /**
+     * @brief Construct a sub-BinSearchTree (==> has a parent tree).
+     * @details For internal use.
+     * @param val The root value to use.
+     * @param prnt The parent tree's pointer to this tree.
+     */
+    BinSearchTree(int val, BinSearchTree *prntThs);
+    
 public:
 
     /**
