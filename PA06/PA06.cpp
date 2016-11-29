@@ -91,15 +91,17 @@ BinSearchTree *fillBST(BinSearchTree *pBst, const std::vector<int>& nums)
 }
 
 /**
- * @brief Program entry point.
+ * @brief Main algorithm of the program.
+ * @param bst1size The size of BST1 to use for generation.
+ * @param bst1max The max value of BST1 to use for generation.
  */
-int main()
+void mainAlgorithm(int bst1size, int bst1max)
 {
     BSTOStream log;
     srand(time(0));
 
     // fill BST1
-    std::vector<int> bst1set = genRandset(100, 200);
+    std::vector<int> bst1set = genRandset(bst1size, bst1max);
     BinSearchTree *bst1 = fillBST(new BinSearchTree, bst1set);
     log
         << bstos::begin("BST1") << bst1
@@ -154,6 +156,15 @@ int main()
 
     // dump log to console
     std::cout << log.str();
+}
 
-    return 0;
+/**
+ * @brief Program entry point.
+ */
+int main()
+{
+    std::cout << "==========NORMAL ASSIGNMENT==========\n";
+    mainAlgorithm(100, 200);
+    std::cout << "\n==========EXTRA CREDIT==========\n";
+    mainAlgorithm(100000, 100000);
 }
