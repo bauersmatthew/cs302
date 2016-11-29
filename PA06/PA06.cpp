@@ -12,7 +12,25 @@
 #include "BSTOStream.h"
 
 /**
- * @brief Generate a set of random integers 1-200 with given length.
+ * @brief Get whether a given value is contained in a given vector.
+ * @param val The value to search for.
+ * @param vec The vector to search in.
+ * @return Whether val is contained in vec.
+ */
+bool vecContains(int val, const std::vector<int>& vec)
+{
+    for(int num : vec)
+    {
+        if(val == num)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * @brief Generate a set of unique random integers 1-200 with given length.
  * @param num The length of the set to generate.
  * @return The generated set.
  */
