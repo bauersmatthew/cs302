@@ -14,12 +14,32 @@
 class BinSearchTree
 {
 private:
+    /**
+     * @brief The value of this node.
+     */
     int root;
+    
+    /**
+     * @brief Whether or this node is not empty.
+     * @details Should only ever be false when the top-level tree is empty.
+     */
     bool hasRoot;
+    
+    /**
+     * @brief Points to the left branch coming off this node.
+     */
     BinSearchTree *left;
+    
+    /**
+     * @brief Points to the right branch coming off this node.
+     */
     BinSearchTree *right;
 
-    // the parent node's pointer to this tree.
+    /**
+     * @brief The parent node's pointer to this tree.
+     * @details Is nullptr when there is no parent node ==> this is the highest
+     *     node.
+     */
     BinSearchTree **parentThis;
 
     /**
