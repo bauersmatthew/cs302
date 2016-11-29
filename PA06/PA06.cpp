@@ -73,7 +73,7 @@ int main()
     srand(time(0));
 
     // fill BST1
-    BinSeachTree *bst1 = fillBST(new BinSeachTree, genRandset(100));
+    BinSearchTree *bst1 = fillBST(new BinSearchTree, genRandset(100));
     log
         << bstos::begin("BST1") << bst1
         << bstos::height
@@ -86,7 +86,7 @@ int main()
         << bstos::begin("BST2") << bst2
         << bstos::preorder
         << bstos::inorder
-        << bstos::postoder
+        << bstos::postorder
         << bstos::end;
 
     // modify bst1
@@ -104,18 +104,22 @@ int main()
 
     // clear trees
     log
-        << bstos::begin
+        << bstos::begin()
         << "Tree empty states:\n"
-        << "\tBST1\t" << bst1 << bstos::empty
-        << "\tBST2\t" << bst2 << bstos::empty;
+        << "\tBST1\t";
+    log << bst1 << bstos::empty;
+    log << "\tBST2\t";
+    log << bst2 << bstos::empty
         << "Clearing trees... ";
     bst1->clear();
     bst2->clear();
     log
         << "DONE\n"
-        << "\tBST1\t" << bst1 << bstos::empty
-        << "\tBST2\t" << bst2 << bstos::empty
-        << end;
+        << "\tBST1\t";
+    log << bst1 << bstos::empty;
+    log << "\tBST2\t";
+    log << bst2 << bstos::empty
+        << bstos::end;
 
     // clean up
     delete bst1;

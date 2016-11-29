@@ -48,7 +48,7 @@ public:
      * @brief Construct a binary search tree with given root value.
      * @param val The root value to use.
      */
-     BinSearchTree(int val);
+    explicit BinSearchTree(int val);
 
      /**
       * @brief Destructs the tree.

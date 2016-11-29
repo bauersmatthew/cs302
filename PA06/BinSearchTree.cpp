@@ -1,18 +1,39 @@
 #include "BinSearchTree.h"
 
+// convenience funcs
+std::vector<int> addVecs(const std::vector<int>& vec1, const std::vector<int>& vec2)
+{
+    std::vector<int> newVec;
+    for(int val : vec1)
+    {
+        newVec.push_back(val);
+    }
+    for(int val : vec2)
+    {
+        newVec.push_back(val);
+    }
+    return newVec;
+}
+void addToVec(std::vector<int>& vec1, const std::vector<int>& vec2)
+{
+    vec1 = addVecs(vec1, vec2);
+}
+
 // constructor/destructor defs
 BinSearchTree::BinSearchTree()
 {
     root = 0;
     hasRoot = false;
-    left = right = parentThis nullptr;
+    left = right = nullptr;
+    parentThis = nullptr;
 }
 
 BinSearchTree::BinSearchTree(int val)
 {
     root = val;
     hasRoot = true;
-    left = right = parentThis = nullptr;
+    left = right = nullptr;
+    parentThis = nullptr;
 }
 
 BinSearchTree::BinSearchTree(int val, BinSearchTree **prntThs)
@@ -110,7 +131,7 @@ bool BinSearchTree::tryRemove(int val)
 
                 return true;
             }
-            else if((left && !right) || (!left && right)))
+            else if((left && !right) || (!left && right))
             {
                 // ==> case: one child
                 // strategy: absorb child
@@ -142,11 +163,11 @@ bool BinSearchTree::tryRemove(int val)
                 // DO NOT REPLACE LEFT, RIGHT, OR PARENTTHIS!
 
                 // connect rightmost's left child with rightmost's parent.
-                *(leftbr_rightmost->parentthis) = leftbr_rightmost->left;
+                *(leftbr_rightmost->parentThis) = leftbr_rightmost->left;
                 if(leftbr_rightmost->left)
                 {
-                    leftbr_rightmost->left->parentthis =
-                        leftbr_rightmost->parentthis;
+                    leftbr_rightmost->left->parentThis =
+                        leftbr_rightmost->parentThis;
                 }
 
                 // destruct rightmost; all the data is saved
@@ -240,11 +261,11 @@ std::vector<int> BinSearchTree::preorder() const
         list.push_back(root);
         if(left)
         {
-            list += left->preorder();
+            addToVec(list, left->preorder());
         }
         if(right)
         {
-            list += right->preorder();
+            addToVec(list, right->preorder());
         }
         return list;
     }
@@ -262,12 +283,12 @@ std::vector<int> BinSearchTree::inorder() const
     {
         if(left)
         {
-            list += left->inorder();
+            addToVec(list, left->inorder());
         }
         list.push_back(root);
         if(right)
         {
-            list += right->inorder();
+            addToVec(list, right->inorder());
         }
         return list;
     }
@@ -285,11 +306,11 @@ std::vector<int> BinSearchTree::postorder() const
     {
         if(left)
         {
-            list += left->postorder();
+            addToVec(list, left->postorder());
         }
         if(right)
         {
-            right += right->postorder();
+            addToVec(list, right->postorder());
         }
         list.push_back(root);
         return list;

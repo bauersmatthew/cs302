@@ -25,7 +25,7 @@ namespace bstos
          * @brief Construct a begin token with the given name.
          * @param name The name of the section.
          */
-        begin(const std::string& name);
+        explicit begin(const std::string& name);
 
         /**
          * @brief Construct a begin token with no (aka a blank) name.
@@ -45,14 +45,14 @@ namespace bstos
          * @brief Construct a token with the given ID.
          * @details For internal use only.
          */
-        token(int id);
+        explicit token(int id);
 
         /**
          * @brief Test for equality between two tokens.
          * @param other The token to compare this one to.
          * @return Whether the tokens are equal.
          */
-        bool operator==(const token& other);
+        bool operator==(const token& other) const;
     };
 
     /**
@@ -64,6 +64,11 @@ namespace bstos
      * @brief Tell the BSTOStream to print out the BST size.
      */
     const token size(1);
+
+    /**
+     * @brief Tell the BSTOStream to print whether the BST is empty.
+     */
+    const token empty(6);
 
     /**
      * @brief Tell the BSTOStream to print out the BST contents in PREORDER.
@@ -86,6 +91,12 @@ namespace bstos
     const token end(5);
 };
 
+/**
+ * @brief Stream class to support easy formatting of BST outputs.
+ * @details Use in a similar way to other std streams.
+ * @note DO NOT SEND THE STREAM BSTOS::TOKENs, BSTOS::BEGINs, or BINSEARCHTREEs
+ *     AFTER SENDING THE STREAM ANY OTHER TYPE, IT WILL NOT COMPILE!
+ */
 class BSTOStream : public std::ostringstream
 {
 private:
@@ -102,7 +113,7 @@ public:
      * @param bst The new BST to use.
      * @return A reference to this stream.
      */
-    BSTOStream& operator<<(const BinSearchTree*& bst);
+    BSTOStream& operator<<(BinSearchTree* bst);
 
     /**
      * @brief Start a section.

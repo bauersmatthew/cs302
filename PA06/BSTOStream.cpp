@@ -31,7 +31,7 @@ bstos::token::token(int id)
 {
     this->id = id;
 }
-bool bstos::token::operator==(const bstos::token& other)
+bool bstos::token::operator==(const bstos::token& other) const
 {
     return (id == other.id);
 }
@@ -43,7 +43,7 @@ BSTOStream::BSTOStream() : std::ostringstream()
     currBST = nullptr;
 }
 
-BSTOStream& BSTOStream::operator<<(const BinSearchTree*& bst)
+BSTOStream& BSTOStream::operator<<(BinSearchTree* bst)
 {
     currBST = bst;
     return *this;
@@ -70,6 +70,12 @@ BSTOStream& BSTOStream::operator<<(const bstos::token& tkn)
         else if(tkn == bstos::size)
         {
             *this << "# of nodes: " << currBST->size() << "\n";
+        }
+        else if(tkn == bstos::empty)
+        {
+            *this
+                << "Empty: " << (currBST->isEmpty() ? "TRUE" : "FALSE")
+                << "\n";
         }
         else if(tkn == bstos::preorder)
         {
