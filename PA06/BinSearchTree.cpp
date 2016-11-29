@@ -5,14 +5,22 @@ BinSearchTree::BinSearchTree()
 {
     root = 0;
     hasRoot = false;
-    left = right = nullptr;
+    left = right = parentThis nullptr;
 }
 
 BinSearchTree::BinSearchTree(int val)
 {
     root = val;
     hasRoot = true;
+    left = right = parentThis = nullptr;
+}
+
+BinSearchTree::BinSearchTree(int val, BinSearchTree **prntThs)
+{
+    root = val;
+    hasRoot = true;
     left = right = nullptr;
+    parentThis = prntThs;
 }
 
 BinSearchTree::~BinSearchTree()

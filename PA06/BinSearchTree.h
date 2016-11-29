@@ -36,8 +36,8 @@ private:
      * @param val The root value to use.
      * @param prnt The parent tree's pointer to this tree.
      */
-    BinSearchTree(int val, BinSearchTree *prntThs);
-    
+    BinSearchTree(int val, BinSearchTree **prntThs);
+
 public:
 
     /**
