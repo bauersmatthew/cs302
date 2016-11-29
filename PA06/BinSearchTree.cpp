@@ -1,6 +1,12 @@
 #include "BinSearchTree.h"
 
 // convenience funcs
+/**
+ * @brief Add two vectors together.
+ * @param vec1 The first vector.
+ * @param vec2 The second vector.
+ * @return A vector containing the values of vec1 and vec2 (in that order).
+ */
 std::vector<int> addVecs(const std::vector<int>& vec1, const std::vector<int>& vec2)
 {
     std::vector<int> newVec;
@@ -14,6 +20,11 @@ std::vector<int> addVecs(const std::vector<int>& vec1, const std::vector<int>& v
     }
     return newVec;
 }
+/**
+ * @brief Add one vector's contents onto the end of another.
+ * @param vec1 The destination vector (to be modified).
+ * @param vec2 The source vector.
+ */
 void addToVec(std::vector<int>& vec1, const std::vector<int>& vec2)
 {
     vec1 = addVecs(vec1, vec2);

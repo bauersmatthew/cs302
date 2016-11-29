@@ -4,6 +4,12 @@
 const std::string HBAR_SEP = "----------";
 
 // helper func
+/**
+ * @brief Print the values in an integer vector to an ostringstream.
+ * @details Format: "val1, val2, val3, valX..."
+ * @param vec The vector to print.
+ * @param oss A pointer to the ostringstream to send vector contents to.
+ */
 void ossTakeVec(const std::vector<int>& vec, std::ostringstream *oss)
 {
     for(int iter = 0; iter < vec.size(); iter++)
