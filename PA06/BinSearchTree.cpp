@@ -225,3 +225,73 @@ bool BinSearchTree::isEmpty()
 {
     return !size();
 }
+
+// vec-out functions
+std::vector<int> BinSearchTree::preorder()
+{
+    std::vector<int> list;
+
+    if(!hasRoot)
+    {
+        return list; // give back empty list b/c empty tree
+    }
+    else
+    {
+        list.push_back(root);
+        if(left)
+        {
+            list += left->preorder();
+        }
+        if(right)
+        {
+            list += right->preorder();
+        }
+        return list;
+    }
+}
+
+std::vector<int> BinSearchTree::inorder()
+{
+    std::vector<int> list;
+
+    if(!hasRoot)
+    {
+        return list;
+    }
+    else
+    {
+        if(left)
+        {
+            list += left->inorder();
+        }
+        list.push_back(root);
+        if(right)
+        {
+            list += right->inorder();
+        }
+        return list;
+    }
+}
+
+std::vector<int> BinSearchTree::postorder()
+{
+    std::vector<int> list;
+
+    if(!hasRoot)
+    {
+        return list;
+    }
+    else
+    {
+        if(left)
+        {
+            list += left->postorder();
+        }
+        if(right)
+        {
+            right += right->postorder();
+        }
+        list.push_back(root);
+        return list;
+    }
+}
