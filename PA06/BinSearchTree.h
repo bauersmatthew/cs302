@@ -23,12 +23,11 @@ private:
     BinSearchTree **parentThis;
 
     /**
-     * @brief Get the second-to-rightmost node in the tree.
+     * @brief Get the rightmost node in the tree.
      * @details For internal use.
-     * @return The second-to-rightmost node in the tree if it exists.
-     *     If there's only one node on the right/center, return nullptr.
+     * @return The rightmost node in the tree.
      */
-    BinSearchTree *get2ndRightNode();
+    BinSearchTree *getRightmostNode();
 
     /**
      * @brief Construct a sub-BinSearchTree (==> has a parent tree).

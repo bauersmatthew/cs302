@@ -46,7 +46,7 @@ void BinSearchTree::insert(int val)
             }
             else
             {
-                right = new BinSearchTree(val);
+                right = new BinSearchTree(val, &right);
             }
         }
         else if(val < root)
@@ -57,7 +57,7 @@ void BinSearchTree::insert(int val)
             }
             else
             {
-                left = new BinSearchTree(val);
+                left = new BinSearchTree(val, &left);
             }
         }
         else
@@ -107,6 +107,7 @@ bool BinSearchTree::tryRemove(int val)
                 hasRoot = oldChild->hasRoot;
                 left = oldChild->left;
                 right = oldChild->right;
+                // DO NOT REPLACE PARENTTHIS!
 
                 // destruct child silently
                 oldChild->left = oldChild->right = nullptr;
@@ -120,42 +121,26 @@ bool BinSearchTree::tryRemove(int val)
                 // strategy: replace this node with the rightmost child of the
                 //     left branch, replacing that node with its left child
                 //     (if it exists).
-                BinSearchTree *leftbr_2ndRight = left->get2ndRightNode();
-                if(!leftbr_2ndRight)
+                BinSearchTree *leftbr_rightmost = left->getRightmostNode();
+
+                // replace self with rightmost node
+                root = leftbr_rightmost->root;
+                hasRoot = leftbr_rightmost->hasRoot;
+                // DO NOT REPLACE LEFT, RIGHT, OR PARENTTHIS!
+
+                // connect rightmost's left child with rightmost's parent.
+                *(leftbr_rightmost->parentthis) = leftbr_rightmost->left;
+                if(leftbr_rightmost->left)
                 {
-                    // the left branch has no right child; thus, replace self
-                    //     with the left branch.
-                    BinSearchTree *oldLeft = left;
-
-                    root = oldLeft->root;
-                    hasRoot = oldLeft->hasRoot;
-                    left = oldLeft->left;
-                    // DO NOT REPLACE RIGHT!
-
-                    oldLeft->left = oldLeft->right = nullptr;
-                    delete oldLeft;
-
-                    return true;
+                    leftbr_rightmost->left->parentthis =
+                        leftbr_rightmost->parentthis;
                 }
-                else
-                {
-                    // replace self with the rightmost node
-                    BinSearchTree *leftbr_1stRight = leftbr_2ndRight->right;
 
-                    // remove that node from where it is now
-                    leftbr_2ndRight->right =
-                        leftbr_1stRight->left; // OK IF NULLPTR\
+                // destruct rightmost; all the data is saved
+                leftbr_rightmost->left = nullptr;
+                delete leftbr_rightmost;
 
-                    // copy node
-                    root = leftbr_1stRight->root;
-                    hasRoot = leftbr_1stRight->hasRoot;
-                    // DO NOT REPLACE BRANCHES
-
-                    leftbr_1stRight->left = nullptr; // ->right already nullptr
-                    delete leftbr_1stRight;
-
-                    return true;
-                }
+                return true;
             }
         }
         else if(val > root)
