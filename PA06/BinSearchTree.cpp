@@ -28,6 +28,19 @@ BinSearchTree::~BinSearchTree()
     clear();
 }
 
+// random support funcs
+BinSearchTree *BinSearchTree::getRightmostNode()
+{
+    if(right)
+    {
+        return right->getRightmostNode();
+    }
+    else
+    {
+        return this;
+    }
+}
+
 // data manipulation defs
 void BinSearchTree::insert(int val)
 {
