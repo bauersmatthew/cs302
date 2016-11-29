@@ -145,12 +145,26 @@ bool BinSearchTree::tryRemove(int val)
         }
         else if(val > root)
         {
-            return right->tryRemove(val);
+            if(right)
+            {
+                return right->tryRemove(val);
+            }
+            else
+            {
+                return false;
+            }
         }
         else
         {
             // val < root
-            return left->tryRemove(val);
+            if(left)
+            {
+                return left->tryRemove(val);
+            }
+            else
+            {
+                return false;
+            }
         }
         // doesn't reach here
     }
