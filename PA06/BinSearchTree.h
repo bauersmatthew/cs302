@@ -8,6 +8,9 @@
 
 #include <vector>
 
+/**
+ * @brief Represents a Binary Search Tree.
+ */
 class BinSearchTree
 {
 private:
@@ -36,6 +39,7 @@ public:
 
     /**
      * @brief Insert a value into the tree.
+     * @details If the value is already present in the tree, do nothing.
      * @param val The value to insert.
      */
     void insert(int val);
