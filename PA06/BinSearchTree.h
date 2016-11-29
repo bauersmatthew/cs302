@@ -84,8 +84,8 @@ public:
 
     /**
      * @brief Try to remove a value.
-     * @details If the value is present in the tree, remove the first instance
-     *     found. If the value is not present, do nothing.
+     * @details If the value is present in the tree, remove it. If the value
+     *     is not present, do nothing.
      * @param val The value to attempt removal of.
      * @return Whether a value was removed.
      */
