@@ -19,6 +19,14 @@ private:
     BinSearchTree *left;
     BinSearchTree *right;
 
+    /**
+     * @brief Get the second-to-rightmost node in the tree.
+     * @details For internal use.
+     * @return The second-to-rightmost node in the tree if it exists.
+     *     If there's only one node on the right/center, return nullptr.
+     */
+    BinSearchTree *get2ndRightNode();
+
 public:
 
     /**
