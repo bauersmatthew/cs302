@@ -76,6 +76,18 @@ class RBTree
      */
     RBTNode *head;
 
+    /**
+     * @brief Rotate the given subtree left.
+     * @param stHead A pointer to the subtree's head node
+     */
+    void rotateLeft(RBTNode *stHead);
+
+    /**
+     * @brief Rotate the given subtree right.
+     * @param stHead A pointer to the subtree's head node
+     */
+    void rotateRight(RBTNode *stHead);
+
 public:
     /**
      * @brief Construct an empty RBTree.

@@ -51,6 +51,37 @@ RBTree::~RBTree()
     clear();
 }
 
+void RBTree::rotateLeft(RBTNode *stHead)
+{
+    RBTNode *toDefer = stHead;
+    RBTNode *newHead = stHead->right;
+    RBTNode *highest = stHead->parent;
+
+    highest->left = newHead;
+    newHead->parent = highest;
+
+    RBTNode *savedLeft = newHead->left;
+    newHead->left = toDefer;
+    toDefer->parent  = newHead;
+
+    toDefer->right = savedLeft;
+}
+void RBTree::rotateRight(RBTNode *stHead)
+{
+    RBTNode *toDefer = stHead;
+    RBTNode *newHead = stHead->left;
+    RBTNode *highest = stHead->parent;
+
+    highest->right = newHead;
+    newHead->parent = highest;
+
+    RBTNode *savedRight = newHead->right;
+    newHead->right = toDefer;
+    toDefer->parent = newHead;
+
+    toDefer->left = savedRight;
+}
+
 void RBTree::insert(int value)
 {
     if(isEmpty())
