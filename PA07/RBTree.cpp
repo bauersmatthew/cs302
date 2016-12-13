@@ -4,7 +4,7 @@
  * @author Matthew Bauer
  */
 
-#include "RBTree.h"voidvoid
+#include "RBTree.h"
 
 #define MAX(a, b) (a>b?a:b)
 
