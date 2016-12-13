@@ -6,6 +6,7 @@
 
 #include "RBTree.h"
 
+// RBTNODE DEFS
 RBTNode::RBTNode(int value, RBTNode *parent, RBTColor color)
 {
     this->value = value;
@@ -13,4 +14,14 @@ RBTNode::RBTNode(int value, RBTNode *parent, RBTColor color)
     this->color = color;
 
     this->left = this->right = nullptr;
+}
+
+// RBTREE DEFS
+RBTree::RBTree()
+{
+    head = nullptr;
+}
+RBTree::~RBTree()
+{
+    clear();
 }
