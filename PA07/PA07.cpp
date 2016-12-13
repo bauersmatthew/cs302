@@ -26,7 +26,7 @@ void genTestSet(std::vector<int>& testSet)
 {
     for(int iter = 0; iter < 1000; iter++)
     {
-        testSet.push_back((rand()%10000)+1));
+        testSet.push_back((rand()%10000)+1);
     }
 }
 
