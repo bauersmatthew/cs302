@@ -89,7 +89,7 @@ public:
       * @brief Whether the tree is empty.
       * @return true if empty; false otherwise.
       */
-     void isEmpty();
+     bool isEmpty();
 
      /**
       * @brief Get the height of the tree.
