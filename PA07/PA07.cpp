@@ -28,7 +28,6 @@ void genTestSet(std::vector<int>& testSet)
     {
         testSet.push_back((rand()%10000)+1));
     }
-    return testSet;
 }
 
 /**
