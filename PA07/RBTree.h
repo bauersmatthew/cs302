@@ -117,7 +117,7 @@ public:
 
      /**
       * @brief Get the height of the tree.
-      * @return The height of the tree.
+      * @return The height of the tree. If the tree is empty, return -1.
       */
      int getHeight();
 
