@@ -1,14 +1,18 @@
 CXX := g++
 CXXFLAGS := -Wall -std=c++11
 
-SRCS := $(shell find . -name '.cpp')
-HDRS := $(shell find . -name '.h')s
+SRCS := $(shell find . -name '*.cpp')
+HDRS := $(shell find . -name '*.h')s
 OBJS := $(SRCS:.cpp=.o)
-MAIN := $(shell pwd | sed -r 's/.*\/(.*)$/\1/')
+MAIN := $(shell pwd | sed -r 's/.*\\/(.*)$/\\1/')
 
 .PHONY: all build clean doxygen zip run
 
 build: $(MAIN)
+	@echo $(MAIN)
+	@echo $(HDRS)
+	@echo $(SRCS)
+	@echo $(OBJS)
 	@echo Compilation successful!
 
 $(MAIN): $(OBJS)
