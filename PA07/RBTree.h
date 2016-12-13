@@ -51,6 +51,18 @@ public:
      * @details Destructs all child nodes.
      */
     ~RBTNode();
+
+    /**
+     * @brief Get the grandparent of this node.
+     * @return The grandparent of this node.
+     */
+    RBTNode *getGrandparent();
+
+    /**
+     * @brief Get the uncle of this node.
+     * @return The uncle of this node.
+     */
+    RBTNode *getUncle();
 };
 
 /**

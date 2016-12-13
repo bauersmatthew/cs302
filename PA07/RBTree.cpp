@@ -4,7 +4,7 @@
  * @author Matthew Bauer
  */
 
-#include "RBTree.h"
+#include "RBTree.h"voidvoid
 
 // RBTNODE DEFS
 RBTNode::RBTNode(int value, RBTNode *parent, RBTColor color)
@@ -14,6 +14,31 @@ RBTNode::RBTNode(int value, RBTNode *parent, RBTColor color)
     this->color = color;
 
     this->left = this->right = nullptr;
+}
+
+RBTNode *RBTNode::getGrandparent()
+{
+    if(!parent)
+    {
+        return nullptr;
+    }
+    return parent->parent;
+}
+RBTNode *RBTNode::getUncle()
+{
+    RBTNode *gp = getGrandparent();
+    if(!gp)
+    {
+        return nullptr;
+    }
+    if(parent == gp->left)
+    {
+        return gp->right;
+    }
+    else
+    {
+        return gp->left;
+    }
 }
 
 // RBTREE DEFS
