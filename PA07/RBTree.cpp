@@ -164,3 +164,35 @@ void RBTree::insert(int value)
 
     // ok hopefully done now...
 }
+
+void RBTree::clear()
+{
+    if(head)
+    {
+        delete head;
+    }
+    head = nullptr;
+}
+
+bool RBTree::isEmpty()
+{
+    return !head;
+}
+
+int RBTree::getHeight()
+{
+    if(!head)
+    {
+        return -1;
+    }
+    return getSubtreeHeight(head);
+}
+
+int RBTree::sum()
+{
+    if(!head)
+    {
+        return 0;
+    }
+    return getSubtreeSum(head);
+}
