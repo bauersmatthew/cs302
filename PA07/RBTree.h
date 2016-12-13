@@ -88,6 +88,20 @@ class RBTree
      */
     void rotateRight(RBTNode *stHead);
 
+    /**
+     * @brief Get the height of the given subtree.
+     * @return The height of the given subtree.
+     * @param stHead A pointer to the head node of the given subtree.
+     */
+    int getSubtreeHeight(RBTNode *stHead);
+
+    /**
+     * @brief Get the sum of the given subtree.
+     * @return The sum of the given subtree.
+     * @param stHead A pointer to the head node of the given subtree.
+     */
+    int getSubtreeSum(RBTNode *stHead);
+
 public:
     /**
      * @brief Construct an empty RBTree.

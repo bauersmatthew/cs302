@@ -6,6 +6,8 @@
 
 #include "RBTree.h"voidvoid
 
+#define MAX(a, b) (a>b?a:b)
+
 // RBTNODE DEFS
 RBTNode::RBTNode(int value, RBTNode *parent, RBTColor color)
 {
@@ -80,6 +82,34 @@ void RBTree::rotateRight(RBTNode *stHead)
     toDefer->parent = newHead;
 
     toDefer->left = savedRight;
+}
+
+int RBTree::getSubtreeHeight(RBTNode *stHead)
+{
+    int maxH = 0;
+    if(stHead->left)
+    {
+        maxH = MAX(maxH, getSubtreeHeight(stHead->left)+1);
+    }
+    if(stHead->right)
+    {
+        maxH = MAX(maxH, getSubtreeHeight(stHead->right)+1);
+    }
+    return maxH;
+}
+
+int RBTree::getSubtreeSum(RBTNode *stHead)
+{
+    int sum = stHead->value;
+    if(stHead->left)
+    {
+        sum += getSubtreeSum(stHead->left);
+    }
+    if(stHead->right)
+    {
+        sum += getSubtreeSum(stHead->right);
+    }
+    return sum;
 }
 
 void RBTree::insert(int value)
