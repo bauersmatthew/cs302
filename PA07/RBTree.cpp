@@ -17,6 +17,17 @@ RBTNode::RBTNode(int value, RBTNode *parent, RBTColor color)
 
     this->left = this->right = nullptr;
 }
+RBTNode::~RBTNode()
+{
+    if(this->left)
+    {
+        delete left;
+    }
+    if(this->right)
+    {
+        delete right;
+    }
+}
 
 RBTNode *RBTNode::getGrandparent()
 {
