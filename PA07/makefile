@@ -2,7 +2,7 @@ CXX := g++
 CXXFLAGS := -Wall -std=c++11
 
 SRCS := $(shell find . -name '*.cpp')
-HDRS := $(shell find . -name '*.h')s
+HDRS := $(shell find . -name '*.h')
 OBJS := $(SRCS:.cpp=.o)
 MAIN := $(notdir $(shell pwd))
 
@@ -24,10 +24,12 @@ $(MAIN): $(OBJS)
 clean:
 	rm -f *.o
 	rm -rf latex/
+	rm -rf html/
 	rm -rf $(MAIN)_MatthewBauer
 
 doxygen:
 	doxygen .
+	rm -rf html/
 	make --directory=latex/
 	cp latex/refman.pdf $(MAIN).pdf
 

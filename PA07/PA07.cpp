@@ -37,17 +37,22 @@ int main()
 {
     srand(time(0));
 
+    std::cerr << "Generating values...\n";
     std::vector<int> testSet;
     genTestSet(testSet);
 
+    std::cerr << "Filling tree...\n";
     RBTree rbt;
     for(auto& val : testSet)
     {
         rbt.insert(val);
     }
+    std::cerr << "Tree heighting...\n";
     std::cout << "Tree height: " << rbt.getHeight() << "\n";
+    std::cerr << "Tree summing...\n";
     std::cout << "Sum of all values: " << rbt.sum() << "\n\n";
 
+    std::cerr << "Tree emptying...\n";
     std::cout << "Empty (before clear): " << B2S(rbt.isEmpty()) << "\n";
     rbt.clear();
     std::cout << "Empty (after clear): " << B2S(rbt.isEmpty()) << "\n";

@@ -5,6 +5,7 @@
  */
 
 #include "RBTree.h"
+#include <iostream>
 
 #define MAX(a, b) (a>b?a:b)
 
@@ -70,7 +71,24 @@ void RBTree::rotateLeft(RBTNode *stHead)
     RBTNode *newHead = stHead->right;
     RBTNode *highest = stHead->parent;
 
-    highest->left = newHead;
+    RBTNode **toTop;
+    if(stHead->parent)
+    {
+        if(stHead == stHead->parent->left)
+        {
+            toTop = &stHead->parent->left;
+        }
+        else
+        {
+            toTop = &stHead->parent->right;
+        }
+    }
+    else
+    {
+        toTop = &head;
+    }
+
+    *toTop = newHead;
     newHead->parent = highest;
 
     RBTNode *savedLeft = newHead->left;
@@ -78,6 +96,10 @@ void RBTree::rotateLeft(RBTNode *stHead)
     toDefer->parent  = newHead;
 
     toDefer->right = savedLeft;
+    if(savedLeft)
+    {
+        savedLeft->parent = toDefer;
+    }
 }
 void RBTree::rotateRight(RBTNode *stHead)
 {
@@ -85,7 +107,24 @@ void RBTree::rotateRight(RBTNode *stHead)
     RBTNode *newHead = stHead->left;
     RBTNode *highest = stHead->parent;
 
-    highest->right = newHead;
+    RBTNode **toTop;
+    if(stHead->parent)
+    {
+        if(stHead == stHead->parent->left)
+        {
+            toTop = &stHead->parent->left;
+        }
+        else
+        {
+            toTop = &stHead->parent->right;
+        }
+    }
+    else
+    {
+        toTop = &head;
+    }
+
+    *toTop = newHead;
     newHead->parent = highest;
 
     RBTNode *savedRight = newHead->right;
@@ -93,6 +132,10 @@ void RBTree::rotateRight(RBTNode *stHead)
     toDefer->parent = newHead;
 
     toDefer->left = savedRight;
+    if(savedRight)
+    {
+        savedRight->parent = toDefer;
+    }
 }
 
 int RBTree::getSubtreeHeight(RBTNode *stHead)
@@ -111,7 +154,7 @@ int RBTree::getSubtreeHeight(RBTNode *stHead)
 
 int RBTree::getSubtreeSum(RBTNode *stHead)
 {
-    int sum = stHead->value;
+    int sum;
     if(stHead->left)
     {
         sum += getSubtreeSum(stHead->left);
@@ -135,27 +178,35 @@ void RBTree::insert(int value)
 
     // insert into tree like a normal binary
     RBTNode *loc = head;
-    RBTNode **locLoc = &head;
     RBTNode *last = nullptr;
+    bool isLeft;
     while(loc)
     {
         if(value < loc->value)
         {
             last = loc;
             loc = loc->left;
-            locLoc = &loc->left;
+            isLeft = true;
         }
         else
         {
             last = loc;
             loc = loc->right;
-            locLoc = &loc->right;
+            isLeft = false;
         }
     }
+
     // location found; construct new red node at that spot
-    *locLoc = new RBTNode(value, last);
-
-
+    if(isLeft)
+    {
+        last->left = new RBTNode(value, last);
+        loc = last->left;
+    }
+    else
+    {
+        last->right = new RBTNode(value, last);
+        loc = last->right;
+    }
     if(loc->parent->color == RBTColor::BLACK)
     {
         // wikipedia case 2; nothing else to do
