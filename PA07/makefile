@@ -26,7 +26,6 @@ clean:
 	rm -rf latex/
 	rm -rf html/
 	rm -rf $(MAIN)_MatthewBauer
-	rm -f Doxyfile
 
 doxygen:
 	doxygen .
