@@ -28,7 +28,7 @@ clean:
 	rm -rf $(MAIN)_MatthewBauer
 
 doxygen:
-	doxygen .
+	doxygen
 	rm -rf html/
 	make --directory=latex/
 	cp latex/refman.pdf $(MAIN).pdf
